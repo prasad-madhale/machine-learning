@@ -41,8 +41,10 @@ def get_best_split(dataset, thresholds):
 
     for feature in range(len(dataset[0])-1):
         for threshold in thresholds[feature]:
-            left = [entry for entry in dataset if entry[feature] < threshold]
-            right = [entry for entry in dataset if entry[feature] >= threshold]
+            left, right = split_data(dataset, feature, threshold)
+
+            if len(left) == 0 or len(right) == 0:
+                continue
 
             left_mse = get_mse(left)
             right_mse = get_mse(right)
@@ -57,12 +59,40 @@ def get_best_split(dataset, thresholds):
     return best_feature, best_threshold
 
 
-def get_mse(dataset):
+class Terminal:
 
+    def __init__(self, dataset):
+        predicts = get_prediction(dataset)
+        self.prediction = predicts[-1]
+
+    def predict(self):
+        return self.prediction
+
+
+class Node:
+
+    def __init__(self, feature, threshold, left_node, right_node):
+        self.feature = feature
+        self.threshold = threshold
+        self.left_node = left_node
+        self.right_node = right_node
+
+
+def get_prediction(dataset):
+    return np.mean(dataset, axis=0)
+
+
+def split_data(dataset, feature, threshold):
+    left = [entry for entry in dataset if entry[feature] < threshold]
+    right = [entry for entry in dataset if entry[feature] >= threshold]
+    return left, right
+
+
+def get_mse(dataset):
     if len(dataset) == 0:
         return 0
 
-    prediction = np.mean(dataset, axis=0)
+    prediction = get_prediction(dataset)
     mse = 0
 
     for entry in dataset:
@@ -71,26 +101,36 @@ def get_mse(dataset):
     return mse / len(dataset)
 
 
-def build_tree(dataset, prev):
+def build_tree(dataset):
 
-    mse = get_mse(dataset)
-
-    if abs(mse-prev) == 0:
-        return
-
-    if len(dataset) < 2:
-        return
+    if get_mse(dataset) <= 1e-4 or len(dataset) <= 2:
+        return Terminal(dataset)
 
     thresholds = get_thresholds(dataset)
-    feature, threshold = get_best_split(dataset, thresholds)
+    best_feature, best_threshold = get_best_split(dataset, thresholds)
 
-    print('feature : {}, threshold : {}'.format(feature, threshold))
+    left_data, right_data = split_data(dataset, best_feature, best_threshold)
 
-    left = [entry for entry in dataset if entry[feature] < threshold]
-    right = [entry for entry in dataset if entry[feature] >= threshold]
+    left_node = build_tree(left_data)
+    right_node = build_tree(right_data)
 
-    build_tree(left, mse)
-    build_tree(right, mse)
+    return Node(best_feature, best_threshold, left_node, right_node)
+
+
+def print_tree(root):
+
+    if isinstance(root, Terminal):
+        print('Prediction: {}'.format(root.prediction))
+        return
+
+    print('({}, {})'.format(root.feature, root.threshold))
+
+    print('Left')
+    print_tree(root.left_node)
+    print('Right')
+    print_tree(root.right_node)
+
+    return
 
 
 train, test = get_data()
@@ -98,5 +138,6 @@ full_data = np.concatenate((train, test), axis=0)
 train, test = normalize(full_data, len(train))
 thresholds = get_thresholds(train)
 
-build_tree(train, sys.maxsize)
+model = build_tree(train)
+print_tree(model)
 
