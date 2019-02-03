@@ -143,7 +143,7 @@ def train(train_data, learn_rate = 0.001, max_iter = 1500):
         max_iter : maximum number of iterations to run GD
     '''
     print('Learning rate: {}'.format(learn_rate))
-    print('Iterations: {}'.format(max_iter))
+    print('Max Iterations: {}'.format(max_iter))
     
     # get data without the labels
     x = train_data.drop(['spam_label'], axis = 1).values
@@ -221,7 +221,7 @@ pred_train = predict(train_data, w)
 
 # get accuracy percentage of the predictions
 train_acc = accuracy(train_data, pred_train)
-print('Accuracy for SpamBase using Gradient Descent on Train Data: {}'.format(train_acc))
+print('Logistic Regression using Gradient Descent Training Accuracy on SpamBase: {}'.format(train_acc))
 
 ## get predictions for optimized weights
 preds = predict(test_data, w)
@@ -229,6 +229,6 @@ preds = predict(test_data, w)
 
 # get accuracy percentage of the predictions
 acc = accuracy(test_data, preds)
-print('Accuracy for SpamBase using Gradient Descent on Test Data: {}'.format(acc))
+print('Logistic Regression using Gradient Descent Training Accuracy on SpamBase: {}'.format(acc))
 
 plot_likelihood(loglike)

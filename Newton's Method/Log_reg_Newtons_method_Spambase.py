@@ -10,6 +10,7 @@ import numpy as np
 import pandas as pd
 import math
 import matplotlib.pyplot as plt
+from numpy.linalg import inv
 
 def get_data(column_names):
     '''
@@ -135,15 +136,14 @@ def sigmoid(z):
     return 1/ (1+np.exp(-z))
 
 
-def train(train_data, learn_rate = 0.001, max_iter = 1500):
+def train(train_data, max_iter = 25):
     '''
     Args
         train_data : normalized data for training
         learn_rate : learning rate for Gradient Descent
         max_iter : maximum number of iterations to run GD
     '''
-    print('Learning rate: {}'.format(learn_rate))
-    print('Iterations: {}'.format(max_iter))
+    print('Max Iterations: {}'.format(max_iter))
     
     # get data without the labels
     x = train_data.drop(['spam_label'], axis = 1).values
@@ -162,21 +162,28 @@ def train(train_data, learn_rate = 0.001, max_iter = 1500):
     
     w = w.flatten()
         
+    sigs = np.vectorize(sigmoid)
+        
     for itr in range(max_iter+1):           
         preds = np.dot(x, w)
-        sigs = np.vectorize(sigmoid)
         preds = sigs(preds.flatten())
         
-        loss = np.subtract(y, preds)
+        g = np.dot(x.T, np.subtract(preds, y))
         
-        grads = np.dot(x.T, loss)
+        s = np.diag(preds.T * (1 - preds))
         
-        w = np.add(w, learn_rate * grads)
+        m1 = np.dot(x.T, s)
+        
+        hessian = np.dot(m1, x)
+        
+        grads = np.dot(inv(hessian), g)
+        
+        w = np.subtract(w, grads)
         
         # record cost after weight updates
         loglikes.append(log_likelihood(x,y,w))
         
-        if itr % 100 == 0:
+        if itr % 5 == 0:
             print('{}: Log-Likelihood: {}'.format(itr, loglikes[itr]))
             
     return w, loglikes
@@ -221,7 +228,7 @@ pred_train = predict(train_data, w)
 
 # get accuracy percentage of the predictions
 train_acc = accuracy(train_data, pred_train)
-print('Accuracy for SpamBase using Gradient Descent on Train Data: {}'.format(train_acc))
+print('Logistic Regression using Newtons Method Training Accuracy on Spambase: {}'.format(train_acc))
 
 ## get predictions for optimized weights
 preds = predict(test_data, w)
@@ -229,6 +236,6 @@ preds = predict(test_data, w)
 
 # get accuracy percentage of the predictions
 acc = accuracy(test_data, preds)
-print('Accuracy for SpamBase using Gradient Descent on Test Data: {}'.format(acc))
+print('Logistic Regression using Newtons Method Testing Accuracy on Spambase: {}'.format(acc))
 
 plot_likelihood(loglike)
