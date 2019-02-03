@@ -8,7 +8,8 @@ Created on Fri Feb  1 01:07:37 2019
 
 import numpy as np
 import pandas as pd
-
+import math
+import matplotlib.pyplot as plt
 
 def get_data(column_names):
     '''
@@ -106,7 +107,10 @@ def cost(data, labels, weights):
     Returns
         cost on the given data
     '''
-    return np.sum((np.dot(data, weights) - labels)**2) / len(data)
+    preds = np.dot(data, weights)
+    preds = preds.flatten()
+    
+    return np.sum(np.square(np.subtract(preds, labels))) / len(data)
   
     
 def train(train_data, learn_rate = 0.001, max_iter = 1000):
@@ -127,29 +131,41 @@ def train(train_data, learn_rate = 0.001, max_iter = 1000):
     y = train_data['MEDV'].values
     
     # initialize weights with random values
-    w = np.random.random(len(x[0]))
+    w = np.random.normal(scale = 1 / math.sqrt(len(x[0])),size = (len(x[0]), 1))
+    
+    w = w.flatten()
     
     # keep records of costs as we keep performing iteration of GD
-    costs = {}
+    costs = []
     
     for itr in range(max_iter):   
         # predictions based on current weights
         predicts = np.dot(x, w)
+        predicts = predicts.flatten()
         
         # difference between current predictions and actual labels
-        loss = predicts - y
+        loss = np.subtract(predicts, y)
+        
+        grads = np.dot(x.T, loss)
         
         # update weights
-        w -= learn_rate * np.dot(loss, x)
+        w = np.subtract(w, learn_rate * grads)
         
         # record cost after weight updates
-        costs[itr] = cost(x,y,w)
+        costs.append(cost(x,y,w))
         
-        print('{}: Cost: {}'.format(itr, costs[itr]))
+        if itr % 100 == 0:
+            print('{}: Cost: {}'.format(itr, costs[itr]))
             
     return w, costs
 
 
+def plot_cost(costs):
+    plt.figure(figsize = (20,10))
+    plt.title('Cost function')
+    plt.ylabel('Costs')
+    plt.xlabel('Iterations')
+    plt.plot(costs)
 
 #### EXECUTION
 
@@ -169,7 +185,13 @@ test_data = normalize_params(test_data,maxs, mins)
 w,costs = train(train_data)
 
 # get predictions for optimized weights
+pred_train = predict(train_data, w)
+
+print('MSE for Housing dataset using Gradient Descent on Train Data: {}'.format(get_mse(train_data, pred_train)))
+
+# get predictions for optimized weights
 preds = predict(test_data, w)
 
-print('MSE for Housing dataset using Gradient Descent: {}'.format(get_mse(test_data, preds)))
+print('MSE for Housing dataset using Gradient Descent on Test Data: {}'.format(get_mse(test_data, preds)))
 
+plot_cost(costs)

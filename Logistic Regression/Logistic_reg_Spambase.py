@@ -39,7 +39,7 @@ def normalize(dataset):
     return dataset
 
 
-def train_test_split(dataframe, percent = 22):
+def train_test_split(dataframe, percent = 20):
     '''
     Args
         dataframe: dataset for the problem
@@ -69,7 +69,7 @@ def predict(test_data, weights):
     preds = {}
     
     for i in range(len(test_data)):
-        preds[i] = rounder(np.dot(test_data[i], weights))
+        preds[i] = rounder(sigmoid(np.dot(test_data[i], weights)))
         
     return preds
 
@@ -116,7 +116,7 @@ def accuracy(test_data, preds):
     return correct_count / len(test_labels)
 
 
-def cost(data, labels, weights): 
+def log_likelihood(data, labels, weights): 
     '''
     Args
         data: data for which cost needs to be calculated
@@ -128,10 +128,14 @@ def cost(data, labels, weights):
     predictions = np.dot(data, weights)
     predictions = predictions.flatten()
     
-    return np.sum(np.square(np.subtract(predictions, labels))) / len(data)
+    return np.sum(labels*predictions - np.log(1 + np.exp(predictions)))
 
 
-def train(train_data, learn_rate = 0.0001, max_iter = 2000):
+def sigmoid(z):
+    return 1/ (1+np.exp(-z))
+
+
+def train(train_data, learn_rate = 0.001, max_iter = 1500):
     '''
     Args
         train_data : normalized data for training
@@ -154,38 +158,34 @@ def train(train_data, learn_rate = 0.0001, max_iter = 2000):
     w = np.random.normal(scale = 1 / math.sqrt(len(x[0])),size = (len(x[0]), 1))
     
     # keep records of costs as we keep performing iteration of GD
-    costs = []
+    loglikes = []
     
     w = w.flatten()
         
-    for itr in range(max_iter+1):   
-        for i,entry in enumerate(x):
-            pred = np.dot(entry, w)
-            
-            # difference between current predictions and actual labels
-            loss = pred - y[i]
-            
-            # gradients
-            grads = loss * entry
-            
-            # update weights
-            w = np.subtract(w,learn_rate * grads) 
-            
-        # record cost after weight updates
-        costs.append(cost(x,y,w))
+    for itr in range(max_iter+1):           
+        preds = np.dot(x, w)
+        sigs = np.vectorize(sigmoid)
+        preds = sigs(preds.flatten())
         
-        if itr % 500 == 0:
-            print('{}: Cost: {}'.format(itr, costs[itr]))
+        loss = np.subtract(y, preds)
+        
+        grads = np.dot(x.T, loss)
+        
+        w = np.add(w, learn_rate * grads)
+        
+        # record cost after weight updates
+        loglikes.append(log_likelihood(x,y,w))
+        
+        if itr % 100 == 0:
+            print('{}: Log-Likelihood: {}'.format(itr, loglikes[itr]))
             
-    return w, costs
+    return w, loglikes
 
-
-def plot_cost(costs):
+def plot_likelihood(logs):
     plt.figure(figsize = (20,10))
-    plt.title('Cost function')
-    plt.ylabel('Costs')
+    plt.title('Log Likelihood')
     plt.xlabel('Iterations')
-    plt.plot(costs)
+    plt.plot(logs)
     
 ### EXECUTION
     
@@ -213,7 +213,7 @@ dataframe = normalize(dataframe)
 train_data, test_data = train_test_split(dataframe)
 
 # optimize weights using Gradient Descent 
-w, costs = train(train_data)
+w, loglike = train(train_data)
 
 ## get predictions for training data
 pred_train = predict(train_data, w)
@@ -231,4 +231,4 @@ preds = predict(test_data, w)
 acc = accuracy(test_data, preds)
 print('Accuracy for SpamBase using Gradient Descent on Test Data: {}'.format(acc))
 
-plot_cost(costs)
+plot_likelihood(loglike)
