@@ -39,7 +39,7 @@ def normalize(dataset):
     return dataset
 
 
-def train_test_split(dataframe, percent = 20):
+def train_test_split(dataframe, percent = 24):
     '''
     Args
         dataframe: dataset for the problem
@@ -63,15 +63,17 @@ def predict(test_data, weights):
     Returns
         preds: predictions based on given weights applied on dataset
     '''
+    test_labels = test_data['spam_label'].values
     test_data = test_data.drop(['spam_label'], axis = 1).values
     test_data = np.append(np.ones([len(test_data),1]),test_data,1)
- 
+    
     preds = {}
     
     for i in range(len(test_data)):
         preds[i] = rounder(sigmoid(np.dot(test_data[i], weights)))
-        
-    return preds
+    
+    conf = conf_matrix(preds, test_labels)
+    return preds, conf
 
 
 def rounder(x):
@@ -135,7 +137,7 @@ def sigmoid(z):
     return 1/ (1+np.exp(-z))
 
 
-def train(train_data, learn_rate = 0.001, max_iter = 1500):
+def train(train_data, learn_rate = 0.001, max_iter = 3000):
     '''
     Args
         train_data : normalized data for training
@@ -182,11 +184,35 @@ def train(train_data, learn_rate = 0.001, max_iter = 1500):
     return w, loglikes
 
 def plot_likelihood(logs):
-    plt.figure(figsize = (20,10))
+    plt.figure(figsize = (15,10))
     plt.title('Log Likelihood')
     plt.xlabel('Iterations')
     plt.plot(logs)
+
+def conf_matrix(preds, test_labels):
+    tp = 0
+    fp = 0
+    tn = 0
+    fn = 0
     
+    for i in range(len(preds)):
+        p = preds[i]
+        if p == test_labels[i]:
+            if p == 1:
+                tp += 1
+            else:
+                tn += 1
+        else:
+            if p == 1:
+                fp += 1
+            else:
+                fn += 1
+    
+    conf = np.array([[tp, fp], [fn, tn]])
+    
+    return conf
+
+
 ### EXECUTION
     
 # names for the features
@@ -206,6 +232,9 @@ column_names = ['word_freq_make','word_freq_address', 'word_freq_all', 'word_fre
 # extract data from files
 dataframe = get_data(column_names)
 
+# shuffle the data
+dataframe = dataframe.sample(frac = 1)
+
 # normalize the data
 dataframe = normalize(dataframe)    
 
@@ -216,7 +245,7 @@ train_data, test_data = train_test_split(dataframe)
 w, loglike = train(train_data)
 
 ## get predictions for training data
-pred_train = predict(train_data, w)
+pred_train, _ = predict(train_data, w)
 #print('MSE for SpamBase using Gradient Descent on Train Data: {}'.format(get_mse(train_data, pred_train)))
 
 # get accuracy percentage of the predictions
@@ -224,11 +253,14 @@ train_acc = accuracy(train_data, pred_train)
 print('Logistic Regression using Gradient Descent Training Accuracy on SpamBase: {}'.format(train_acc))
 
 ## get predictions for optimized weights
-preds = predict(test_data, w)
+preds, conf = predict(test_data, w)
 #print('MSE for SpamBase using Gradient Descent on Test Data: {}'.format(get_mse(test_data, preds)))
 
 # get accuracy percentage of the predictions
 acc = accuracy(test_data, preds)
 print('Logistic Regression using Gradient Descent Training Accuracy on SpamBase: {}'.format(acc))
+
+print('Confusion Matrix:')
+print(conf)
 
 plot_likelihood(loglike)
