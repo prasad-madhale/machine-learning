@@ -18,7 +18,7 @@ def get_data(column_names):
     return df
 
 
-def perceptron(train_data, learn_rate = 0.0001, max_iter = 1000):
+def perceptron(train_data, learn_rate = 0.001, max_iter = 1000):
     print('Learning rate: {}'.format(learn_rate))
     print('Max Iterations: {}'.format(max_iter))
     

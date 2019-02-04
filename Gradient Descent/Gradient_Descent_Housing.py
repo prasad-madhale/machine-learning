@@ -113,7 +113,7 @@ def cost(data, labels, weights):
     return np.sum(np.square(np.subtract(preds, labels))) / len(data)
   
     
-def train(train_data, learn_rate = 0.001, max_iter = 1000):
+def train(train_data, learn_rate = 0.001, max_iter = 3000):
     '''
     Args
         train_data : normalized data for training

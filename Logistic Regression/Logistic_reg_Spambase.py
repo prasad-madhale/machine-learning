@@ -10,6 +10,7 @@ import numpy as np
 import pandas as pd
 import math
 import matplotlib.pyplot as plt
+from sklearn import metrics
 
 def get_data(column_names):
     '''
@@ -55,7 +56,7 @@ def train_test_split(dataframe, percent = 24):
     return train_data, test_data
 
 
-def predict(test_data, weights):
+def predict(test_data, weights, threshold=0.45):
     '''
     Args
         test_data: data for which predictions are to be calculated
@@ -70,20 +71,20 @@ def predict(test_data, weights):
     preds = {}
     
     for i in range(len(test_data)):
-        preds[i] = rounder(sigmoid(np.dot(test_data[i], weights)))
+        preds[i] = rounder(sigmoid(np.dot(test_data[i], weights)), threshold)
     
-    conf = conf_matrix(preds, test_labels)
-    return preds, conf
+    conf,tp,fp,tn,fn = conf_matrix(preds, test_labels)
+    return preds, conf, tp, fp, tn, fn
 
 
-def rounder(x):
+def rounder(x, threshold):
     '''
     Args
         x: exact prediction
     Returns
         label based on the threshold value
     '''
-    if x >= 0.26:
+    if x >= threshold:
         return 1
     return 0
 
@@ -183,11 +184,13 @@ def train(train_data, learn_rate = 0.001, max_iter = 3000):
             
     return w, loglikes
 
+
 def plot_likelihood(logs):
     plt.figure(figsize = (15,10))
     plt.title('Log Likelihood')
     plt.xlabel('Iterations')
     plt.plot(logs)
+
 
 def conf_matrix(preds, test_labels):
     tp = 0
@@ -210,9 +213,34 @@ def conf_matrix(preds, test_labels):
     
     conf = np.array([[tp, fp], [fn, tn]])
     
-    return conf
+    return conf, tp, fp, tn, fn
 
 
+def roc(test_data, w):
+    ts = np.arange(0,1, 0.01)
+    tprs = []
+    fprs = []
+    
+    for t in ts:
+        _, conf, tp, fp, tn, fn = predict(test_data, w, t)
+        tpr = tp/(tp + fn)
+        fpr = fp/(fp + tn)
+        tprs.append(tpr)
+        fprs.append(fpr)
+    
+    plot_roc(fprs, tprs)
+    
+    
+def plot_roc(fprs, tprs):
+    plt.figure(figsize = (15,10))
+    plt.title('ROC')
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    
+    plt.plot(fprs, tprs, label = 'AUC: {}'.format(metrics.auc(fprs, tprs)))
+    plt.legend(loc = 'lower right')
+
+    
 ### EXECUTION
     
 # names for the features
@@ -245,7 +273,7 @@ train_data, test_data = train_test_split(dataframe)
 w, loglike = train(train_data)
 
 ## get predictions for training data
-pred_train, _ = predict(train_data, w)
+pred_train,_,_,_,_,_ = predict(train_data, w)
 #print('MSE for SpamBase using Gradient Descent on Train Data: {}'.format(get_mse(train_data, pred_train)))
 
 # get accuracy percentage of the predictions
@@ -253,7 +281,7 @@ train_acc = accuracy(train_data, pred_train)
 print('Logistic Regression using Gradient Descent Training Accuracy on SpamBase: {}'.format(train_acc))
 
 ## get predictions for optimized weights
-preds, conf = predict(test_data, w)
+preds, conf,_,_,_,_ = predict(test_data, w)
 #print('MSE for SpamBase using Gradient Descent on Test Data: {}'.format(get_mse(test_data, preds)))
 
 # get accuracy percentage of the predictions
@@ -264,3 +292,5 @@ print('Confusion Matrix:')
 print(conf)
 
 plot_likelihood(loglike)
+
+roc(test_data, w)

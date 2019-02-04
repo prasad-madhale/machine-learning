@@ -10,6 +10,8 @@ import numpy as np
 import pandas as pd
 import math
 import matplotlib.pyplot as plt
+from sklearn import metrics
+
 
 def get_data(column_names):
     '''
@@ -39,7 +41,7 @@ def normalize(dataset):
     return dataset
 
 
-def train_test_split(dataframe, percent = 22):
+def train_test_split(dataframe, percent = 25):
     '''
     Args
         dataframe: dataset for the problem
@@ -55,7 +57,7 @@ def train_test_split(dataframe, percent = 22):
     return train_data, test_data
 
 
-def predict(test_data, weights):
+def predict(test_data, weights, threshold=0.45):
     '''
     Args
         test_data: data for which predictions are to be calculated
@@ -70,20 +72,20 @@ def predict(test_data, weights):
     preds = {}
     
     for i in range(len(test_data)):
-        preds[i] = rounder(np.dot(test_data[i], weights))
+        preds[i] = rounder(np.dot(test_data[i], weights), threshold)
     
-    conf = conf_matrix(preds, test_labels)
-    return preds, conf
+    conf,tp,fp,tn,fn = conf_matrix(preds, test_labels)
+    return preds,conf, tp, fp, tn, fn
 
 
-def rounder(x):
+def rounder(x, threshold):
     '''
     Args
         x: exact prediction
     Returns
         label based on the threshold value
     '''
-    if x >= 0.26:
+    if x >= threshold:
         return 1
     return 0
 
@@ -159,31 +161,28 @@ def train(train_data, learn_rate = 0.0001, max_iter = 2000):
     costs = []
     
     w = w.flatten()
+            
+    for itr in range(max_iter+1):           
+        preds = np.dot(x, w)
+        preds = preds.flatten()
         
-    for itr in range(max_iter+1):   
-        for i,entry in enumerate(x):
-            pred = np.dot(entry, w)
-            
-            # difference between current predictions and actual labels
-            loss = pred - y[i]
-            
-            # gradients
-            grads = loss * entry
-            
-            # update weights
-            w = np.subtract(w,learn_rate * grads) 
-            
+        loss = np.subtract(preds, y)
+        
+        grads = np.dot(x.T, loss)
+        
+        w = np.subtract(w, learn_rate * grads)
+        
         # record cost after weight updates
         costs.append(cost(x,y,w))
         
-        if itr % 500 == 0:
-            print('{}: Cost: {}'.format(itr, costs[itr]))
+        if itr % 100 == 0:
+            print('{}: Costs: {}'.format(itr, costs[itr]))
             
     return w, costs
 
 
 def plot_cost(costs):
-    plt.figure(figsize = (15,10))
+    plt.figure(figsize = (20,15))
     plt.title('Cost function')
     plt.ylabel('Costs')
     plt.xlabel('Iterations')
@@ -210,9 +209,31 @@ def conf_matrix(preds, test_labels):
                 fn += 1
     
     conf = np.array([[tp, fp], [fn, tn]])
-    return conf
+    return conf, tp, fp, tn, fn
 
 
+def roc(test_data, w):
+    ts = np.arange(0,1, 0.01)
+    tprs = []
+    fprs = []
+    
+    for t in ts:
+        preds, conf, tp, fp, tn, fn = predict(test_data, w, t)
+        tpr = tp/(tp + fn)
+        fpr = fp/(fp + tn)
+        tprs.append(tpr)
+        fprs.append(fpr)
+    
+    plot_roc(fprs, tprs)
+
+
+def plot_roc(fprs, tprs):
+    plt.figure(figsize = (20,15))
+    plt.title('ROC')
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.plot(fprs, tprs, label = 'AUC: {}'.format(metrics.auc(fprs, tprs)))
+    plt.legend(loc = 'lower right')
 
 ### EXECUTION
     
@@ -233,8 +254,8 @@ column_names = ['word_freq_make','word_freq_address', 'word_freq_all', 'word_fre
 # extract data from files
 dataframe = get_data(column_names)
 
-## shuffle the data
-#dataframe = dataframe.sample(frac = 1)
+# shuffle the data
+dataframe = dataframe.sample(frac = 1)
 
 # normalize the data
 dataframe = normalize(dataframe)    
@@ -246,7 +267,7 @@ train_data, test_data = train_test_split(dataframe)
 w, costs = train(train_data)
 
 ## get predictions for training data
-pred_train, _ = predict(train_data, w)
+pred_train,_,_,_,_,_ = predict(train_data, w)
 #print('MSE for SpamBase using Gradient Descent on Train Data: {}'.format(get_mse(train_data, pred_train)))
 
 # get accuracy percentage of the predictions
@@ -254,7 +275,7 @@ train_acc = accuracy(train_data, pred_train)
 print('Accuracy for SpamBase using Gradient Descent on Train Data: {}'.format(train_acc))
 
 ## get predictions for optimized weights
-preds, conf = predict(test_data, w)
+preds, conf,_,_,_,_ = predict(test_data, w)
 #print('MSE for SpamBase using Gradient Descent on Test Data: {}'.format(get_mse(test_data, preds)))
 
 # get accuracy percentage of the predictions
@@ -265,3 +286,4 @@ print('Confusion Matrix:')
 print(conf)
 
 plot_cost(costs)
+roc(test_data, w)
