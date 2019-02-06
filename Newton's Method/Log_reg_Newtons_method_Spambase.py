@@ -169,7 +169,6 @@ def train(train_data, max_iter = 25):
         preds = sigs(preds.flatten())
         
         g = np.dot(x.T, np.subtract(preds, y))
-        
         s = np.diag(preds.T * (1 - preds))
         
         m1 = np.dot(x.T, s)

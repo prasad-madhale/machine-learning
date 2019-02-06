@@ -10,7 +10,6 @@ import numpy as np
 import pandas as pd
 import math
 import matplotlib.pyplot as plt
-from sklearn import metrics
 
 
 def get_data(column_names):
@@ -35,7 +34,7 @@ def normalize(dataset):
     mins = dataset.min()
     
     for feature in dataset.columns[:-1]:        
-        for i, entry in dataset.iterrows():
+        for i, entry in dataset.iterrows(): 
             dataset.at[i, feature] = (entry[feature] - mins[feature]) / (maxs[feature] - mins[feature])
             
     return dataset
@@ -213,6 +212,7 @@ def conf_matrix(preds, test_labels):
 
 
 def roc(test_data, w):
+    test_labels = test_data['spam_label'].values
     ts = np.arange(0,1, 0.01)
     tprs = []
     fprs = []
@@ -223,7 +223,8 @@ def roc(test_data, w):
         fpr = fp/(fp + tn)
         tprs.append(tpr)
         fprs.append(fpr)
-    
+        
+    # plot with custom implementation
     plot_roc(fprs, tprs)
 
 
