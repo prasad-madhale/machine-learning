@@ -1,6 +1,4 @@
 import pandas as pd
-import numpy as np
-import tensorflow as tf
 from tensorflow import keras
 from sklearn.model_selection import train_test_split
 
@@ -18,21 +16,6 @@ def split(df):
     return data, labels
 
 
-### TRAIN MODELS(Tensorflow)
-#
-#class NN:
-#    def __init__(self):
-#        self.input = tf.placeholder(shape=[None, 13], name='inputs', dtype=tf.float32)
-#        self.labels = tf.placeholder(shape=[None,3], name='labels', dtype=tf.float32)
-#        
-#        # prediction
-#        self.predict = tf.layers.dense(input, activation=tf.nn.sigmoid, units=3)
-#        
-#        # loss
-#        self.loss = tf.reduce_mean(tf.squared_difference(self.labels, self.predict))
-#        self.train_op = tf.train.AdamOptimizer(0.0001).minimize(self.loss)
-
-
 ## DATA PROCESSING
 
 column_names = ['label', 'f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12', 'f13']
@@ -47,22 +30,6 @@ data, label = split(dataframe)
 data = keras.utils.normalize(data, axis=1, order=2)
 
 train_data, test_data, train_label, test_label = train_test_split(data, label, test_size = 0.5)
-
-#train_label = pd.get_dummies(train_label, dtype = np.float32).values
-#test_label = pd.get_dummies(test_label, dtype = np.float32).values
-#
-
-### TRAIN MODEL (Tensorflow)
-#
-#init = tf.global_variables_initializer()
-#
-#with tf.Session() as sess:
-#    sess.run(init)
-#    
-#    mlp = NN()
-#    sess.run(mlp.predict, feed_dict={mlp.input: train_data,
-#                                     mlp.labels: train_label})
-
 
     
 ## TRAIN MODEL (KERAS)
