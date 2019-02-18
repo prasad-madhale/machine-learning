@@ -39,12 +39,14 @@ class NN:
         
         with tf.variable_scope('loss'):
             self.loss = tf.losses.mean_squared_error(self.labels, self.predict)
+            self.loss_plot = tf.summary.scalar('loss', self.loss)
             self.train_op = tf.train.AdamOptimizer(self.lr).minimize(self.loss)
-    
+        
+        self.summaries = tf.summary.merge_all()
+        
         with tf.variable_scope('accuracy'):
             _, self.acc = tf.metrics.accuracy(tf.math.argmax(self.labels,1),
                                               tf.math.argmax(self.predict,1))
-        
         
     def build_network(self):
         with tf.variable_scope('mlp'):
@@ -60,6 +62,10 @@ class NN:
                                      feed_dict={self.input: train_data,
                                                 self.labels: train_label})
         return loss, acc
+    
+    def get_summary(self, data, labels):
+        return self.sess.run(self.summaries, feed_dict = {self.input: data,
+                                                       self.labels: labels})
     
     def test(self, data, labels):
         return self.sess.run(self.acc, feed_dict={self.input: data, self.labels: labels})
@@ -96,6 +102,7 @@ tf.reset_default_graph()
 
 with tf.Session() as sess:
     mlp = NN('MLP', sess, NUM_FEATURES, NUM_CLASSES, lr=0.01)
+    tensor_plot = tf.summary.FileWriter('log/Classification', graph = sess.graph)
     sess.run(tf.local_variables_initializer())
     sess.run(tf.global_variables_initializer())
     
@@ -104,7 +111,12 @@ with tf.Session() as sess:
         
         if epoch % 500 == 0:
             print('TRAIN--Epoch: {}, Loss: {}, Accuracy: {}'.format(epoch, loss, acc))
-
+        
+        # get loss plots
+        summary = mlp.get_summary(train_data, train_label)
+        # add the loss plot to tensorboard
+        tensor_plot.add_summary(summary, epoch)
+    
     print('TEST: Accuracy: {}'.format(mlp.test(test_data, test_label)))
 
         
