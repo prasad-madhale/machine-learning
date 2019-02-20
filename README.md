@@ -1,7 +1,7 @@
 # Machine Learning from Scratch
 Common Machine Learning algorithms implemented from Scratch
 
-**Index:**
+### Index:
 1. [Linear Regression using Normal Equation](#linear_reg_eqn)
 2. [Linear Regression with Gradient Descent](#linear_reg_gd)
 3. [Logistic Regression with Gradient Descent](#log_reg_gd)
