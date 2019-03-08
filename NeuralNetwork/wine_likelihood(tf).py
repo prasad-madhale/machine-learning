@@ -81,6 +81,7 @@ class NN:
 NUM_CLASSES = 3
 NUM_FEATURES = 13
 EPOCHS = 10000    
+LEARN_RATE = 0.01
 
 ## DATA PROCESSING
 
@@ -96,7 +97,7 @@ train_label = keras.utils.to_categorical(train_label-1,NUM_CLASSES)
 tf.reset_default_graph()
 
 with tf.Session() as sess:
-    mlp = NN('MLP with cross-entropy', sess, NUM_FEATURES, NUM_CLASSES, lr=0.01)
+    mlp = NN('MLP with cross-entropy', sess, NUM_FEATURES, NUM_CLASSES, lr=LEARN_RATE)
     tensor_plot = tf.summary.FileWriter('log/Log_likelihood', graph = sess.graph)
     sess.run(tf.local_variables_initializer())
     sess.run(tf.global_variables_initializer())
