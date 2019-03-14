@@ -14,8 +14,8 @@ def get_data(column_names):
     data_frame.columns = column_names
     return data_frame
 
-def k_fold(dataframe, num_folds = 5):
-    folds = KFold(num_folds, random_state = 1, shuffle = True)
+def k_fold(dataframe, num_folds = 10):
+    folds = KFold(num_folds, random_state = 2, shuffle = True)
     return folds
 
 def split_data_labels(train_data, test_data):
@@ -109,7 +109,7 @@ for train,test in folds.split(df):
     acc = accuracy(prob0, prob1, test_labels)
     accuracies.append(acc)
 
-print('Accuracies over 5 folds')
+print('Accuracies over 10 folds and shuffled data')
 print(accuracies)
 mean_acc = np.mean(accuracies)
 print('Mean Accuracy: {}'.format(mean_acc))    
