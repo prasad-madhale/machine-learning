@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Thu Mar  7 21:29:28 2019
+Created on Fri Mar 15 19:58:24 2019
 
 @author: prasad
 """
-   
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import KFold
 
 def get_data(column_names):
     data_frame = pd.read_csv('./data/spambase.txt', header = None, sep = ',')    
@@ -33,15 +31,13 @@ def split(data, num_of_splits = 10):
         
     return folds
 
-def k_fold(dataframe, num_folds = 10):
-    folds = KFold(num_folds, random_state = 2, shuffle = True)
-    return folds
-
 # assuming features are bernoulli variables
 def train_naive_bayes(train_data, train_labels, test_data, test_labels):
     
-    mean = np.mean(train_data, axis = 0)
-    train_data = binarize(train_data, mean)
+    mins = np.min(train_data, axis = 0)
+    maxs = np.max(train_data, axis = 0)
+    
+    train_data = preprocess(train_data, mins, maxs)
     
     non_spam_indices = np.argwhere(train_labels == 0).flatten()
     spam_indices = np.argwhere(train_labels == 1).flatten()
@@ -57,12 +53,12 @@ def train_naive_bayes(train_data, train_labels, test_data, test_labels):
     count_spam = count(spam_data)
     
     counts = np.array([count_non_spam, count_spam])    
-   
+    
     probabilities = prob(counts)
     
     predictions = []
     
-    test_data = binarize(test_data, mean)
+    test_data = preprocess(test_data, mins, maxs)
     
     for pt in range(len(test_data)):
         data = test_data[pt]
@@ -70,7 +66,7 @@ def train_naive_bayes(train_data, train_labels, test_data, test_labels):
         predictions.append(np.argmax(pred))
         
     return acc(predictions, test_labels)
-    
+   
 def get_priors(labels):
     count_spam = np.count_nonzero(labels)
     count_non_spam = len(labels) - count_spam
@@ -80,7 +76,6 @@ def get_priors(labels):
 def acc(preds, labels):
     check = (preds == labels).astype(int)
     count = np.count_nonzero(check)
-        
     return count / len(labels)
 
 def prob(feature_count):
@@ -90,8 +85,18 @@ def count(data):
     greaters = np.sum(data, axis = 0) + 1.0
     return greaters
 
-def binarize(data, mean):
-    data = (data < mean).astype(int)
+def preprocess(data, mins, maxs):
+    
+    for x in data:
+        for f in range(len(x)):
+            min_c = mins[f]
+            max_c = maxs[f]
+            
+            # nine equal bins
+            nine_bins = np.linspace(min_c, max_c, 9)
+            
+            x[f] = np.digitize(x[f], bins = nine_bins)-1
+            
     return data
 
 def get_labels(data):
@@ -100,9 +105,7 @@ def get_labels(data):
     
     return data, data_labels
 
-
-def train_folds(folds):
-    
+def train_folds(folds):    
     accs = []
 
     # for each fold
@@ -143,9 +146,13 @@ column_names = ['word_freq_make','word_freq_address', 'word_freq_all', 'word_fre
                'word_freq_re','word_freq_edu','word_freq_table','word_freq_conference','char_freq_;',
                'char_freq_(','char_freq_[','char_freq_!','char_freq_$','char_freq_#','capital_run_length_average',
                'capital_run_length_longest','capital_run_length_total','spam_label']
-    
+
+  
 # get data from txt file
 df = get_data(column_names)
+
+# shuffle data
+df = df.sample(frac = 1)
 
 # create folds of the data based on customized conditions
 folds = split(df)
@@ -154,5 +161,5 @@ folds = split(df)
 accs = train_folds(folds)
 
 print('Accuracies for 10 Fold cross-validation')
-print(accs)            
-            
+print(accs)     
+print('Mean Accuracy: {}'.format(np.mean(accs)))  
