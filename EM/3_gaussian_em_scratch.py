@@ -12,21 +12,21 @@ from scipy.stats import multivariate_normal
 
 class EM:
     
-    def __init__(self, k, threshold=1e-4):
+    def __init__(self, k):
         self.k = k
         self.data = EM.get_data()
-        self.w = np.asmatrix(np.empty(self.data.shape), dtype=float)
-        self.phi = np.ones(self.data.shape[1])/2
-        self.model = EM.init_model(k)
-        self.threshold = threshold
+        self.n = self.data.shape[1]
+        self.w = np.asmatrix(np.empty((self.data.shape[0], self.k)), dtype=float)
+        self.phi = np.ones(self.k)/self.k
+        self.model = EM.init_model(self.k, self.n)
 
     @staticmethod
-    def init_model(k):
-        return {'mu': np.asmatrix(np.random.random((k, k))), 'sig': np.array([np.identity(k) for _ in range(k)])}
+    def init_model(k, n):
+        return {'mu': np.asmatrix(np.random.random((k, n))), 'sig': np.array([np.identity(n) for _ in range(k)])}
 
     @staticmethod
     def get_data():
-        df = pd.read_csv('./data/2gaussian.txt', sep=' ')
+        df = pd.read_csv('./data/3gaussian.txt', sep=' ')
         return df.values
     
     def e_step(self):
@@ -47,8 +47,8 @@ class EM:
         for i in range(self.k):
             sum_w = self.w[:, i].sum()
             self.phi[i] = sum_w / len(self.w)
-            new_mu = np.zeros(self.k)
-            new_sigma = np.zeros((self.k, self.k))
+            new_mu = np.zeros(self.n)
+            new_sigma = np.zeros((self.n, self.n))
             
             for j in range(len(self.data)):
                 new_mu += (self.data[j] * self.w[j, i])
@@ -71,11 +71,11 @@ class EM:
         
         return ans
     
-    def train(self):
+    def train(self, threshold=1e-4):
         diff = float('inf')
         itr = 0
         
-        while diff > self.threshold:
+        while diff > threshold:
             # calculate previous set log likelihood
             prev_ll = self.log_likelihood()
             
@@ -100,9 +100,12 @@ class EM:
         return 'Final Model:\n ' \
                'Mean1: {}\n' \
                'Mean2: {}\n' \
+               'Mean3: {}\n' \
                'Cov1: {}\n' \
-               'Cov2: {}\n'.format(self.model['mu'][0], self.model['mu'][1], self.model['sig'][0], self.model['sig'][1])
+               'Cov2: {}\n' \
+               'Cov3: {}\n'.format(self.model['mu'][0], self.model['mu'][1], self.model['mu'][2],
+                                   self.model['sig'][0], self.model['sig'][1], self.model['sig'][2])
 
 
-gaussEM = EM(2)
+gaussEM = EM(3)
 gaussEM.train()
