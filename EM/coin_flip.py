@@ -5,6 +5,8 @@ from collections import Counter
 class CoinFlipEM:
 
     def __init__(self, m=1000, k=10, p=0.8, r=0.3, pi=0.5):
+        self.p = p
+        self.r = r
         self.data, self.label = CoinFlipEM.generate_data(m, k, p, r, pi)
 
     @staticmethod
@@ -46,7 +48,8 @@ class CoinFlipEM:
             expects = self.e_step(pi_s)
             pi_s = self.m_step(pi_s, expects)
 
-        print(pi_s)
+        print('Expected: {}   |   {}'.format(self.p, self.r))
+        print('Result: {}   |   {}'.format(pi_s[0], pi_s[1]))
 
     def e_step(self, pi_s):
 
