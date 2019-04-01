@@ -13,7 +13,10 @@ Common Machine Learning algorithms implemented from Scratch
 9. [Autoencoder NN from scratch and using Tensorflow](#auto_enc)
 10. [Classifier Neural Network (square loss) from scratch and using Tensorflow](#class_sq)
 11. [Classifier Neural Network (cross-entropy) from scratch and using Tensorflow](#class_cross_enp)
-
+12. [Gaussian Discriminant Analysis](#gda)
+13. [Naive Bayesian Classifier](#naive_bayes)
+14. [Expectation Maximization](#exp_max)
+15. [AdaBoost](#ada_boost)
 
 ## <a id="linear_reg_eqn"></a>Linear Regression (Normal Equation)
 Linear Regression with Mean Squared Error cost function. The weight training is done with Normal Equation (closed-form solution).
@@ -145,3 +148,79 @@ Uses sigmoid activation with softmax at the output layer along with a cross entr
 *Loss per Epoch*
 
 <img src="https://github.com/prasad-madhale/machine-learning/blob/master/NeuralNetwork/plots/wine_log_likelihood_tf.png" width="600">
+
+## <a id="gda"></a>Gaussian Discriminant Analysis
+
+Implemented GDA which learns a distribution to form discriminant function for prediction.
+
+[GDA](https://github.com/prasad-madhale/machine-learning/blob/master/Gaussian%20Discriminant%20Analysis/gda.py)
+
+## <a id="naive_bayes"></a>Naive Bayesian Classifier
+
+Implemented a Naive Bayesian Classifier which uses Baye's rule to learn a gaussian using given data probabilities.
+
+[Naive Bayes Classifier (Gaussian)](https://github.com/prasad-madhale/machine-learning/blob/master/Naive%20Bayesian/gaussian_naive_bayes.py)
+
+[Naive Bayes Classifier with Bernoulli](https://github.com/prasad-madhale/machine-learning/blob/master/Naive%20Bayesian/bernoulli_naive_bayes.py)
+
+[Naive Bayes Classifier for broken down into 9 bins](https://github.com/prasad-madhale/machine-learning/blob/master/Naive%20Bayesian/9bin_naive_bayes.py)
+
+[Naive Bayes Classifier for broken down into 4 bins](https://github.com/prasad-madhale/machine-learning/blob/master/Naive%20Bayesian/4bin_naive_bayes.py)
+
+## <a id="exp_max"></a>Expectation Maximization
+
+Given data which is a mixture of Gaussian. EM algorithm accurately predicts to which Gaussian the data point belongs
+
+[Expectation Maximization (mixture of Gaussian)](https://github.com/prasad-madhale/machine-learning/blob/master/EM/gaussian_em_scratch.py)
+
+[Expectation Maximization for Coin Flipping example](https://github.com/prasad-madhale/machine-learning/blob/master/EM/coin_flip.py)
+
+*Given two biased coins and datapoints derived by picking one coin at random and flipping it d times.
+EM algorithm helps to predict which coin is used to create that datapoint*
+
+## <a id="ada_boost"></a> AdaBoost
+
+Boosting is a methodology where by combining multiple weak learners we get a strong model for prediction.
+I have used simple **1-split Decision Tree** as weak learner for this AdaBoosting implementation.
+
+[AdaBoost with Optimal Thresholding](https://github.com/prasad-madhale/machine-learning/blob/master/AdaBoost/adaboost.py)
+
+*Optimal thresholding signifies going through all the decision stumps => (feature,threshold) combinations to find the one
+that gives maximum improvement in predictions*
+
+*Error at Each Round*
+
+<img src="https://github.com/prasad-madhale/machine-learning/blob/master/AdaBoost/plots/round_error.png" width="600">
+
+*Train/Test Error*
+
+<img src="https://github.com/prasad-madhale/machine-learning/blob/master/AdaBoost/plots/train_test_error.png" width="600">
+
+*AUC curve*
+
+<img src="https://github.com/prasad-madhale/machine-learning/blob/master/AdaBoost/plots/auc.png" width="600">
+
+*ROC curve*
+
+<img src="https://github.com/prasad-madhale/machine-learning/blob/master/AdaBoost/plots/roc.png" width="600">
+
+[AdaBoost with Random Thresholding](https://github.com/prasad-madhale/machine-learning/blob/master/AdaBoost/adaboost_random.py)
+
+*Random thresholding signifies picking a decision stump => (feature,threshold) combination at random*
+
+*Error at Each Round*
+
+<img src="https://github.com/prasad-madhale/machine-learning/blob/master/AdaBoost/plots/random_round_error.png" width="600">
+
+*Train/Test Error*
+
+<img src="https://github.com/prasad-madhale/machine-learning/blob/master/AdaBoost/plots/random_train_test_error.png" width="600">
+
+*AUC curve*
+
+<img src="https://github.com/prasad-madhale/machine-learning/blob/master/AdaBoost/plots/random_auc.png" width="600">
+
+*ROC curve*
+
+<img src="https://github.com/prasad-madhale/machine-learning/blob/master/AdaBoost/plots/random_roc.png" width="600">
+
