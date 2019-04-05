@@ -6,6 +6,7 @@ from sklearn import preprocessing
 from sklearn.metrics import accuracy_score, auc, roc_curve
 import random
 
+
 class AdaBoost:
 
     def __init__(self, column_names):
@@ -52,8 +53,22 @@ class AdaBoost:
         train_data, test_data, train_label, test_label = train_test_split(self.data, self.labels, test_size=0.25,
                                                                           random_state=10)
 
-        # train for the training data
-        models, summary = AdaBoost.train(train_data, train_label, test_data, test_label, num_weak_learners)
+        c_values = [5, 10, 15, 20, 25, 30, 50, 80]
+
+        for c in c_values:
+
+            print('\n\nTraining for c={}\n'.format(c))
+
+            # pick random data points from training set while keeping test set fixed
+            num_cs = (c * len(train_data)) // 100
+
+            rand_idx = np.random.randint(len(train_data), size=num_cs)
+
+            new_train_data = train_data[rand_idx, :]
+            new_train_label = train_label[rand_idx]
+
+            # train for the training data
+            models, summary = AdaBoost.train(new_train_data, new_train_label, test_data, test_label, num_weak_learners)
 
     @staticmethod
     def train(train_data, train_label, test_data, test_label, num_weak_learners):
@@ -75,7 +90,7 @@ class AdaBoost:
             error = model.error
 
             # calculate alpha for this model
-            model.alpha = 0.5 * np.log((1 - error) / (error + 1e-10))
+            model.alpha = 0.5 * np.log((1 - error) / (error + 1e-5))
 
             preds = np.ones(np.shape(train_label))
             preds[train_data[:, model.feature] <= model.threshold] = -1
@@ -184,4 +199,4 @@ random.seed(2)
 column_names = ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11', 'A12', 'A13', 'A14', 'A15', 'label']
 
 ada_boost = AdaBoost(column_names)
-ada_boost.fit(num_weak_learners=100)
+ada_boost.fit(num_weak_learners=500)

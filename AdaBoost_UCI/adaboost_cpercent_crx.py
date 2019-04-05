@@ -4,7 +4,7 @@ from collections import Counter
 from sklearn.model_selection import train_test_split
 from sklearn import preprocessing
 from sklearn.metrics import accuracy_score, auc, roc_curve
-import random
+
 
 class AdaBoost:
 
@@ -16,18 +16,19 @@ class AdaBoost:
         # value if it's a string
         self.preprocess_data()
 
+
     @staticmethod
     def get_data(names):
-        data_frame = pd.read_csv('./data/vote/vote.data', sep='\t')
+        data_frame = pd.read_csv('./data/crx/crx.data', sep='\t')
 
         data_frame.columns = names
         labels = data_frame['label'].values
 
         # replace labels for adaboost
-        # replace d with 1
-        labels[labels == 'd'] = 1
-        # replace r with -1
-        labels[labels == 'r'] = -1
+        # replace + with 1
+        labels[labels == '+'] = 1
+        # replace - with -1
+        labels[labels == '-'] = -1
 
         data_frame = data_frame.drop('label', axis=1)
         return data_frame, np.array(labels, dtype='float64')
@@ -39,8 +40,18 @@ class AdaBoost:
             indices = self.data[col][self.data[col] == '?'].index.values
             bad_df = self.data.index.isin(indices)
 
-            max_occ = max(Counter(self.data[~bad_df][col]))
-            self.data.at[bad_df, col] = max_occ
+            try:
+                first = float(self.data[~bad_df][col][0])
+            except:
+                first = str(self.data[~bad_df][col][0])
+
+            if type(first) == type(1.0):
+                max_val = self.data[~bad_df][col].astype('float').max()
+                self.data.at[bad_df, col] = max_val
+                self.data[col] = self.data[col].astype(float)
+            else:
+                max_occ = max(Counter(self.data[~bad_df][col]))
+                self.data.at[bad_df, col] = max_occ
 
         self.data = self.data.values
 
@@ -52,8 +63,22 @@ class AdaBoost:
         train_data, test_data, train_label, test_label = train_test_split(self.data, self.labels, test_size=0.25,
                                                                           random_state=10)
 
-        # train for the training data
-        models, summary = AdaBoost.train(train_data, train_label, test_data, test_label, num_weak_learners)
+        c_values = [5, 10, 15, 20, 25, 30, 50, 80]
+
+        for c in c_values:
+
+            print('\n\nTraining for c = {}\n'.format(c))
+
+            # pick random data points from training set while keeping test set fixed
+            num_cs = (c * len(train_data)) // 100
+
+            rand_idx = np.random.randint(len(train_data), size=num_cs)
+
+            new_train_data = train_data[rand_idx, :]
+            new_train_label = train_label[rand_idx]
+
+            # train for the training data
+            models, summary = AdaBoost.train(new_train_data, new_train_label, test_data, test_label, num_weak_learners)
 
     @staticmethod
     def train(train_data, train_label, test_data, test_label, num_weak_learners):
@@ -135,19 +160,25 @@ class WeakLearner:
 
         max_diff = -float('inf')
 
-        # pick random feature
-        feature = random.randint(0, dataset.shape[1] - 1)
+        # check each threshold, feature pair to find the best one
+        for feature in range(dataset.shape[1]):
+            for threshold in thresholds[feature]:
 
-        # pick random threshold
-        threshold = np.random.choice(thresholds[feature])
+                # build the weak learner
+                tree = Node(feature, threshold)
 
-        # build the weak learner
-        tree = Node(feature, threshold)
+                # find error for this weak learner
+                error = WeakLearner.predict(tree, dataset, labels, wts)
 
-        # find error for this weak learner
-        tree.error = WeakLearner.predict(tree, dataset, labels, wts)
+                diff = np.abs(0.5 - error)
 
-        return tree
+                if diff > max_diff:
+                    max_diff = diff
+                    tree.error = error
+                    tree.max_diff = max_diff
+                    best_tree = tree
+
+        return best_tree
 
     @staticmethod
     def predict(model, test_data, labels, wts):
@@ -179,9 +210,7 @@ class WeakLearner:
 
 
 # EXECUTION
-random.seed(2)
 
-column_names = ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11', 'A12', 'A13', 'A14', 'A15', 'label']
-
-ada_boost = AdaBoost(column_names)
-ada_boost.fit(num_weak_learners=100)
+column_names = ['A0', 'D0', 'D1', 'A1', 'A2', 'A3', 'A4', 'D2', 'A5', 'A6', 'D3', 'A7', 'A8', 'D4', 'D5', 'label']
+adaboost = AdaBoost(column_names)
+adaboost.fit(num_weak_learners=100)

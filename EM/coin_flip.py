@@ -4,7 +4,7 @@ from collections import Counter
 
 class CoinFlipEM:
 
-    def __init__(self, m=1000, k=10, p=0.8, r=0.3, pi=0.5):
+    def __init__(self, m=1000, k=10, p=0.7, r=0.2, pi=0.5):
         self.p = p
         self.r = r
         self.data, self.label = CoinFlipEM.generate_data(m, k, p, r, pi)
