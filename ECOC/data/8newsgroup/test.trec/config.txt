@@ -1,0 +1,5 @@
+#
+#Sun Oct 05 18:09:19 EDT 2014
+numClasses=8
+numDataPoints=7532
+numFeatures=1754

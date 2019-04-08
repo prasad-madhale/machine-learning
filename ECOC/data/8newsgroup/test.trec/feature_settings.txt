@@ -1,0 +1,1754 @@
+featureIndex=0,featureType=numerical,featureName=atheism
+featureIndex=1,featureType=numerical,featureName=atheist
+featureIndex=2,featureType=numerical,featureName=moral
+featureIndex=3,featureType=numerical,featureName=keith
+featureIndex=4,featureType=numerical,featureName=satan
+featureIndex=5,featureType=numerical,featureName=sandvik
+featureIndex=6,featureType=numerical,featureName=evolv
+featureIndex=7,featureType=numerical,featureName=mathew
+featureIndex=8,featureType=numerical,featureName=d012s658
+featureIndex=9,featureType=numerical,featureName=premis
+featureIndex=10,featureType=numerical,featureName=liar
+featureIndex=11,featureType=numerical,featureName=evolut
+featureIndex=12,featureType=numerical,featureName=religion
+featureIndex=13,featureType=numerical,featureName=rushdi
+featureIndex=14,featureType=numerical,featureName=khan
+featureIndex=15,featureType=numerical,featureName=ryan
+featureIndex=16,featureType=numerical,featureName=cobb
+featureIndex=17,featureType=numerical,featureName=moham
+featureIndex=18,featureType=numerical,featureName=benedikt
+featureIndex=19,featureType=numerical,featureName=sgi
+featureIndex=20,featureType=numerical,featureName=absurd
+featureIndex=21,featureType=numerical,featureName=theist
+featureIndex=22,featureType=numerical,featureName=alt.ath
+featureIndex=23,featureType=numerical,featureName=islam
+featureIndex=24,featureType=numerical,featureName=kmr4
+featureIndex=25,featureType=numerical,featureName=conner
+featureIndex=26,featureType=numerical,featureName=beauchain
+featureIndex=27,featureType=numerical,featureName=nanci
+featureIndex=28,featureType=numerical,featureName=studio
+featureIndex=29,featureType=numerical,featureName=sharewar
+featureIndex=30,featureType=numerical,featureName=vesa
+featureIndex=31,featureType=numerical,featureName=bitmap
+featureIndex=32,featureType=numerical,featureName=curv
+featureIndex=33,featureType=numerical,featureName=scanner
+featureIndex=34,featureType=numerical,featureName=visual
+featureIndex=35,featureType=numerical,featureName=algorithm
+featureIndex=36,featureType=numerical,featureName=contrib
+featureIndex=37,featureType=numerical,featureName=toolkit
+featureIndex=38,featureType=numerical,featureName=anim
+featureIndex=39,featureType=numerical,featureName=viewer
+featureIndex=40,featureType=numerical,featureName=librari
+featureIndex=41,featureType=numerical,featureName=svga
+featureIndex=42,featureType=numerical,featureName=sphere
+featureIndex=43,featureType=numerical,featureName=surfac
+featureIndex=44,featureType=numerical,featureName=graphic
+featureIndex=45,featureType=numerical,featureName=map
+featureIndex=46,featureType=numerical,featureName=ftp
+featureIndex=47,featureType=numerical,featureName=2d
+featureIndex=48,featureType=numerical,featureName=polygon
+featureIndex=49,featureType=numerical,featureName=imag
+featureIndex=50,featureType=numerical,featureName=3d
+featureIndex=51,featureType=numerical,featureName=manipul
+featureIndex=52,featureType=numerical,featureName=format
+featureIndex=53,featureType=numerical,featureName=tiff
+featureIndex=54,featureType=numerical,featureName=workstat
+featureIndex=55,featureType=numerical,featureName=color
+featureIndex=56,featureType=numerical,featureName=gif
+featureIndex=57,featureType=numerical,featureName=binari
+featureIndex=58,featureType=numerical,featureName=rgb
+featureIndex=59,featureType=numerical,featureName=vga
+featureIndex=60,featureType=numerical,featureName=transform
+featureIndex=61,featureType=numerical,featureName=oak
+featureIndex=62,featureType=numerical,featureName=pixel
+featureIndex=63,featureType=numerical,featureName=risc
+featureIndex=64,featureType=numerical,featureName=xv
+featureIndex=65,featureType=numerical,featureName=dx2
+featureIndex=66,featureType=numerical,featureName=driver
+featureIndex=67,featureType=numerical,featureName=util
+featureIndex=68,featureType=numerical,featureName=3.0
+featureIndex=69,featureType=numerical,featureName=3.1
+featureIndex=70,featureType=numerical,featureName=icon
+featureIndex=71,featureType=numerical,featureName=file
+featureIndex=72,featureType=numerical,featureName=cica
+featureIndex=73,featureType=numerical,featureName=6.0
+featureIndex=74,featureType=numerical,featureName=font
+featureIndex=75,featureType=numerical,featureName=dl
+featureIndex=76,featureType=numerical,featureName=microsoft
+featureIndex=77,featureType=numerical,featureName=config.si
+featureIndex=78,featureType=numerical,featureName=download
+featureIndex=79,featureType=numerical,featureName=ati
+featureIndex=80,featureType=numerical,featureName=ms
+featureIndex=81,featureType=numerical,featureName=alt
+featureIndex=82,featureType=numerical,featureName=ami
+featureIndex=83,featureType=numerical,featureName=vw
+featureIndex=84,featureType=numerical,featureName=nt
+featureIndex=85,featureType=numerical,featureName=meg
+featureIndex=86,featureType=numerical,featureName=dialog
+featureIndex=87,featureType=numerical,featureName=norton
+featureIndex=88,featureType=numerical,featureName=os
+featureIndex=89,featureType=numerical,featureName=diamond
+featureIndex=90,featureType=numerical,featureName=4.0
+featureIndex=91,featureType=numerical,featureName=setup
+featureIndex=92,featureType=numerical,featureName=window
+featureIndex=93,featureType=numerical,featureName=hd
+featureIndex=94,featureType=numerical,featureName=bio
+featureIndex=95,featureType=numerical,featureName=modem
+featureIndex=96,featureType=numerical,featureName=id
+featureIndex=97,featureType=numerical,featureName=benchmark
+featureIndex=98,featureType=numerical,featureName=486
+featureIndex=99,featureType=numerical,featureName=connector
+featureIndex=100,featureType=numerical,featureName=card
+featureIndex=101,featureType=numerical,featureName=mhz
+featureIndex=102,featureType=numerical,featureName=cmo
+featureIndex=103,featureType=numerical,featureName=bu
+featureIndex=104,featureType=numerical,featureName=floppi
+featureIndex=105,featureType=numerical,featureName=upgrad
+featureIndex=106,featureType=numerical,featureName=irq
+featureIndex=107,featureType=numerical,featureName=vlb
+featureIndex=108,featureType=numerical,featureName=isa
+featureIndex=109,featureType=numerical,featureName=board
+featureIndex=110,featureType=numerical,featureName=instal
+featureIndex=111,featureType=numerical,featureName=dip
+featureIndex=112,featureType=numerical,featureName=nec
+featureIndex=113,featureType=numerical,featureName=gatewai
+featureIndex=114,featureType=numerical,featureName=spec
+featureIndex=115,featureType=numerical,featureName=scsi
+featureIndex=116,featureType=numerical,featureName=pin
+featureIndex=117,featureType=numerical,featureName=interrupt
+featureIndex=118,featureType=numerical,featureName=motherboard
+featureIndex=119,featureType=numerical,featureName=cpu
+featureIndex=120,featureType=numerical,featureName=286
+featureIndex=121,featureType=numerical,featureName=486dx
+featureIndex=122,featureType=numerical,featureName=ethernet
+featureIndex=123,featureType=numerical,featureName=disk
+featureIndex=124,featureType=numerical,featureName=port
+featureIndex=125,featureType=numerical,featureName=1024
+featureIndex=126,featureType=numerical,featureName=quantum
+featureIndex=127,featureType=numerical,featureName=seagat
+featureIndex=128,featureType=numerical,featureName=eisa
+featureIndex=129,featureType=numerical,featureName=jumper
+featureIndex=130,featureType=numerical,featureName=vram
+featureIndex=131,featureType=numerical,featureName=monitor
+featureIndex=132,featureType=numerical,featureName=pc
+featureIndex=133,featureType=numerical,featureName=clone
+featureIndex=134,featureType=numerical,featureName=powerbook
+featureIndex=135,featureType=numerical,featureName=solder
+featureIndex=136,featureType=numerical,featureName=xxmessag
+featureIndex=137,featureType=numerical,featureName=xxdate
+featureIndex=138,featureType=numerical,featureName=macintosh
+featureIndex=139,featureType=numerical,featureName=7.1
+featureIndex=140,featureType=numerical,featureName=simm
+featureIndex=141,featureType=numerical,featureName=appl
+featureIndex=142,featureType=numerical,featureName=iisi
+featureIndex=143,featureType=numerical,featureName=mac
+featureIndex=144,featureType=numerical,featureName=650
+featureIndex=145,featureType=numerical,featureName=lciii
+featureIndex=146,featureType=numerical,featureName=se
+featureIndex=147,featureType=numerical,featureName=nubu
+featureIndex=148,featureType=numerical,featureName=centri
+featureIndex=149,featureType=numerical,featureName=incompat
+featureIndex=150,featureType=numerical,featureName=lc
+featureIndex=151,featureType=numerical,featureName=extern
+featureIndex=152,featureType=numerical,featureName=950
+featureIndex=153,featureType=numerical,featureName=ee
+featureIndex=154,featureType=numerical,featureName=quadra
+featureIndex=155,featureType=numerical,featureName=pb
+featureIndex=156,featureType=numerical,featureName=duo
+featureIndex=157,featureType=numerical,featureName=r5
+featureIndex=158,featureType=numerical,featureName=displai
+featureIndex=159,featureType=numerical,featureName=applic
+featureIndex=160,featureType=numerical,featureName=openwindow
+featureIndex=161,featureType=numerical,featureName=pointer
+featureIndex=162,featureType=numerical,featureName=x11r5
+featureIndex=163,featureType=numerical,featureName=xterm
+featureIndex=164,featureType=numerical,featureName=xlib
+featureIndex=165,featureType=numerical,featureName=server
+featureIndex=166,featureType=numerical,featureName=widget
+featureIndex=167,featureType=numerical,featureName=pixmap
+featureIndex=168,featureType=numerical,featureName=compil
+featureIndex=169,featureType=numerical,featureName=default
+featureIndex=170,featureType=numerical,featureName=x11
+featureIndex=171,featureType=numerical,featureName=motif
+featureIndex=172,featureType=numerical,featureName=colormap
+featureIndex=173,featureType=numerical,featureName=xpert
+featureIndex=174,featureType=numerical,featureName=alloc
+featureIndex=175,featureType=numerical,featureName=client
+featureIndex=176,featureType=numerical,featureName=ship
+featureIndex=177,featureType=numerical,featureName=bag
+featureIndex=178,featureType=numerical,featureName=350
+featureIndex=179,featureType=numerical,featureName=offer
+featureIndex=180,featureType=numerical,featureName=firm
+featureIndex=181,featureType=numerical,featureName=forsal
+featureIndex=182,featureType=numerical,featureName=price
+featureIndex=183,featureType=numerical,featureName=buyer
+featureIndex=184,featureType=numerical,featureName=stereo
+featureIndex=185,featureType=numerical,featureName=3.5
+featureIndex=186,featureType=numerical,featureName=manual
+featureIndex=187,featureType=numerical,featureName=130
+featureIndex=188,featureType=numerical,featureName=interior
+featureIndex=189,featureType=numerical,featureName=mint
+featureIndex=190,featureType=numerical,featureName=golf
+featureIndex=191,featureType=numerical,featureName=audio
+featureIndex=192,featureType=numerical,featureName=camera
+featureIndex=193,featureType=numerical,featureName=sell
+featureIndex=194,featureType=numerical,featureName=excel
+featureIndex=195,featureType=numerical,featureName=sale
+featureIndex=196,featureType=numerical,featureName=5.25
+featureIndex=197,featureType=numerical,featureName=150
+featureIndex=198,featureType=numerical,featureName=genesi
+featureIndex=199,featureType=numerical,featureName=carpet
+featureIndex=200,featureType=numerical,featureName=disc
+featureIndex=201,featureType=numerical,featureName=batteri
+featureIndex=202,featureType=numerical,featureName=amp
+featureIndex=203,featureType=numerical,featureName=2400
+featureIndex=204,featureType=numerical,featureName=pair
+featureIndex=205,featureType=numerical,featureName=101
+featureIndex=206,featureType=numerical,featureName=1200
+featureIndex=207,featureType=numerical,featureName=obo
+featureIndex=208,featureType=numerical,featureName=mileag
+featureIndex=209,featureType=numerical,featureName=saturn
+featureIndex=210,featureType=numerical,featureName=shift
+featureIndex=211,featureType=numerical,featureName=mustang
+featureIndex=212,featureType=numerical,featureName=fluid
+featureIndex=213,featureType=numerical,featureName=leak
+featureIndex=214,featureType=numerical,featureName=tire
+featureIndex=215,featureType=numerical,featureName=dodg
+featureIndex=216,featureType=numerical,featureName=radar
+featureIndex=217,featureType=numerical,featureName=dealer
+featureIndex=218,featureType=numerical,featureName=automot
+featureIndex=219,featureType=numerical,featureName=nissan
+featureIndex=220,featureType=numerical,featureName=auto
+featureIndex=221,featureType=numerical,featureName=turbo
+featureIndex=222,featureType=numerical,featureName=ford
+featureIndex=223,featureType=numerical,featureName=thunder
+featureIndex=224,featureType=numerical,featureName=bmw
+featureIndex=225,featureType=numerical,featureName=rear
+featureIndex=226,featureType=numerical,featureName=brake
+featureIndex=227,featureType=numerical,featureName=toyota
+featureIndex=228,featureType=numerical,featureName=detector
+featureIndex=229,featureType=numerical,featureName=gear
+featureIndex=230,featureType=numerical,featureName=truck
+featureIndex=231,featureType=numerical,featureName=oil
+featureIndex=232,featureType=numerical,featureName=car
+featureIndex=233,featureType=numerical,featureName=alarm
+featureIndex=234,featureType=numerical,featureName=honda
+featureIndex=235,featureType=numerical,featureName=insur
+featureIndex=236,featureType=numerical,featureName=rider
+featureIndex=237,featureType=numerical,featureName=750
+featureIndex=238,featureType=numerical,featureName=drunk
+featureIndex=239,featureType=numerical,featureName=biker
+featureIndex=240,featureType=numerical,featureName=dod
+featureIndex=241,featureType=numerical,featureName=liabil
+featureIndex=242,featureType=numerical,featureName=helmet
+featureIndex=243,featureType=numerical,featureName=egreen
+featureIndex=244,featureType=numerical,featureName=yamaha
+featureIndex=245,featureType=numerical,featureName=jean
+featureIndex=246,featureType=numerical,featureName=motorcycl
+featureIndex=247,featureType=numerical,featureName=jacket
+featureIndex=248,featureType=numerical,featureName=boom
+featureIndex=249,featureType=numerical,featureName=ride
+featureIndex=250,featureType=numerical,featureName=bike
+featureIndex=251,featureType=numerical,featureName=harlei
+featureIndex=252,featureType=numerical,featureName=twin
+featureIndex=253,featureType=numerical,featureName=career
+featureIndex=254,featureType=numerical,featureName=hr
+featureIndex=255,featureType=numerical,featureName=score
+featureIndex=256,featureType=numerical,featureName=oriol
+featureIndex=257,featureType=numerical,featureName=ted
+featureIndex=258,featureType=numerical,featureName=jai
+featureIndex=259,featureType=numerical,featureName=bat
+featureIndex=260,featureType=numerical,featureName=stadium
+featureIndex=261,featureType=numerical,featureName=giant
+featureIndex=262,featureType=numerical,featureName=season
+featureIndex=263,featureType=numerical,featureName=brave
+featureIndex=264,featureType=numerical,featureName=pitch
+featureIndex=265,featureType=numerical,featureName=runner
+featureIndex=266,featureType=numerical,featureName=batter
+featureIndex=267,featureType=numerical,featureName=in
+featureIndex=268,featureType=numerical,featureName=tiger
+featureIndex=269,featureType=numerical,featureName=cub
+featureIndex=270,featureType=numerical,featureName=cardin
+featureIndex=271,featureType=numerical,featureName=plate
+featureIndex=272,featureType=numerical,featureName=team
+featureIndex=273,featureType=numerical,featureName=2b
+featureIndex=274,featureType=numerical,featureName=swing
+featureIndex=275,featureType=numerical,featureName=catcher
+featureIndex=276,featureType=numerical,featureName=hit
+featureIndex=277,featureType=numerical,featureName=dodger
+featureIndex=278,featureType=numerical,featureName=yanke
+featureIndex=279,featureType=numerical,featureName=pitcher
+featureIndex=280,featureType=numerical,featureName=sox
+featureIndex=281,featureType=numerical,featureName=basebal
+featureIndex=282,featureType=numerical,featureName=nl
+featureIndex=283,featureType=numerical,featureName=game
+featureIndex=284,featureType=numerical,featureName=philli
+featureIndex=285,featureType=numerical,featureName=ball
+featureIndex=286,featureType=numerical,featureName=leagu
+featureIndex=287,featureType=numerical,featureName=hitter
+featureIndex=288,featureType=numerical,featureName=met
+featureIndex=289,featureType=numerical,featureName=rocki
+featureIndex=290,featureType=numerical,featureName=player
+featureIndex=291,featureType=numerical,featureName=palmer
+featureIndex=292,featureType=numerical,featureName=ninth
+featureIndex=293,featureType=numerical,featureName=espn
+featureIndex=294,featureType=numerical,featureName=det
+featureIndex=295,featureType=numerical,featureName=fan
+featureIndex=296,featureType=numerical,featureName=pen
+featureIndex=297,featureType=numerical,featureName=puck
+featureIndex=298,featureType=numerical,featureName=goal
+featureIndex=299,featureType=numerical,featureName=playoff
+featureIndex=300,featureType=numerical,featureName=wing
+featureIndex=301,featureType=numerical,featureName=coach
+featureIndex=302,featureType=numerical,featureName=cup
+featureIndex=303,featureType=numerical,featureName=domi
+featureIndex=304,featureType=numerical,featureName=devil
+featureIndex=305,featureType=numerical,featureName=hockei
+featureIndex=306,featureType=numerical,featureName=cherri
+featureIndex=307,featureType=numerical,featureName=detroit
+featureIndex=308,featureType=numerical,featureName=goaltend
+featureIndex=309,featureType=numerical,featureName=abc
+featureIndex=310,featureType=numerical,featureName=goali
+featureIndex=311,featureType=numerical,featureName=leaf
+featureIndex=312,featureType=numerical,featureName=lemieux
+featureIndex=313,featureType=numerical,featureName=penguin
+featureIndex=314,featureType=numerical,featureName=isl
+featureIndex=315,featureType=numerical,featureName=montreal
+featureIndex=316,featureType=numerical,featureName=hab
+featureIndex=317,featureType=numerical,featureName=bruin
+featureIndex=318,featureType=numerical,featureName=tie
+featureIndex=319,featureType=numerical,featureName=franci
+featureIndex=320,featureType=numerical,featureName=island
+featureIndex=321,featureType=numerical,featureName=overtim
+featureIndex=322,featureType=numerical,featureName=flyer
+featureIndex=323,featureType=numerical,featureName=ranger
+featureIndex=324,featureType=numerical,featureName=wc
+featureIndex=325,featureType=numerical,featureName=gretzki
+featureIndex=326,featureType=numerical,featureName=nhl
+featureIndex=327,featureType=numerical,featureName=olchowi
+featureIndex=328,featureType=numerical,featureName=den
+featureIndex=329,featureType=numerical,featureName=password
+featureIndex=330,featureType=numerical,featureName=mitr
+featureIndex=331,featureType=numerical,featureName=gtoal
+featureIndex=332,featureType=numerical,featureName=secur
+featureIndex=333,featureType=numerical,featureName=nsa
+featureIndex=334,featureType=numerical,featureName=rsa
+featureIndex=335,featureType=numerical,featureName=secret
+featureIndex=336,featureType=numerical,featureName=kei
+featureIndex=337,featureType=numerical,featureName=wiretap
+featureIndex=338,featureType=numerical,featureName=encrypt
+featureIndex=339,featureType=numerical,featureName=pgp
+featureIndex=340,featureType=numerical,featureName=chip
+featureIndex=341,featureType=numerical,featureName=de
+featureIndex=342,featureType=numerical,featureName=escrow
+featureIndex=343,featureType=numerical,featureName=cryptographi
+featureIndex=344,featureType=numerical,featureName=clipper
+featureIndex=345,featureType=numerical,featureName=tap
+featureIndex=346,featureType=numerical,featureName=crypto
+featureIndex=347,featureType=numerical,featureName=cryptograph
+featureIndex=348,featureType=numerical,featureName=random
+featureIndex=349,featureType=numerical,featureName=lobbi
+featureIndex=350,featureType=numerical,featureName=antenna
+featureIndex=351,featureType=numerical,featureName=transmitt
+featureIndex=352,featureType=numerical,featureName=catalog
+featureIndex=353,featureType=numerical,featureName=electron
+featureIndex=354,featureType=numerical,featureName=resistor
+featureIndex=355,featureType=numerical,featureName=outlet
+featureIndex=356,featureType=numerical,featureName=modul
+featureIndex=357,featureType=numerical,featureName=rf
+featureIndex=358,featureType=numerical,featureName=circuit
+featureIndex=359,featureType=numerical,featureName=voltag
+featureIndex=360,featureType=numerical,featureName=dial
+featureIndex=361,featureType=numerical,featureName=devic
+featureIndex=362,featureType=numerical,featureName=motorola
+featureIndex=363,featureType=numerical,featureName=shack
+featureIndex=364,featureType=numerical,featureName=ham
+featureIndex=365,featureType=numerical,featureName=signal
+featureIndex=366,featureType=numerical,featureName=tower
+featureIndex=367,featureType=numerical,featureName=wire
+featureIndex=368,featureType=numerical,featureName=electr
+featureIndex=369,featureType=numerical,featureName=frequenc
+featureIndex=370,featureType=numerical,featureName=dsp
+featureIndex=371,featureType=numerical,featureName=detect
+featureIndex=372,featureType=numerical,featureName=scope
+featureIndex=373,featureType=numerical,featureName=sensit
+featureIndex=374,featureType=numerical,featureName=cure
+featureIndex=375,featureType=numerical,featureName=seizur
+featureIndex=376,featureType=numerical,featureName=diagnos
+featureIndex=377,featureType=numerical,featureName=genet
+featureIndex=378,featureType=numerical,featureName=yeast
+featureIndex=379,featureType=numerical,featureName=photographi
+featureIndex=380,featureType=numerical,featureName=disord
+featureIndex=381,featureType=numerical,featureName=symptom
+featureIndex=382,featureType=numerical,featureName=treatment
+featureIndex=383,featureType=numerical,featureName=muscl
+featureIndex=384,featureType=numerical,featureName=skin
+featureIndex=385,featureType=numerical,featureName=cell
+featureIndex=386,featureType=numerical,featureName=physician
+featureIndex=387,featureType=numerical,featureName=stress
+featureIndex=388,featureType=numerical,featureName=health
+featureIndex=389,featureType=numerical,featureName=food
+featureIndex=390,featureType=numerical,featureName=surgeri
+featureIndex=391,featureType=numerical,featureName=infect
+featureIndex=392,featureType=numerical,featureName=chemic
+featureIndex=393,featureType=numerical,featureName=msg
+featureIndex=394,featureType=numerical,featureName=treat
+featureIndex=395,featureType=numerical,featureName=syndrom
+featureIndex=396,featureType=numerical,featureName=medicin
+featureIndex=397,featureType=numerical,featureName=ill
+featureIndex=398,featureType=numerical,featureName=diseas
+featureIndex=399,featureType=numerical,featureName=substanc
+featureIndex=400,featureType=numerical,featureName=krillean
+featureIndex=401,featureType=numerical,featureName=medic
+featureIndex=402,featureType=numerical,featureName=patient
+featureIndex=403,featureType=numerical,featureName=immun
+featureIndex=404,featureType=numerical,featureName=heal
+featureIndex=405,featureType=numerical,featureName=diet
+featureIndex=406,featureType=numerical,featureName=pain
+featureIndex=407,featureType=numerical,featureName=doctor
+featureIndex=408,featureType=numerical,featureName=cancer
+featureIndex=409,featureType=numerical,featureName=clinic
+featureIndex=410,featureType=numerical,featureName=shuttl
+featureIndex=411,featureType=numerical,featureName=rocket
+featureIndex=412,featureType=numerical,featureName=orbit
+featureIndex=413,featureType=numerical,featureName=sky
+featureIndex=414,featureType=numerical,featureName=moon
+featureIndex=415,featureType=numerical,featureName=explor
+featureIndex=416,featureType=numerical,featureName=observatori
+featureIndex=417,featureType=numerical,featureName=flight
+featureIndex=418,featureType=numerical,featureName=solar
+featureIndex=419,featureType=numerical,featureName=vacuum
+featureIndex=420,featureType=numerical,featureName=optic
+featureIndex=421,featureType=numerical,featureName=mar
+featureIndex=422,featureType=numerical,featureName=launch
+featureIndex=423,featureType=numerical,featureName=nasa
+featureIndex=424,featureType=numerical,featureName=jupit
+featureIndex=425,featureType=numerical,featureName=beam
+featureIndex=426,featureType=numerical,featureName=space
+featureIndex=427,featureType=numerical,featureName=spacecraft
+featureIndex=428,featureType=numerical,featureName=payload
+featureIndex=429,featureType=numerical,featureName=astronomi
+featureIndex=430,featureType=numerical,featureName=prb
+featureIndex=431,featureType=numerical,featureName=planet
+featureIndex=432,featureType=numerical,featureName=lunar
+featureIndex=433,featureType=numerical,featureName=henri
+featureIndex=434,featureType=numerical,featureName=nsmca
+featureIndex=435,featureType=numerical,featureName=sci.spac
+featureIndex=436,featureType=numerical,featureName=earth
+featureIndex=437,featureType=numerical,featureName=vers
+featureIndex=438,featureType=numerical,featureName=righteou
+featureIndex=439,featureType=numerical,featureName=fisher
+featureIndex=440,featureType=numerical,featureName=scriptur
+featureIndex=441,featureType=numerical,featureName=clh
+featureIndex=442,featureType=numerical,featureName=spiritu
+featureIndex=443,featureType=numerical,featureName=heaven
+featureIndex=444,featureType=numerical,featureName=baptist
+featureIndex=445,featureType=numerical,featureName=marri
+featureIndex=446,featureType=numerical,featureName=judgement
+featureIndex=447,featureType=numerical,featureName=ceremoni
+featureIndex=448,featureType=numerical,featureName=church
+featureIndex=449,featureType=numerical,featureName=prophet
+featureIndex=450,featureType=numerical,featureName=hebrew
+featureIndex=451,featureType=numerical,featureName=christian
+featureIndex=452,featureType=numerical,featureName=celebr
+featureIndex=453,featureType=numerical,featureName=christ
+featureIndex=454,featureType=numerical,featureName=prayer
+featureIndex=455,featureType=numerical,featureName=god
+featureIndex=456,featureType=numerical,featureName=roman
+featureIndex=457,featureType=numerical,featureName=templ
+featureIndex=458,featureType=numerical,featureName=easter
+featureIndex=459,featureType=numerical,featureName=etern
+featureIndex=460,featureType=numerical,featureName=denomin
+featureIndex=461,featureType=numerical,featureName=biblic
+featureIndex=462,featureType=numerical,featureName=orthodox
+featureIndex=463,featureType=numerical,featureName=gospel
+featureIndex=464,featureType=numerical,featureName=divin
+featureIndex=465,featureType=numerical,featureName=faith
+featureIndex=466,featureType=numerical,featureName=propheci
+featureIndex=467,featureType=numerical,featureName=cathol
+featureIndex=468,featureType=numerical,featureName=sin
+featureIndex=469,featureType=numerical,featureName=jesu
+featureIndex=470,featureType=numerical,featureName=revel
+featureIndex=471,featureType=numerical,featureName=bibl
+featureIndex=472,featureType=numerical,featureName=reno
+featureIndex=473,featureType=numerical,featureName=liberti
+featureIndex=474,featureType=numerical,featureName=fire
+featureIndex=475,featureType=numerical,featureName=nra
+featureIndex=476,featureType=numerical,featureName=tennesse
+featureIndex=477,featureType=numerical,featureName=fbi
+featureIndex=478,featureType=numerical,featureName=firearm
+featureIndex=479,featureType=numerical,featureName=handgun
+featureIndex=480,featureType=numerical,featureName=gun
+featureIndex=481,featureType=numerical,featureName=cult
+featureIndex=482,featureType=numerical,featureName=crime
+featureIndex=483,featureType=numerical,featureName=crimin
+featureIndex=484,featureType=numerical,featureName=cnn
+featureIndex=485,featureType=numerical,featureName=freeman
+featureIndex=486,featureType=numerical,featureName=censor
+featureIndex=487,featureType=numerical,featureName=vike
+featureIndex=488,featureType=numerical,featureName=jmd
+featureIndex=489,featureType=numerical,featureName=waco
+featureIndex=490,featureType=numerical,featureName=militia
+featureIndex=491,featureType=numerical,featureName=atf
+featureIndex=492,featureType=numerical,featureName=ranch
+featureIndex=493,featureType=numerical,featureName=koresh
+featureIndex=494,featureType=numerical,featureName=suicid
+featureIndex=495,featureType=numerical,featureName=weapon
+featureIndex=496,featureType=numerical,featureName=dividian
+featureIndex=497,featureType=numerical,featureName=batf
+featureIndex=498,featureType=numerical,featureName=turkei
+featureIndex=499,featureType=numerical,featureName=bosnia
+featureIndex=500,featureType=numerical,featureName=greec
+featureIndex=501,featureType=numerical,featureName=iran
+featureIndex=502,featureType=numerical,featureName=armenia
+featureIndex=503,featureType=numerical,featureName=serdar
+featureIndex=504,featureType=numerical,featureName=arab
+featureIndex=505,featureType=numerical,featureName=beyer
+featureIndex=506,featureType=numerical,featureName=soldier
+featureIndex=507,featureType=numerical,featureName=holocaust
+featureIndex=508,featureType=numerical,featureName=argic
+featureIndex=509,featureType=numerical,featureName=cpr
+featureIndex=510,featureType=numerical,featureName=armenian
+featureIndex=511,featureType=numerical,featureName=occupi
+featureIndex=512,featureType=numerical,featureName=turkish
+featureIndex=513,featureType=numerical,featureName=jerusalem
+featureIndex=514,featureType=numerical,featureName=racism
+featureIndex=515,featureType=numerical,featureName=isra
+featureIndex=516,featureType=numerical,featureName=territori
+featureIndex=517,featureType=numerical,featureName=israel
+featureIndex=518,featureType=numerical,featureName=racist
+featureIndex=519,featureType=numerical,featureName=clinton
+featureIndex=520,featureType=numerical,featureName=senat
+featureIndex=521,featureType=numerical,featureName=hallam
+featureIndex=522,featureType=numerical,featureName=conserv
+featureIndex=523,featureType=numerical,featureName=reform
+featureIndex=524,featureType=numerical,featureName=sexual
+featureIndex=525,featureType=numerical,featureName=bi
+featureIndex=526,featureType=numerical,featureName=d.c
+featureIndex=527,featureType=numerical,featureName=deficit
+featureIndex=528,featureType=numerical,featureName=homosexu
+featureIndex=529,featureType=numerical,featureName=econom
+featureIndex=530,featureType=numerical,featureName=tax
+featureIndex=531,featureType=numerical,featureName=cramer
+featureIndex=532,featureType=numerical,featureName=libertarian
+featureIndex=533,featureType=numerical,featureName=clayton
+featureIndex=534,featureType=numerical,featureName=debt
+featureIndex=535,featureType=numerical,featureName=abolish
+featureIndex=536,featureType=numerical,featureName=gai
+featureIndex=537,featureType=numerical,featureName=beleiv
+featureIndex=538,featureType=numerical,featureName=social
+featureIndex=539,featureType=numerical,featureName=politician
+featureIndex=540,featureType=numerical,featureName=fundamentalist
+featureIndex=541,featureType=numerical,featureName=hudson
+featureIndex=542,featureType=numerical,featureName=sword
+featureIndex=543,featureType=numerical,featureName=mormon
+featureIndex=544,featureType=numerical,featureName=compass
+featureIndex=545,featureType=numerical,featureName=clarif
+featureIndex=546,featureType=numerical,featureName=mozumd
+featureIndex=547,featureType=numerical,featureName=keith allan
+featureIndex=548,featureType=numerical,featureName=fractal
+featureIndex=549,featureType=numerical,featureName=pov
+featureIndex=550,featureType=numerical,featureName=rjck.uucp
+featureIndex=551,featureType=numerical,featureName=subject re rumour about 3do
+featureIndex=552,featureType=numerical,featureName=about 3do
+featureIndex=553,featureType=numerical,featureName=winbench
+featureIndex=554,featureType=numerical,featureName=procomm
+featureIndex=555,featureType=numerical,featureName=norton desktop
+featureIndex=556,featureType=numerical,featureName=guyd
+featureIndex=557,featureType=numerical,featureName=c650
+featureIndex=558,featureType=numerical,featureName=laserwrit
+featureIndex=559,featureType=numerical,featureName=adb
+featureIndex=560,featureType=numerical,featureName=se 30
+featureIndex=561,featureType=numerical,featureName=x
+featureIndex=562,featureType=numerical,featureName=code
+featureIndex=563,featureType=numerical,featureName=consortium
+featureIndex=564,featureType=numerical,featureName=x termin
+featureIndex=565,featureType=numerical,featureName=interest
+featureIndex=566,featureType=numerical,featureName=cod
+featureIndex=567,featureType=numerical,featureName=brand new
+featureIndex=568,featureType=numerical,featureName=excel condit
+featureIndex=569,featureType=numerical,featureName=interest pleas
+featureIndex=570,featureType=numerical,featureName=boyl
+featureIndex=571,featureType=numerical,featureName=integra
+featureIndex=572,featureType=numerical,featureName=wagon
+featureIndex=573,featureType=numerical,featureName=re dumbest automot
+featureIndex=574,featureType=numerical,featureName=re dumbest
+featureIndex=575,featureType=numerical,featureName=woodward
+featureIndex=576,featureType=numerical,featureName=azw
+featureIndex=577,featureType=numerical,featureName=marlin
+featureIndex=578,featureType=numerical,featureName=hobokenit
+featureIndex=579,featureType=numerical,featureName=plai
+featureIndex=580,featureType=numerical,featureName=lindro
+featureIndex=581,featureType=numerical,featureName=pem
+featureIndex=582,featureType=numerical,featureName=traffic
+featureIndex=583,featureType=numerical,featureName=ohm
+featureIndex=584,featureType=numerical,featureName=capacitor
+featureIndex=585,featureType=numerical,featureName=medin
+featureIndex=586,featureType=numerical,featureName=pittsburgh
+featureIndex=587,featureType=numerical,featureName=migrain
+featureIndex=588,featureType=numerical,featureName=gordon bank
+featureIndex=589,featureType=numerical,featureName=pittsburgh comput scienc
+featureIndex=590,featureType=numerical,featureName=mccall
+featureIndex=591,featureType=numerical,featureName=baalk
+featureIndex=592,featureType=numerical,featureName=distribut sci
+featureIndex=593,featureType=numerical,featureName=kulikauska
+featureIndex=594,featureType=numerical,featureName=christian organ
+featureIndex=595,featureType=numerical,featureName=kratz
+featureIndex=596,featureType=numerical,featureName=re gun
+featureIndex=597,featureType=numerical,featureName=hezbollah
+featureIndex=598,featureType=numerical,featureName=peac
+featureIndex=599,featureType=numerical,featureName=hasan
+featureIndex=600,featureType=numerical,featureName=teel
+featureIndex=601,featureType=numerical,featureName=thor.isc
+featureIndex=602,featureType=numerical,featureName=law
+featureIndex=603,featureType=numerical,featureName=joslin
+featureIndex=604,featureType=numerical,featureName=psyrobtw
+featureIndex=605,featureType=numerical,featureName=tyre
+featureIndex=606,featureType=numerical,featureName=meritt
+featureIndex=607,featureType=numerical,featureName=robert weiss
+featureIndex=608,featureType=numerical,featureName=re after 2000
+featureIndex=609,featureType=numerical,featureName=wingat
+featureIndex=610,featureType=numerical,featureName=charlei
+featureIndex=611,featureType=numerical,featureName=from keith
+featureIndex=612,featureType=numerical,featureName=jon livesei
+featureIndex=613,featureType=numerical,featureName=j.c
+featureIndex=614,featureType=numerical,featureName=bj
+featureIndex=615,featureType=numerical,featureName=under window
+featureIndex=616,featureType=numerical,featureName=latest driver
+featureIndex=617,featureType=numerical,featureName=win 3.1
+featureIndex=618,featureType=numerical,featureName=drive
+featureIndex=619,featureType=numerical,featureName=subject re id
+featureIndex=620,featureType=numerical,featureName=1304
+featureIndex=621,featureType=numerical,featureName=cyclon
+featureIndex=622,featureType=numerical,featureName=r4
+featureIndex=623,featureType=numerical,featureName=includ
+featureIndex=624,featureType=numerical,featureName=fax modem
+featureIndex=625,featureType=numerical,featureName=rec.auto
+featureIndex=626,featureType=numerical,featureName=subaru
+featureIndex=627,featureType=numerical,featureName=owner
+featureIndex=628,featureType=numerical,featureName=boyl cactus.org craig boyl
+featureIndex=629,featureType=numerical,featureName=boyl cactus.org
+featureIndex=630,featureType=numerical,featureName=win
+featureIndex=631,featureType=numerical,featureName=alomar
+featureIndex=632,featureType=numerical,featureName=toronto
+featureIndex=633,featureType=numerical,featureName=biggest
+featureIndex=634,featureType=numerical,featureName=crypt
+featureIndex=635,featureType=numerical,featureName=govern
+featureIndex=636,featureType=numerical,featureName=administr
+featureIndex=637,featureType=numerical,featureName=imped
+featureIndex=638,featureType=numerical,featureName=detector detector
+featureIndex=639,featureType=numerical,featureName=homeopathi
+featureIndex=640,featureType=numerical,featureName=risk
+featureIndex=641,featureType=numerical,featureName=exercis
+featureIndex=642,featureType=numerical,featureName=atterlep
+featureIndex=643,featureType=numerical,featureName=hell
+featureIndex=644,featureType=numerical,featureName=articl apr
+featureIndex=645,featureType=numerical,featureName=cop
+featureIndex=646,featureType=numerical,featureName=rkba
+featureIndex=647,featureType=numerical,featureName=aaron rai clement
+featureIndex=648,featureType=numerical,featureName=jew
+featureIndex=649,featureType=numerical,featureName=kaldi
+featureIndex=650,featureType=numerical,featureName=child
+featureIndex=651,featureType=numerical,featureName=russia
+featureIndex=652,featureType=numerical,featureName=thyagi
+featureIndex=653,featureType=numerical,featureName=god promis
+featureIndex=654,featureType=numerical,featureName=subject re after 2000 year can we
+featureIndex=655,featureType=numerical,featureName=tdawson
+featureIndex=656,featureType=numerical,featureName=herringshaw
+featureIndex=657,featureType=numerical,featureName=packag
+featureIndex=658,featureType=numerical,featureName=comp.graph
+featureIndex=659,featureType=numerical,featureName=win3.1
+featureIndex=660,featureType=numerical,featureName=window organ
+featureIndex=661,featureType=numerical,featureName=bmp file
+featureIndex=662,featureType=numerical,featureName=my mac
+featureIndex=663,featureType=numerical,featureName=function
+featureIndex=664,featureType=numerical,featureName=my applic
+featureIndex=665,featureType=numerical,featureName=x window
+featureIndex=666,featureType=numerical,featureName=pleas contact
+featureIndex=667,featureType=numerical,featureName=good condit
+featureIndex=668,featureType=numerical,featureName=sedan
+featureIndex=669,featureType=numerical,featureName=chang oil
+featureIndex=670,featureType=numerical,featureName=subject re chang oil
+featureIndex=671,featureType=numerical,featureName=shortstop
+featureIndex=672,featureType=numerical,featureName=canadien
+featureIndex=673,featureType=numerical,featureName=championship
+featureIndex=674,featureType=numerical,featureName=white
+featureIndex=675,featureType=numerical,featureName=120vac
+featureIndex=676,featureType=numerical,featureName=radio shack
+featureIndex=677,featureType=numerical,featureName=aerospac
+featureIndex=678,featureType=numerical,featureName=re space
+featureIndex=679,featureType=numerical,featureName=joseph dale fisher
+featureIndex=680,featureType=numerical,featureName=fisher subject
+featureIndex=681,featureType=numerical,featureName=pistol
+featureIndex=682,featureType=numerical,featureName=second amend
+featureIndex=683,featureType=numerical,featureName=jewish
+featureIndex=684,featureType=numerical,featureName=polici research
+featureIndex=685,featureType=numerical,featureName=christian moral
+featureIndex=686,featureType=numerical,featureName=charlei wingat
+featureIndex=687,featureType=numerical,featureName=photoshop
+featureIndex=688,featureType=numerical,featureName=cview
+featureIndex=689,featureType=numerical,featureName=mpeg
+featureIndex=690,featureType=numerical,featureName=ghhwang
+featureIndex=691,featureType=numerical,featureName=wp
+featureIndex=692,featureType=numerical,featureName=my mous
+featureIndex=693,featureType=numerical,featureName=latonia
+featureIndex=694,featureType=numerical,featureName=17 monitor
+featureIndex=695,featureType=numerical,featureName=monitor organ
+featureIndex=696,featureType=numerical,featureName=68040
+featureIndex=697,featureType=numerical,featureName=warrenti
+featureIndex=698,featureType=numerical,featureName=040
+featureIndex=699,featureType=numerical,featureName=tvtwm
+featureIndex=700,featureType=numerical,featureName=event
+featureIndex=701,featureType=numerical,featureName=handler
+featureIndex=702,featureType=numerical,featureName=expos event
+featureIndex=703,featureType=numerical,featureName=unregist
+featureIndex=704,featureType=numerical,featureName=25.00
+featureIndex=705,featureType=numerical,featureName=must sell
+featureIndex=706,featureType=numerical,featureName=champion_________________
+featureIndex=707,featureType=numerical,featureName=kawasaki
+featureIndex=708,featureType=numerical,featureName=aaa
+featureIndex=709,featureType=numerical,featureName=ted frank
+featureIndex=710,featureType=numerical,featureName=damphouss
+featureIndex=711,featureType=numerical,featureName=winnipeg jet
+featureIndex=712,featureType=numerical,featureName=re onc tap your code
+featureIndex=713,featureType=numerical,featureName=re onc tap
+featureIndex=714,featureType=numerical,featureName=onc tap
+featureIndex=715,featureType=numerical,featureName=256k
+featureIndex=716,featureType=numerical,featureName=vanderbyl
+featureIndex=717,featureType=numerical,featureName=subject re scienc
+featureIndex=718,featureType=numerical,featureName=sensit superstit
+featureIndex=719,featureType=numerical,featureName=orion
+featureIndex=720,featureType=numerical,featureName=discuss
+featureIndex=721,featureType=numerical,featureName=hell organ
+featureIndex=722,featureType=numerical,featureName=re accept
+featureIndex=723,featureType=numerical,featureName=heart organ
+featureIndex=724,featureType=numerical,featureName=deer
+featureIndex=725,featureType=numerical,featureName=atf burn dividian
+featureIndex=726,featureType=numerical,featureName=cypru
+featureIndex=727,featureType=numerical,featureName=vat
+featureIndex=728,featureType=numerical,featureName=ipser
+featureIndex=729,featureType=numerical,featureName=top ten
+featureIndex=730,featureType=numerical,featureName=re top ten
+featureIndex=731,featureType=numerical,featureName=subject re top ten
+featureIndex=732,featureType=numerical,featureName=slick willi
+featureIndex=733,featureType=numerical,featureName=health care
+featureIndex=734,featureType=numerical,featureName=incom tax
+featureIndex=735,featureType=numerical,featureName=rosicrucian
+featureIndex=736,featureType=numerical,featureName=oto
+featureIndex=737,featureType=numerical,featureName=ch981
+featureIndex=738,featureType=numerical,featureName=93 god promis
+featureIndex=739,featureType=numerical,featureName=kent sandvik
+featureIndex=740,featureType=numerical,featureName=program
+featureIndex=741,featureType=numerical,featureName=c program
+featureIndex=742,featureType=numerical,featureName=tiff philosoph signific
+featureIndex=743,featureType=numerical,featureName=file manag
+featureIndex=744,featureType=numerical,featureName=os 2
+featureIndex=745,featureType=numerical,featureName=re mac
+featureIndex=746,featureType=numerical,featureName=openlook
+featureIndex=747,featureType=numerical,featureName=callback
+featureIndex=748,featureType=numerical,featureName=ask
+featureIndex=749,featureType=numerical,featureName=subject re
+featureIndex=750,featureType=numerical,featureName=work condit
+featureIndex=751,featureType=numerical,featureName=pleas contact me
+featureIndex=752,featureType=numerical,featureName=chrysler
+featureIndex=753,featureType=numerical,featureName=motorcyclist
+featureIndex=754,featureType=numerical,featureName=tharp
+featureIndex=755,featureType=numerical,featureName=he
+featureIndex=756,featureType=numerical,featureName=dave kingman
+featureIndex=757,featureType=numerical,featureName=plu minu stat
+featureIndex=758,featureType=numerical,featureName=phone
+featureIndex=759,featureType=numerical,featureName=switch
+featureIndex=760,featureType=numerical,featureName=design
+featureIndex=761,featureType=numerical,featureName=connect
+featureIndex=762,featureType=numerical,featureName=venu
+featureIndex=763,featureType=numerical,featureName=abstin
+featureIndex=764,featureType=numerical,featureName=two peopl marri
+featureIndex=765,featureType=numerical,featureName=jesu christ
+featureIndex=766,featureType=numerical,featureName=daric
+featureIndex=767,featureType=numerical,featureName=re islam
+featureIndex=768,featureType=numerical,featureName=quicktim
+featureIndex=769,featureType=numerical,featureName=targa
+featureIndex=770,featureType=numerical,featureName=1 meg
+featureIndex=771,featureType=numerical,featureName=techwork
+featureIndex=772,featureType=numerical,featureName=subject re quadra
+featureIndex=773,featureType=numerical,featureName=subject x
+featureIndex=774,featureType=numerical,featureName=displai i
+featureIndex=775,featureType=numerical,featureName=summer
+featureIndex=776,featureType=numerical,featureName=sublet
+featureIndex=777,featureType=numerical,featureName=40.00
+featureIndex=778,featureType=numerical,featureName=subject want
+featureIndex=779,featureType=numerical,featureName=mail you
+featureIndex=780,featureType=numerical,featureName=center distribut
+featureIndex=781,featureType=numerical,featureName=want organ
+featureIndex=782,featureType=numerical,featureName=jeep
+featureIndex=783,featureType=numerical,featureName=frost
+featureIndex=784,featureType=numerical,featureName=dealership
+featureIndex=785,featureType=numerical,featureName=year
+featureIndex=786,featureType=numerical,featureName=beat
+featureIndex=787,featureType=numerical,featureName=cain
+featureIndex=788,featureType=numerical,featureName=bit kei
+featureIndex=789,featureType=numerical,featureName=graham toal
+featureIndex=790,featureType=numerical,featureName=sell them
+featureIndex=791,featureType=numerical,featureName=antibiot
+featureIndex=792,featureType=numerical,featureName=kenneth gilbert
+featureIndex=793,featureType=numerical,featureName=krillean photographi
+featureIndex=794,featureType=numerical,featureName=sherzer
+featureIndex=795,featureType=numerical,featureName=dietz
+featureIndex=796,featureType=numerical,featureName=nickh
+featureIndex=797,featureType=numerical,featureName=peopl
+featureIndex=798,featureType=numerical,featureName=question from
+featureIndex=799,featureType=numerical,featureName=feder
+featureIndex=800,featureType=numerical,featureName=broward
+featureIndex=801,featureType=numerical,featureName=drieux
+featureIndex=802,featureType=numerical,featureName=templar
+featureIndex=803,featureType=numerical,featureName=svga card
+featureIndex=804,featureType=numerical,featureName=system.ini
+featureIndex=805,featureType=numerical,featureName=you set
+featureIndex=806,featureType=numerical,featureName=80486dx
+featureIndex=807,featureType=numerical,featureName=scsi control
+featureIndex=808,featureType=numerical,featureName=video card
+featureIndex=809,featureType=numerical,featureName=syquest
+featureIndex=810,featureType=numerical,featureName=sun
+featureIndex=811,featureType=numerical,featureName=sun 3
+featureIndex=812,featureType=numerical,featureName=mail server
+featureIndex=813,featureType=numerical,featureName=i
+featureIndex=814,featureType=numerical,featureName=jim frost
+featureIndex=815,featureType=numerical,featureName=ducati
+featureIndex=816,featureType=numerical,featureName=transistor
+featureIndex=817,featureType=numerical,featureName=project
+featureIndex=818,featureType=numerical,featureName=hezbollah organ
+featureIndex=819,featureType=numerical,featureName=kent sandvik subject re
+featureIndex=820,featureType=numerical,featureName=24 bit
+featureIndex=821,featureType=numerical,featureName=atm
+featureIndex=822,featureType=numerical,featureName=1280x1024
+featureIndex=823,featureType=numerical,featureName=72
+featureIndex=824,featureType=numerical,featureName=scsi interfac
+featureIndex=825,featureType=numerical,featureName=cd rom
+featureIndex=826,featureType=numerical,featureName=implement
+featureIndex=827,featureType=numerical,featureName=draw
+featureIndex=828,featureType=numerical,featureName=code i
+featureIndex=829,featureType=numerical,featureName=x y
+featureIndex=830,featureType=numerical,featureName=want
+featureIndex=831,featureType=numerical,featureName=holm
+featureIndex=832,featureType=numerical,featureName=35.00
+featureIndex=833,featureType=numerical,featureName=univers comput center line
+featureIndex=834,featureType=numerical,featureName=line 18 nntp post host
+featureIndex=835,featureType=numerical,featureName=4wd
+featureIndex=836,featureType=numerical,featureName=tailgat
+featureIndex=837,featureType=numerical,featureName=motorc
+featureIndex=838,featureType=numerical,featureName=bdi
+featureIndex=839,featureType=numerical,featureName=eff.org
+featureIndex=840,featureType=numerical,featureName=inov
+featureIndex=841,featureType=numerical,featureName=xc68882rc33
+featureIndex=842,featureType=numerical,featureName=fund
+featureIndex=843,featureType=numerical,featureName=religi
+featureIndex=844,featureType=numerical,featureName=from god
+featureIndex=845,featureType=numerical,featureName=onc we
+featureIndex=846,featureType=numerical,featureName=peopl becom atheist
+featureIndex=847,featureType=numerical,featureName=gt6511a
+featureIndex=848,featureType=numerical,featureName=thomasp
+featureIndex=849,featureType=numerical,featureName=american
+featureIndex=850,featureType=numerical,featureName=consum
+featureIndex=851,featureType=numerical,featureName=re employ
+featureIndex=852,featureType=numerical,featureName=kendig
+featureIndex=853,featureType=numerical,featureName=subject re biblic
+featureIndex=854,featureType=numerical,featureName=koresh 3
+featureIndex=855,featureType=numerical,featureName=raytrac
+featureIndex=856,featureType=numerical,featureName=netwar
+featureIndex=857,featureType=numerical,featureName=2
+featureIndex=858,featureType=numerical,featureName=sound card
+featureIndex=859,featureType=numerical,featureName=trade
+featureIndex=860,featureType=numerical,featureName=jimf
+featureIndex=861,featureType=numerical,featureName=jimf centerline.com jim
+featureIndex=862,featureType=numerical,featureName=rickei
+featureIndex=863,featureType=numerical,featureName=ulf
+featureIndex=864,featureType=numerical,featureName=sweden
+featureIndex=865,featureType=numerical,featureName=walker
+featureIndex=866,featureType=numerical,featureName=led
+featureIndex=867,featureType=numerical,featureName=did he realli rise
+featureIndex=868,featureType=numerical,featureName=new studi
+featureIndex=869,featureType=numerical,featureName=pooh.bear
+featureIndex=870,featureType=numerical,featureName=bsa
+featureIndex=871,featureType=numerical,featureName=bit per
+featureIndex=872,featureType=numerical,featureName=8 bit
+featureIndex=873,featureType=numerical,featureName=nz
+featureIndex=874,featureType=numerical,featureName=0 m
+featureIndex=875,featureType=numerical,featureName=2m
+featureIndex=876,featureType=numerical,featureName=guykuo
+featureIndex=877,featureType=numerical,featureName=clock speed
+featureIndex=878,featureType=numerical,featureName=redraw
+featureIndex=879,featureType=numerical,featureName=xwindow
+featureIndex=880,featureType=numerical,featureName=window manag
+featureIndex=881,featureType=numerical,featureName=x organ
+featureIndex=882,featureType=numerical,featureName=n x
+featureIndex=883,featureType=numerical,featureName=ega
+featureIndex=884,featureType=numerical,featureName=mail list
+featureIndex=885,featureType=numerical,featureName=wharfi
+featureIndex=886,featureType=numerical,featureName=jame p callison
+featureIndex=887,featureType=numerical,featureName=t bird
+featureIndex=888,featureType=numerical,featureName=ranck
+featureIndex=889,featureType=numerical,featureName=moa
+featureIndex=890,featureType=numerical,featureName=npet bnr.ca
+featureIndex=891,featureType=numerical,featureName=blain gardner
+featureIndex=892,featureType=numerical,featureName=uniform
+featureIndex=893,featureType=numerical,featureName=teal
+featureIndex=894,featureType=numerical,featureName=go
+featureIndex=895,featureType=numerical,featureName=blackhawk
+featureIndex=896,featureType=numerical,featureName=ottawa
+featureIndex=897,featureType=numerical,featureName=let go
+featureIndex=898,featureType=numerical,featureName=keyseach
+featureIndex=899,featureType=numerical,featureName=1016
+featureIndex=900,featureType=numerical,featureName=brute
+featureIndex=901,featureType=numerical,featureName=wiretap chip
+featureIndex=902,featureType=numerical,featureName=microcontrol
+featureIndex=903,featureType=numerical,featureName=bui them
+featureIndex=904,featureType=numerical,featureName=effect
+featureIndex=905,featureType=numerical,featureName=side effect
+featureIndex=906,featureType=numerical,featureName=urepli
+featureIndex=907,featureType=numerical,featureName=nicho
+featureIndex=908,featureType=numerical,featureName=1 billion
+featureIndex=909,featureType=numerical,featureName=bill higgin
+featureIndex=910,featureType=numerical,featureName=dc x
+featureIndex=911,featureType=numerical,featureName=first flight
+featureIndex=912,featureType=numerical,featureName=petch
+featureIndex=913,featureType=numerical,featureName=sorenson
+featureIndex=914,featureType=numerical,featureName=34aej7d
+featureIndex=915,featureType=numerical,featureName=hunt
+featureIndex=916,featureType=numerical,featureName=tear ga
+featureIndex=917,featureType=numerical,featureName=dan sorenson
+featureIndex=918,featureType=numerical,featureName=dean
+featureIndex=919,featureType=numerical,featureName=nation
+featureIndex=920,featureType=numerical,featureName=trial
+featureIndex=921,featureType=numerical,featureName=jmeritt
+featureIndex=922,featureType=numerical,featureName=siggraph
+featureIndex=923,featureType=numerical,featureName=thank
+featureIndex=924,featureType=numerical,featureName=16 bit
+featureIndex=925,featureType=numerical,featureName=print
+featureIndex=926,featureType=numerical,featureName=workgroup
+featureIndex=927,featureType=numerical,featureName=w4wg
+featureIndex=928,featureType=numerical,featureName=esdi
+featureIndex=929,featureType=numerical,featureName=adaptec
+featureIndex=930,featureType=numerical,featureName=mother board
+featureIndex=931,featureType=numerical,featureName=ii
+featureIndex=932,featureType=numerical,featureName=hernandez
+featureIndex=933,featureType=numerical,featureName=stephenson
+featureIndex=934,featureType=numerical,featureName=book
+featureIndex=935,featureType=numerical,featureName=kolstad
+featureIndex=936,featureType=numerical,featureName=liver
+featureIndex=937,featureType=numerical,featureName=mussack
+featureIndex=938,featureType=numerical,featureName=lee
+featureIndex=939,featureType=numerical,featureName=object valu
+featureIndex=940,featureType=numerical,featureName=re christian
+featureIndex=941,featureType=numerical,featureName=thank mark
+featureIndex=942,featureType=numerical,featureName=hercul
+featureIndex=943,featureType=numerical,featureName=eckton
+featureIndex=944,featureType=numerical,featureName=defrag
+featureIndex=945,featureType=numerical,featureName=aew
+featureIndex=946,featureType=numerical,featureName=western
+featureIndex=947,featureType=numerical,featureName=16550
+featureIndex=948,featureType=numerical,featureName=iici
+featureIndex=949,featureType=numerical,featureName=creat
+featureIndex=950,featureType=numerical,featureName=auction
+featureIndex=951,featureType=numerical,featureName=20,000
+featureIndex=952,featureType=numerical,featureName=chevi
+featureIndex=953,featureType=numerical,featureName=organ evan sutherland comput
+featureIndex=954,featureType=numerical,featureName=hrivnak
+featureIndex=955,featureType=numerical,featureName=bontchev
+featureIndex=956,featureType=numerical,featureName=vesselin
+featureIndex=957,featureType=numerical,featureName=health risk
+featureIndex=958,featureType=numerical,featureName=linguist
+featureIndex=959,featureType=numerical,featureName=cosmo
+featureIndex=960,featureType=numerical,featureName=presid
+featureIndex=961,featureType=numerical,featureName=social secur
+featureIndex=962,featureType=numerical,featureName=phill hallam baker
+featureIndex=963,featureType=numerical,featureName=sarver
+featureIndex=964,featureType=numerical,featureName=decenso
+featureIndex=965,featureType=numerical,featureName=re
+featureIndex=966,featureType=numerical,featureName=help
+featureIndex=967,featureType=numerical,featureName=2a42dubinski
+featureIndex=968,featureType=numerical,featureName=s3
+featureIndex=969,featureType=numerical,featureName=western digit
+featureIndex=970,featureType=numerical,featureName=sync
+featureIndex=971,featureType=numerical,featureName=jonathan
+featureIndex=972,featureType=numerical,featureName=kou
+featureIndex=973,featureType=numerical,featureName=cager
+featureIndex=974,featureType=numerical,featureName=next
+featureIndex=975,featureType=numerical,featureName=power
+featureIndex=976,featureType=numerical,featureName=power suppli
+featureIndex=977,featureType=numerical,featureName=re vandal
+featureIndex=978,featureType=numerical,featureName=space new
+featureIndex=979,featureType=numerical,featureName=verdict
+featureIndex=980,featureType=numerical,featureName=malcolm lee
+featureIndex=981,featureType=numerical,featureName=paul harvei
+featureIndex=982,featureType=numerical,featureName=re some thought
+featureIndex=983,featureType=numerical,featureName=univesa
+featureIndex=984,featureType=numerical,featureName=winqvt
+featureIndex=985,featureType=numerical,featureName=from
+featureIndex=986,featureType=numerical,featureName=cs3sd3ae
+featureIndex=987,featureType=numerical,featureName=xserver
+featureIndex=988,featureType=numerical,featureName=495
+featureIndex=989,featureType=numerical,featureName=ibm
+featureIndex=990,featureType=numerical,featureName=mutant
+featureIndex=991,featureType=numerical,featureName=math cs dept line
+featureIndex=992,featureType=numerical,featureName=denver math cs dept line
+featureIndex=993,featureType=numerical,featureName=nyx public access unix u
+featureIndex=994,featureType=numerical,featureName=ssave
+featureIndex=995,featureType=numerical,featureName=jnielsen
+featureIndex=996,featureType=numerical,featureName=lawyer
+featureIndex=997,featureType=numerical,featureName=over my
+featureIndex=998,featureType=numerical,featureName=belfour
+featureIndex=999,featureType=numerical,featureName=probert
+featureIndex=1000,featureType=numerical,featureName=keller
+featureIndex=1001,featureType=numerical,featureName=capriccioso
+featureIndex=1002,featureType=numerical,featureName=fifth amend
+featureIndex=1003,featureType=numerical,featureName=brute forc
+featureIndex=1004,featureType=numerical,featureName=1016 2ef221
+featureIndex=1005,featureType=numerical,featureName=clementin
+featureIndex=1006,featureType=numerical,featureName=buehler
+featureIndex=1007,featureType=numerical,featureName=hi life
+featureIndex=1008,featureType=numerical,featureName=i question
+featureIndex=1009,featureType=numerical,featureName=passport
+featureIndex=1010,featureType=numerical,featureName=mohammad
+featureIndex=1011,featureType=numerical,featureName=zionism
+featureIndex=1012,featureType=numerical,featureName=pro
+featureIndex=1013,featureType=numerical,featureName=free market
+featureIndex=1014,featureType=numerical,featureName=creationist
+featureIndex=1015,featureType=numerical,featureName=love
+featureIndex=1016,featureType=numerical,featureName=jesu di
+featureIndex=1017,featureType=numerical,featureName=do 6
+featureIndex=1018,featureType=numerical,featureName=32
+featureIndex=1019,featureType=numerical,featureName=1.44
+featureIndex=1020,featureType=numerical,featureName=24x
+featureIndex=1021,featureType=numerical,featureName=your pc
+featureIndex=1022,featureType=numerical,featureName=xdm
+featureIndex=1023,featureType=numerical,featureName=nntp
+featureIndex=1024,featureType=numerical,featureName=distribut ba
+featureIndex=1025,featureType=numerical,featureName=encrypt scheme
+featureIndex=1026,featureType=numerical,featureName=schemat
+featureIndex=1027,featureType=numerical,featureName=jr subject re
+featureIndex=1028,featureType=numerical,featureName=nf from cdp.uucp
+featureIndex=1029,featureType=numerical,featureName=soc.motss
+featureIndex=1030,featureType=numerical,featureName=said
+featureIndex=1031,featureType=numerical,featureName=ingl
+featureIndex=1032,featureType=numerical,featureName=problem
+featureIndex=1033,featureType=numerical,featureName=18 nntp post
+featureIndex=1034,featureType=numerical,featureName=state univers distribut
+featureIndex=1035,featureType=numerical,featureName=intern modem
+featureIndex=1036,featureType=numerical,featureName=prelud
+featureIndex=1037,featureType=numerical,featureName=devil reincarn
+featureIndex=1038,featureType=numerical,featureName=automat transmiss
+featureIndex=1039,featureType=numerical,featureName=vax5
+featureIndex=1040,featureType=numerical,featureName=chp
+featureIndex=1041,featureType=numerical,featureName=boell
+featureIndex=1042,featureType=numerical,featureName=octopu
+featureIndex=1043,featureType=numerical,featureName=tempest
+featureIndex=1044,featureType=numerical,featureName=fluke
+featureIndex=1045,featureType=numerical,featureName=have gotten
+featureIndex=1046,featureType=numerical,featureName=nicol
+featureIndex=1047,featureType=numerical,featureName=english
+featureIndex=1048,featureType=numerical,featureName=d andrew byler
+featureIndex=1049,featureType=numerical,featureName=reword
+featureIndex=1050,featureType=numerical,featureName=garfiel
+featureIndex=1051,featureType=numerical,featureName=alphalpha
+featureIndex=1052,featureType=numerical,featureName=prolin
+featureIndex=1053,featureType=numerical,featureName=litig
+featureIndex=1054,featureType=numerical,featureName=free speech
+featureIndex=1055,featureType=numerical,featureName=muhammad
+featureIndex=1056,featureType=numerical,featureName=lesbian
+featureIndex=1057,featureType=numerical,featureName=re who next mormon
+featureIndex=1058,featureType=numerical,featureName=mirror
+featureIndex=1059,featureType=numerical,featureName=subject help
+featureIndex=1060,featureType=numerical,featureName=emm386
+featureIndex=1061,featureType=numerical,featureName=id card
+featureIndex=1062,featureType=numerical,featureName=card you
+featureIndex=1063,featureType=numerical,featureName=unplug
+featureIndex=1064,featureType=numerical,featureName=ctrl
+featureIndex=1065,featureType=numerical,featureName=mydisplai
+featureIndex=1066,featureType=numerical,featureName=internet line
+featureIndex=1067,featureType=numerical,featureName=e mail address
+featureIndex=1068,featureType=numerical,featureName=subject re warn pleas read
+featureIndex=1069,featureType=numerical,featureName=simmon
+featureIndex=1070,featureType=numerical,featureName=phone call
+featureIndex=1071,featureType=numerical,featureName=diod
+featureIndex=1072,featureType=numerical,featureName=mri
+featureIndex=1073,featureType=numerical,featureName=bibl sai
+featureIndex=1074,featureType=numerical,featureName=etern damnat
+featureIndex=1075,featureType=numerical,featureName=hci
+featureIndex=1076,featureType=numerical,featureName=cipriani
+featureIndex=1077,featureType=numerical,featureName=dogfight
+featureIndex=1078,featureType=numerical,featureName=trinitron
+featureIndex=1079,featureType=numerical,featureName=goyal
+featureIndex=1080,featureType=numerical,featureName=1.1 pl5
+featureIndex=1081,featureType=numerical,featureName=iicx
+featureIndex=1082,featureType=numerical,featureName=root
+featureIndex=1083,featureType=numerical,featureName=panason
+featureIndex=1084,featureType=numerical,featureName=andyh
+featureIndex=1085,featureType=numerical,featureName=neck
+featureIndex=1086,featureType=numerical,featureName=c4wkfs.bc1
+featureIndex=1087,featureType=numerical,featureName=daigl
+featureIndex=1088,featureType=numerical,featureName=sugra.uucp
+featureIndex=1089,featureType=numerical,featureName=amolitor nmsu.edu
+featureIndex=1090,featureType=numerical,featureName=phosphor
+featureIndex=1091,featureType=numerical,featureName=spdcc.com steve dyer
+featureIndex=1092,featureType=numerical,featureName=steve dyer
+featureIndex=1093,featureType=numerical,featureName=author
+featureIndex=1094,featureType=numerical,featureName=rolf
+featureIndex=1095,featureType=numerical,featureName=who give
+featureIndex=1096,featureType=numerical,featureName=sin organ
+featureIndex=1097,featureType=numerical,featureName=keren
+featureIndex=1098,featureType=numerical,featureName=666
+featureIndex=1099,featureType=numerical,featureName=mr presid how do you know what happen
+featureIndex=1100,featureType=numerical,featureName=you mr presid
+featureIndex=1101,featureType=numerical,featureName=9000
+featureIndex=1102,featureType=numerical,featureName=orchid
+featureIndex=1103,featureType=numerical,featureName=tech support
+featureIndex=1104,featureType=numerical,featureName=sne
+featureIndex=1105,featureType=numerical,featureName=subject re clipper
+featureIndex=1106,featureType=numerical,featureName=ey
+featureIndex=1107,featureType=numerical,featureName=assembl
+featureIndex=1108,featureType=numerical,featureName=jesu di organ
+featureIndex=1109,featureType=numerical,featureName=subject re need
+featureIndex=1110,featureType=numerical,featureName=devilbiss
+featureIndex=1111,featureType=numerical,featureName=memori manag
+featureIndex=1112,featureType=numerical,featureName=x86
+featureIndex=1113,featureType=numerical,featureName=right hand
+featureIndex=1114,featureType=numerical,featureName=pedal
+featureIndex=1115,featureType=numerical,featureName=automat
+featureIndex=1116,featureType=numerical,featureName=freon
+featureIndex=1117,featureType=numerical,featureName=asphaug
+featureIndex=1118,featureType=numerical,featureName=world seri
+featureIndex=1119,featureType=numerical,featureName=heard he
+featureIndex=1120,featureType=numerical,featureName=kingston
+featureIndex=1121,featureType=numerical,featureName=fewer
+featureIndex=1122,featureType=numerical,featureName=stampfli
+featureIndex=1123,featureType=numerical,featureName=anonym
+featureIndex=1124,featureType=numerical,featureName=announc organ
+featureIndex=1125,featureType=numerical,featureName=disk copi protect
+featureIndex=1126,featureType=numerical,featureName=copi protect
+featureIndex=1127,featureType=numerical,featureName=prozac
+featureIndex=1128,featureType=numerical,featureName=proton
+featureIndex=1129,featureType=numerical,featureName=i knew
+featureIndex=1130,featureType=numerical,featureName=larouch
+featureIndex=1131,featureType=numerical,featureName=riddl
+featureIndex=1132,featureType=numerical,featureName=gritz
+featureIndex=1133,featureType=numerical,featureName=christic
+featureIndex=1134,featureType=numerical,featureName=danni
+featureIndex=1135,featureType=numerical,featureName=arm embargo
+featureIndex=1136,featureType=numerical,featureName=boomer
+featureIndex=1137,featureType=numerical,featureName=do you know what happen organ
+featureIndex=1138,featureType=numerical,featureName=erickson
+featureIndex=1139,featureType=numerical,featureName=interleav
+featureIndex=1140,featureType=numerical,featureName=return
+featureIndex=1141,featureType=numerical,featureName=multi
+featureIndex=1142,featureType=numerical,featureName=5
+featureIndex=1143,featureType=numerical,featureName=tercel
+featureIndex=1144,featureType=numerical,featureName=bullpen
+featureIndex=1145,featureType=numerical,featureName=tv
+featureIndex=1146,featureType=numerical,featureName=more secur
+featureIndex=1147,featureType=numerical,featureName=practition
+featureIndex=1148,featureType=numerical,featureName=basil
+featureIndex=1149,featureType=numerical,featureName=liber
+featureIndex=1150,featureType=numerical,featureName=dgraham
+featureIndex=1151,featureType=numerical,featureName=ann miller
+featureIndex=1152,featureType=numerical,featureName=mathew mathew
+featureIndex=1153,featureType=numerical,featureName=bj200
+featureIndex=1154,featureType=numerical,featureName=access
+featureIndex=1155,featureType=numerical,featureName=macus
+featureIndex=1156,featureType=numerical,featureName=xmovewindow
+featureIndex=1157,featureType=numerical,featureName=i'm run
+featureIndex=1158,featureType=numerical,featureName=state.edu
+featureIndex=1159,featureType=numerical,featureName=aftermarket
+featureIndex=1160,featureType=numerical,featureName=riceburn
+featureIndex=1161,featureType=numerical,featureName=rec.motorcycl
+featureIndex=1162,featureType=numerical,featureName=andrew infant write
+featureIndex=1163,featureType=numerical,featureName=roth
+featureIndex=1164,featureType=numerical,featureName=homerun
+featureIndex=1165,featureType=numerical,featureName=ncaa
+featureIndex=1166,featureType=numerical,featureName=kubo
+featureIndex=1167,featureType=numerical,featureName=abstract
+featureIndex=1168,featureType=numerical,featureName=secret sourc
+featureIndex=1169,featureType=numerical,featureName=200th
+featureIndex=1170,featureType=numerical,featureName=subject re vandal
+featureIndex=1171,featureType=numerical,featureName=scholarship
+featureIndex=1172,featureType=numerical,featureName=last week
+featureIndex=1173,featureType=numerical,featureName=fcrari
+featureIndex=1174,featureType=numerical,featureName=j979
+featureIndex=1175,featureType=numerical,featureName=gass
+featureIndex=1176,featureType=numerical,featureName=b8ha
+featureIndex=1177,featureType=numerical,featureName=nysernet
+featureIndex=1178,featureType=numerical,featureName=somalia
+featureIndex=1179,featureType=numerical,featureName=bony.com jake
+featureIndex=1180,featureType=numerical,featureName=marijuana
+featureIndex=1181,featureType=numerical,featureName=do you know what happen
+featureIndex=1182,featureType=numerical,featureName=death penalti
+featureIndex=1183,featureType=numerical,featureName=winword
+featureIndex=1184,featureType=numerical,featureName=harddisk
+featureIndex=1185,featureType=numerical,featureName=trunk
+featureIndex=1186,featureType=numerical,featureName=i bui
+featureIndex=1187,featureType=numerical,featureName=cbr
+featureIndex=1188,featureType=numerical,featureName=hall
+featureIndex=1189,featureType=numerical,featureName=advertis
+featureIndex=1190,featureType=numerical,featureName=liter
+featureIndex=1191,featureType=numerical,featureName=ronzon
+featureIndex=1192,featureType=numerical,featureName=bubblejet
+featureIndex=1193,featureType=numerical,featureName=i486
+featureIndex=1194,featureType=numerical,featureName=amd
+featureIndex=1195,featureType=numerical,featureName=pentium
+featureIndex=1196,featureType=numerical,featureName=have similar
+featureIndex=1197,featureType=numerical,featureName=postal
+featureIndex=1198,featureType=numerical,featureName=tific
+featureIndex=1199,featureType=numerical,featureName=mail order
+featureIndex=1200,featureType=numerical,featureName=bumper
+featureIndex=1201,featureType=numerical,featureName=organ bell
+featureIndex=1202,featureType=numerical,featureName=bgardner
+featureIndex=1203,featureType=numerical,featureName=82
+featureIndex=1204,featureType=numerical,featureName=cb750
+featureIndex=1205,featureType=numerical,featureName=backfir
+featureIndex=1206,featureType=numerical,featureName=subject re countersteering_faq pleas
+featureIndex=1207,featureType=numerical,featureName=wfan
+featureIndex=1208,featureType=numerical,featureName=cab
+featureIndex=1209,featureType=numerical,featureName=moonbas
+featureIndex=1210,featureType=numerical,featureName=post
+featureIndex=1211,featureType=numerical,featureName=rutledg
+featureIndex=1212,featureType=numerical,featureName=gannon
+featureIndex=1213,featureType=numerical,featureName=arafat
+featureIndex=1214,featureType=numerical,featureName=ethnic cleans
+featureIndex=1215,featureType=numerical,featureName=do you know what
+featureIndex=1216,featureType=numerical,featureName=6
+featureIndex=1217,featureType=numerical,featureName=how can i
+featureIndex=1218,featureType=numerical,featureName=do i need
+featureIndex=1219,featureType=numerical,featureName=245
+featureIndex=1220,featureType=numerical,featureName=pc xt
+featureIndex=1221,featureType=numerical,featureName=s l
+featureIndex=1222,featureType=numerical,featureName=all origin
+featureIndex=1223,featureType=numerical,featureName=all standard
+featureIndex=1224,featureType=numerical,featureName=discomfort
+featureIndex=1225,featureType=numerical,featureName=larri cipriani
+featureIndex=1226,featureType=numerical,featureName=child molest
+featureIndex=1227,featureType=numerical,featureName=leger
+featureIndex=1228,featureType=numerical,featureName=tseng
+featureIndex=1229,featureType=numerical,featureName=impuls
+featureIndex=1230,featureType=numerical,featureName=infoworld
+featureIndex=1231,featureType=numerical,featureName=haapanen
+featureIndex=1232,featureType=numerical,featureName=have 2
+featureIndex=1233,featureType=numerical,featureName=480
+featureIndex=1234,featureType=numerical,featureName=cie
+featureIndex=1235,featureType=numerical,featureName=sunnyt
+featureIndex=1236,featureType=numerical,featureName=band
+featureIndex=1237,featureType=numerical,featureName=att
+featureIndex=1238,featureType=numerical,featureName=eliot
+featureIndex=1239,featureType=numerical,featureName=woof
+featureIndex=1240,featureType=numerical,featureName=royal
+featureIndex=1241,featureType=numerical,featureName=tee
+featureIndex=1242,featureType=numerical,featureName=sourc
+featureIndex=1243,featureType=numerical,featureName=donald_macki
+featureIndex=1244,featureType=numerical,featureName=anoth
+featureIndex=1245,featureType=numerical,featureName=come true
+featureIndex=1246,featureType=numerical,featureName=cathi
+featureIndex=1247,featureType=numerical,featureName=harvard univers line
+featureIndex=1248,featureType=numerical,featureName=kyle
+featureIndex=1249,featureType=numerical,featureName=qur'an
+featureIndex=1250,featureType=numerical,featureName=3 02
+featureIndex=1251,featureType=numerical,featureName=thou shalt
+featureIndex=1252,featureType=numerical,featureName=wallpap
+featureIndex=1253,featureType=numerical,featureName=walford
+featureIndex=1254,featureType=numerical,featureName=arcad
+featureIndex=1255,featureType=numerical,featureName=moto
+featureIndex=1256,featureType=numerical,featureName=pillion
+featureIndex=1257,featureType=numerical,featureName=speedi
+featureIndex=1258,featureType=numerical,featureName=infield
+featureIndex=1259,featureType=numerical,featureName=drug us
+featureIndex=1260,featureType=numerical,featureName=ccw
+featureIndex=1261,featureType=numerical,featureName=hama
+featureIndex=1262,featureType=numerical,featureName=visit from
+featureIndex=1263,featureType=numerical,featureName=jumpi
+featureIndex=1264,featureType=numerical,featureName=find out
+featureIndex=1265,featureType=numerical,featureName=gw2000
+featureIndex=1266,featureType=numerical,featureName=porsch
+featureIndex=1267,featureType=numerical,featureName=cookson
+featureIndex=1268,featureType=numerical,featureName=my sourc
+featureIndex=1269,featureType=numerical,featureName=after he
+featureIndex=1270,featureType=numerical,featureName=speedo
+featureIndex=1271,featureType=numerical,featureName=lcd
+featureIndex=1272,featureType=numerical,featureName=ob
+featureIndex=1273,featureType=numerical,featureName=kingdom
+featureIndex=1274,featureType=numerical,featureName=wasn't
+featureIndex=1275,featureType=numerical,featureName=professor
+featureIndex=1276,featureType=numerical,featureName=texan
+featureIndex=1277,featureType=numerical,featureName=costli
+featureIndex=1278,featureType=numerical,featureName=ballot
+featureIndex=1279,featureType=numerical,featureName=reitman
+featureIndex=1280,featureType=numerical,featureName=adject
+featureIndex=1281,featureType=numerical,featureName=molest organ
+featureIndex=1282,featureType=numerical,featureName=pmy
+featureIndex=1283,featureType=numerical,featureName=love god
+featureIndex=1284,featureType=numerical,featureName=john w
+featureIndex=1285,featureType=numerical,featureName=amus atheist
+featureIndex=1286,featureType=numerical,featureName=phig
+featureIndex=1287,featureType=numerical,featureName=radios
+featureIndex=1288,featureType=numerical,featureName=frame buffer
+featureIndex=1289,featureType=numerical,featureName=trintex.uucp
+featureIndex=1290,featureType=numerical,featureName=collin co
+featureIndex=1291,featureType=numerical,featureName=undefin
+featureIndex=1292,featureType=numerical,featureName=mazda
+featureIndex=1293,featureType=numerical,featureName=morri organ
+featureIndex=1294,featureType=numerical,featureName=buf
+featureIndex=1295,featureType=numerical,featureName=protein
+featureIndex=1296,featureType=numerical,featureName=liquid
+featureIndex=1297,featureType=numerical,featureName=free moral
+featureIndex=1298,featureType=numerical,featureName=from mathew mathew
+featureIndex=1299,featureType=numerical,featureName=walter
+featureIndex=1300,featureType=numerical,featureName=imagin
+featureIndex=1301,featureType=numerical,featureName=macro
+featureIndex=1302,featureType=numerical,featureName=doe anybodi know
+featureIndex=1303,featureType=numerical,featureName=shaw
+featureIndex=1304,featureType=numerical,featureName=xdrawlin
+featureIndex=1305,featureType=numerical,featureName=etiquett
+featureIndex=1306,featureType=numerical,featureName=i am
+featureIndex=1307,featureType=numerical,featureName=rapw20
+featureIndex=1308,featureType=numerical,featureName=rmt6r
+featureIndex=1309,featureType=numerical,featureName=bui on
+featureIndex=1310,featureType=numerical,featureName=na4
+featureIndex=1311,featureType=numerical,featureName=klinger
+featureIndex=1312,featureType=numerical,featureName=distribut rec line
+featureIndex=1313,featureType=numerical,featureName=lupica
+featureIndex=1314,featureType=numerical,featureName=flame
+featureIndex=1315,featureType=numerical,featureName=confer
+featureIndex=1316,featureType=numerical,featureName=core hacker spook onli
+featureIndex=1317,featureType=numerical,featureName=hard core hacker
+featureIndex=1318,featureType=numerical,featureName=fujitsu
+featureIndex=1319,featureType=numerical,featureName=jdnicol
+featureIndex=1320,featureType=numerical,featureName=seven
+featureIndex=1321,featureType=numerical,featureName=cs89mcd
+featureIndex=1322,featureType=numerical,featureName=subject re question
+featureIndex=1323,featureType=numerical,featureName=cn
+featureIndex=1324,featureType=numerical,featureName=desertif
+featureIndex=1325,featureType=numerical,featureName=kkopp
+featureIndex=1326,featureType=numerical,featureName=justic
+featureIndex=1327,featureType=numerical,featureName=mark wilson write
+featureIndex=1328,featureType=numerical,featureName=man page
+featureIndex=1329,featureType=numerical,featureName=window system
+featureIndex=1330,featureType=numerical,featureName=2 8
+featureIndex=1331,featureType=numerical,featureName=svga monitor
+featureIndex=1332,featureType=numerical,featureName=xfree86
+featureIndex=1333,featureType=numerical,featureName=ttl
+featureIndex=1334,featureType=numerical,featureName=inflamm
+featureIndex=1335,featureType=numerical,featureName=amino
+featureIndex=1336,featureType=numerical,featureName=peac talk
+featureIndex=1337,featureType=numerical,featureName=mandtbacka
+featureIndex=1338,featureType=numerical,featureName=resiz
+featureIndex=1339,featureType=numerical,featureName=viewson
+featureIndex=1340,featureType=numerical,featureName=re monitor
+featureIndex=1341,featureType=numerical,featureName=screwdriv
+featureIndex=1342,featureType=numerical,featureName=give up
+featureIndex=1343,featureType=numerical,featureName=14.4k
+featureIndex=1344,featureType=numerical,featureName=re manual shift
+featureIndex=1345,featureType=numerical,featureName=rover
+featureIndex=1346,featureType=numerical,featureName=rz350
+featureIndex=1347,featureType=numerical,featureName=winona
+featureIndex=1348,featureType=numerical,featureName=miavx1
+featureIndex=1349,featureType=numerical,featureName=membran
+featureIndex=1350,featureType=numerical,featureName=rsilver
+featureIndex=1351,featureType=numerical,featureName=mohnei
+featureIndex=1352,featureType=numerical,featureName=sunset
+featureIndex=1353,featureType=numerical,featureName=seminari
+featureIndex=1354,featureType=numerical,featureName=aweslei
+featureIndex=1355,featureType=numerical,featureName=adl
+featureIndex=1356,featureType=numerical,featureName=yigal
+featureIndex=1357,featureType=numerical,featureName=statut
+featureIndex=1358,featureType=numerical,featureName=unit nation
+featureIndex=1359,featureType=numerical,featureName=purg
+featureIndex=1360,featureType=numerical,featureName=contour
+featureIndex=1361,featureType=numerical,featureName=chipset
+featureIndex=1362,featureType=numerical,featureName=crippl
+featureIndex=1363,featureType=numerical,featureName=more technic
+featureIndex=1364,featureType=numerical,featureName=allergi
+featureIndex=1365,featureType=numerical,featureName=centaur
+featureIndex=1366,featureType=numerical,featureName=30 dai
+featureIndex=1367,featureType=numerical,featureName=re satan
+featureIndex=1368,featureType=numerical,featureName=arm forc
+featureIndex=1369,featureType=numerical,featureName=hq campaign92 org clinton gore 92
+featureIndex=1370,featureType=numerical,featureName=o'dwyer i'm
+featureIndex=1371,featureType=numerical,featureName=24
+featureIndex=1372,featureType=numerical,featureName=paladin
+featureIndex=1373,featureType=numerical,featureName=allwai
+featureIndex=1374,featureType=numerical,featureName=macplu
+featureIndex=1375,featureType=numerical,featureName=jartsu
+featureIndex=1376,featureType=numerical,featureName=248
+featureIndex=1377,featureType=numerical,featureName=rjwade
+featureIndex=1378,featureType=numerical,featureName=roenick
+featureIndex=1379,featureType=numerical,featureName=pleshar
+featureIndex=1380,featureType=numerical,featureName=gile
+featureIndex=1381,featureType=numerical,featureName=atari
+featureIndex=1382,featureType=numerical,featureName=handed
+featureIndex=1383,featureType=numerical,featureName=silverberg
+featureIndex=1384,featureType=numerical,featureName=sunris
+featureIndex=1385,featureType=numerical,featureName=loss
+featureIndex=1386,featureType=numerical,featureName=pastor
+featureIndex=1387,featureType=numerical,featureName=repres
+featureIndex=1388,featureType=numerical,featureName=deir
+featureIndex=1389,featureType=numerical,featureName=jaa12
+featureIndex=1390,featureType=numerical,featureName=curtail
+featureIndex=1391,featureType=numerical,featureName=from steve
+featureIndex=1392,featureType=numerical,featureName=jumbo
+featureIndex=1393,featureType=numerical,featureName=68lc040
+featureIndex=1394,featureType=numerical,featureName=3 8
+featureIndex=1395,featureType=numerical,featureName=bob vesterman
+featureIndex=1396,featureType=numerical,featureName=anyon
+featureIndex=1397,featureType=numerical,featureName=analog
+featureIndex=1398,featureType=numerical,featureName=doe anyon out
+featureIndex=1399,featureType=numerical,featureName=recurr
+featureIndex=1400,featureType=numerical,featureName=steroid
+featureIndex=1401,featureType=numerical,featureName=g b
+featureIndex=1402,featureType=numerical,featureName=compuserv
+featureIndex=1403,featureType=numerical,featureName=charact
+featureIndex=1404,featureType=numerical,featureName=glang
+featureIndex=1405,featureType=numerical,featureName=floptic
+featureIndex=1406,featureType=numerical,featureName=xdefault
+featureIndex=1407,featureType=numerical,featureName=572
+featureIndex=1408,featureType=numerical,featureName=500
+featureIndex=1409,featureType=numerical,featureName=rlglend
+featureIndex=1410,featureType=numerical,featureName=pavement
+featureIndex=1411,featureType=numerical,featureName=freewai
+featureIndex=1412,featureType=numerical,featureName=ani inform
+featureIndex=1413,featureType=numerical,featureName=wat
+featureIndex=1414,featureType=numerical,featureName=moodi
+featureIndex=1415,featureType=numerical,featureName=wage
+featureIndex=1416,featureType=numerical,featureName=adher
+featureIndex=1417,featureType=numerical,featureName=columbia univers line
+featureIndex=1418,featureType=numerical,featureName=person who
+featureIndex=1419,featureType=numerical,featureName=lippard
+featureIndex=1420,featureType=numerical,featureName=organ tektronix inc beaverton
+featureIndex=1421,featureType=numerical,featureName=build
+featureIndex=1422,featureType=numerical,featureName=toner
+featureIndex=1423,featureType=numerical,featureName=randi
+featureIndex=1424,featureType=numerical,featureName=chamber
+featureIndex=1425,featureType=numerical,featureName=subject clinton
+featureIndex=1426,featureType=numerical,featureName=crchh410
+featureIndex=1427,featureType=numerical,featureName=mississauga
+featureIndex=1428,featureType=numerical,featureName=wait period
+featureIndex=1429,featureType=numerical,featureName=imak
+featureIndex=1430,featureType=numerical,featureName=d.j
+featureIndex=1431,featureType=numerical,featureName=handheld
+featureIndex=1432,featureType=numerical,featureName=mechan
+featureIndex=1433,featureType=numerical,featureName=baerga
+featureIndex=1434,featureType=numerical,featureName=gregmeist
+featureIndex=1435,featureType=numerical,featureName=mrr
+featureIndex=1436,featureType=numerical,featureName=kelsei
+featureIndex=1437,featureType=numerical,featureName=john kelsei
+featureIndex=1438,featureType=numerical,featureName=anyon know how
+featureIndex=1439,featureType=numerical,featureName=spot
+featureIndex=1440,featureType=numerical,featureName=pregnanc
+featureIndex=1441,featureType=numerical,featureName=draper
+featureIndex=1442,featureType=numerical,featureName=kfl
+featureIndex=1443,featureType=numerical,featureName=inform regard
+featureIndex=1444,featureType=numerical,featureName=imaginit
+featureIndex=1445,featureType=numerical,featureName=prado
+featureIndex=1446,featureType=numerical,featureName=somewhat
+featureIndex=1447,featureType=numerical,featureName=gov't
+featureIndex=1448,featureType=numerical,featureName=rodnei king
+featureIndex=1449,featureType=numerical,featureName=bhagavad
+featureIndex=1450,featureType=numerical,featureName=agnostic
+featureIndex=1451,featureType=numerical,featureName=delet
+featureIndex=1452,featureType=numerical,featureName=distribut world organ univers
+featureIndex=1453,featureType=numerical,featureName=brook
+featureIndex=1454,featureType=numerical,featureName=copper
+featureIndex=1455,featureType=numerical,featureName=comput system
+featureIndex=1456,featureType=numerical,featureName=inform system
+featureIndex=1457,featureType=numerical,featureName=comput engin
+featureIndex=1458,featureType=numerical,featureName=center
+featureIndex=1459,featureType=numerical,featureName=pww
+featureIndex=1460,featureType=numerical,featureName=tao
+featureIndex=1461,featureType=numerical,featureName=compaq
+featureIndex=1462,featureType=numerical,featureName=re free moral
+featureIndex=1463,featureType=numerical,featureName=rs6000
+featureIndex=1464,featureType=numerical,featureName=grant
+featureIndex=1465,featureType=numerical,featureName=cboesel
+featureIndex=1466,featureType=numerical,featureName=dewint
+featureIndex=1467,featureType=numerical,featureName=pinout
+featureIndex=1468,featureType=numerical,featureName=620
+featureIndex=1469,featureType=numerical,featureName=elegantli
+featureIndex=1470,featureType=numerical,featureName=repli via
+featureIndex=1471,featureType=numerical,featureName=curios
+featureIndex=1472,featureType=numerical,featureName=regal
+featureIndex=1473,featureType=numerical,featureName=bar
+featureIndex=1474,featureType=numerical,featureName=piec
+featureIndex=1475,featureType=numerical,featureName=sparki
+featureIndex=1476,featureType=numerical,featureName=k_mullin
+featureIndex=1477,featureType=numerical,featureName=finland line
+featureIndex=1478,featureType=numerical,featureName=rc2
+featureIndex=1479,featureType=numerical,featureName=morphin
+featureIndex=1480,featureType=numerical,featureName=ng4
+featureIndex=1481,featureType=numerical,featureName=nus.sg
+featureIndex=1482,featureType=numerical,featureName=put me
+featureIndex=1483,featureType=numerical,featureName=kh
+featureIndex=1484,featureType=numerical,featureName=never have
+featureIndex=1485,featureType=numerical,featureName=sai you'r
+featureIndex=1486,featureType=numerical,featureName=forc
+featureIndex=1487,featureType=numerical,featureName=fetu
+featureIndex=1488,featureType=numerical,featureName=cocain
+featureIndex=1489,featureType=numerical,featureName=stack
+featureIndex=1490,featureType=numerical,featureName=more monei
+featureIndex=1491,featureType=numerical,featureName=braunschweig
+featureIndex=1492,featureType=numerical,featureName=geometr
+featureIndex=1493,featureType=numerical,featureName=winmark
+featureIndex=1494,featureType=numerical,featureName=fusi
+featureIndex=1495,featureType=numerical,featureName=compon
+featureIndex=1496,featureType=numerical,featureName=allerg
+featureIndex=1497,featureType=numerical,featureName=pl1u
+featureIndex=1498,featureType=numerical,featureName=societ
+featureIndex=1499,featureType=numerical,featureName=pl3
+featureIndex=1500,featureType=numerical,featureName=win31
+featureIndex=1501,featureType=numerical,featureName=blaster
+featureIndex=1502,featureType=numerical,featureName=deskwrit
+featureIndex=1503,featureType=numerical,featureName=stylewrit
+featureIndex=1504,featureType=numerical,featureName=xrai
+featureIndex=1505,featureType=numerical,featureName=sunroof
+featureIndex=1506,featureType=numerical,featureName=irish
+featureIndex=1507,featureType=numerical,featureName=uc
+featureIndex=1508,featureType=numerical,featureName=sea
+featureIndex=1509,featureType=numerical,featureName=pill
+featureIndex=1510,featureType=numerical,featureName=well regul
+featureIndex=1511,featureType=numerical,featureName=ss
+featureIndex=1512,featureType=numerical,featureName=c5lp0y.fdk
+featureIndex=1513,featureType=numerical,featureName=o'har
+featureIndex=1514,featureType=numerical,featureName=broadcast
+featureIndex=1515,featureType=numerical,featureName=also read
+featureIndex=1516,featureType=numerical,featureName=sdk
+featureIndex=1517,featureType=numerical,featureName=rs
+featureIndex=1518,featureType=numerical,featureName=awd
+featureIndex=1519,featureType=numerical,featureName=maddi
+featureIndex=1520,featureType=numerical,featureName=buckminst
+featureIndex=1521,featureType=numerical,featureName=token
+featureIndex=1522,featureType=numerical,featureName=ndi
+featureIndex=1523,featureType=numerical,featureName=qemm
+featureIndex=1524,featureType=numerical,featureName=bernoulli
+featureIndex=1525,featureType=numerical,featureName=xwd
+featureIndex=1526,featureType=numerical,featureName=ton
+featureIndex=1527,featureType=numerical,featureName=hafeez
+featureIndex=1528,featureType=numerical,featureName=jonathan e quist
+featureIndex=1529,featureType=numerical,featureName=home run
+featureIndex=1530,featureType=numerical,featureName=greg spira
+featureIndex=1531,featureType=numerical,featureName=mitre.org
+featureIndex=1532,featureType=numerical,featureName=zrepachol
+featureIndex=1533,featureType=numerical,featureName=perri e
+featureIndex=1534,featureType=numerical,featureName=surplu
+featureIndex=1535,featureType=numerical,featureName=eyed
+featureIndex=1536,featureType=numerical,featureName=lynch
+featureIndex=1537,featureType=numerical,featureName=origin post
+featureIndex=1538,featureType=numerical,featureName=wdstarr
+featureIndex=1539,featureType=numerical,featureName=mahogany126
+featureIndex=1540,featureType=numerical,featureName=rja
+featureIndex=1541,featureType=numerical,featureName=rich.bellacera
+featureIndex=1542,featureType=numerical,featureName=june
+featureIndex=1543,featureType=numerical,featureName=have ani info
+featureIndex=1544,featureType=numerical,featureName=job
+featureIndex=1545,featureType=numerical,featureName=chrisb
+featureIndex=1546,featureType=numerical,featureName=spline
+featureIndex=1547,featureType=numerical,featureName=510
+featureIndex=1548,featureType=numerical,featureName=autoexec.bat
+featureIndex=1549,featureType=numerical,featureName=firstclass
+featureIndex=1550,featureType=numerical,featureName=imakefil
+featureIndex=1551,featureType=numerical,featureName=buick
+featureIndex=1552,featureType=numerical,featureName=mr2
+featureIndex=1553,featureType=numerical,featureName=sepinwal
+featureIndex=1554,featureType=numerical,featureName=sepinw
+featureIndex=1555,featureType=numerical,featureName=rs232
+featureIndex=1556,featureType=numerical,featureName=liftoff
+featureIndex=1557,featureType=numerical,featureName=whoosh
+featureIndex=1558,featureType=numerical,featureName=singapor
+featureIndex=1559,featureType=numerical,featureName=boulder distribut
+featureIndex=1560,featureType=numerical,featureName=dobb
+featureIndex=1561,featureType=numerical,featureName=albert sabin
+featureIndex=1562,featureType=numerical,featureName=io
+featureIndex=1563,featureType=numerical,featureName=i'v gotten
+featureIndex=1564,featureType=numerical,featureName=ultrix
+featureIndex=1565,featureType=numerical,featureName=florida
+featureIndex=1566,featureType=numerical,featureName=hasn't been
+featureIndex=1567,featureType=numerical,featureName=trip
+featureIndex=1568,featureType=numerical,featureName=stilgar
+featureIndex=1569,featureType=numerical,featureName=palett
+featureIndex=1570,featureType=numerical,featureName=joystick
+featureIndex=1571,featureType=numerical,featureName=70n
+featureIndex=1572,featureType=numerical,featureName=gordon lang
+featureIndex=1573,featureType=numerical,featureName=macwarehous
+featureIndex=1574,featureType=numerical,featureName=runtim
+featureIndex=1575,featureType=numerical,featureName=sram
+featureIndex=1576,featureType=numerical,featureName=misc.forsal
+featureIndex=1577,featureType=numerical,featureName=locomot
+featureIndex=1578,featureType=numerical,featureName=previou post
+featureIndex=1579,featureType=numerical,featureName=i made
+featureIndex=1580,featureType=numerical,featureName=wangr
+featureIndex=1581,featureType=numerical,featureName=tranquil
+featureIndex=1582,featureType=numerical,featureName=fs7
+featureIndex=1583,featureType=numerical,featureName=gamma rai
+featureIndex=1584,featureType=numerical,featureName=peopl becom
+featureIndex=1585,featureType=numerical,featureName=her husband
+featureIndex=1586,featureType=numerical,featureName=danger
+featureIndex=1587,featureType=numerical,featureName=fbi director
+featureIndex=1588,featureType=numerical,featureName=re good neighbor polit hypocrisi test
+featureIndex=1589,featureType=numerical,featureName=magick
+featureIndex=1590,featureType=numerical,featureName=gregg jaeger
+featureIndex=1591,featureType=numerical,featureName=where on
+featureIndex=1592,featureType=numerical,featureName=argv
+featureIndex=1593,featureType=numerical,featureName=195
+featureIndex=1594,featureType=numerical,featureName=would he
+featureIndex=1595,featureType=numerical,featureName=babb
+featureIndex=1596,featureType=numerical,featureName=goddess
+featureIndex=1597,featureType=numerical,featureName=racial
+featureIndex=1598,featureType=numerical,featureName=abort
+featureIndex=1599,featureType=numerical,featureName=mitchel
+featureIndex=1600,featureType=numerical,featureName=toolbox
+featureIndex=1601,featureType=numerical,featureName=degre
+featureIndex=1602,featureType=numerical,featureName=furnish
+featureIndex=1603,featureType=numerical,featureName=address i
+featureIndex=1604,featureType=numerical,featureName=mik
+featureIndex=1605,featureType=numerical,featureName=_would_
+featureIndex=1606,featureType=numerical,featureName=she didn't
+featureIndex=1607,featureType=numerical,featureName=machinegun
+featureIndex=1608,featureType=numerical,featureName=hi right
+featureIndex=1609,featureType=numerical,featureName=mistak
+featureIndex=1610,featureType=numerical,featureName=commission
+featureIndex=1611,featureType=numerical,featureName=stacker
+featureIndex=1612,featureType=numerical,featureName=latch
+featureIndex=1613,featureType=numerical,featureName=backup
+featureIndex=1614,featureType=numerical,featureName=hua
+featureIndex=1615,featureType=numerical,featureName=distribut comp
+featureIndex=1616,featureType=numerical,featureName=mean anyth
+featureIndex=1617,featureType=numerical,featureName=depreci
+featureIndex=1618,featureType=numerical,featureName=room
+featureIndex=1619,featureType=numerical,featureName=stereotyp
+featureIndex=1620,featureType=numerical,featureName=dispens
+featureIndex=1621,featureType=numerical,featureName=persian
+featureIndex=1622,featureType=numerical,featureName=diack
+featureIndex=1623,featureType=numerical,featureName=jc
+featureIndex=1624,featureType=numerical,featureName=noseble
+featureIndex=1625,featureType=numerical,featureName=miner
+featureIndex=1626,featureType=numerical,featureName=subject re gamma
+featureIndex=1627,featureType=numerical,featureName=hamza
+featureIndex=1628,featureType=numerical,featureName=mwilson
+featureIndex=1629,featureType=numerical,featureName=fascism
+featureIndex=1630,featureType=numerical,featureName=masud
+featureIndex=1631,featureType=numerical,featureName=nintendo
+featureIndex=1632,featureType=numerical,featureName=bowl green state
+featureIndex=1633,featureType=numerical,featureName=roster
+featureIndex=1634,featureType=numerical,featureName=0705
+featureIndex=1635,featureType=numerical,featureName=organ space telescop scienc
+featureIndex=1636,featureType=numerical,featureName=nasa goddard space flight
+featureIndex=1637,featureType=numerical,featureName=parsli
+featureIndex=1638,featureType=numerical,featureName=rscharfi
+featureIndex=1639,featureType=numerical,featureName=bezier
+featureIndex=1640,featureType=numerical,featureName=mail pleas
+featureIndex=1641,featureType=numerical,featureName=e mail pleas
+featureIndex=1642,featureType=numerical,featureName=lisbon
+featureIndex=1643,featureType=numerical,featureName=13
+featureIndex=1644,featureType=numerical,featureName=voicemail
+featureIndex=1645,featureType=numerical,featureName=chevrolet
+featureIndex=1646,featureType=numerical,featureName=doubter
+featureIndex=1647,featureType=numerical,featureName=organ yale
+featureIndex=1648,featureType=numerical,featureName=gyro
+featureIndex=1649,featureType=numerical,featureName=gamma rai burster where
+featureIndex=1650,featureType=numerical,featureName=rememb which
+featureIndex=1651,featureType=numerical,featureName=jac2i
+featureIndex=1652,featureType=numerical,featureName=out from
+featureIndex=1653,featureType=numerical,featureName=xputimag
+featureIndex=1654,featureType=numerical,featureName=fan club
+featureIndex=1655,featureType=numerical,featureName=your life
+featureIndex=1656,featureType=numerical,featureName=free state
+featureIndex=1657,featureType=numerical,featureName=acoop
+featureIndex=1658,featureType=numerical,featureName=9051467f
+featureIndex=1659,featureType=numerical,featureName=cat.uucp
+featureIndex=1660,featureType=numerical,featureName=someon tell me
+featureIndex=1661,featureType=numerical,featureName=someon tell
+featureIndex=1662,featureType=numerical,featureName=wcl
+featureIndex=1663,featureType=numerical,featureName=1055
+featureIndex=1664,featureType=numerical,featureName=awak
+featureIndex=1665,featureType=numerical,featureName=roderick
+featureIndex=1666,featureType=numerical,featureName=titti
+featureIndex=1667,featureType=numerical,featureName=rhea
+featureIndex=1668,featureType=numerical,featureName=gerald.belton
+featureIndex=1669,featureType=numerical,featureName=quantiti
+featureIndex=1670,featureType=numerical,featureName=thirti year
+featureIndex=1671,featureType=numerical,featureName=parenthood
+featureIndex=1672,featureType=numerical,featureName=1000.00
+featureIndex=1673,featureType=numerical,featureName=js
+featureIndex=1674,featureType=numerical,featureName=3 how
+featureIndex=1675,featureType=numerical,featureName=go out
+featureIndex=1676,featureType=numerical,featureName=mediev
+featureIndex=1677,featureType=numerical,featureName=raini
+featureIndex=1678,featureType=numerical,featureName=doublespac
+featureIndex=1679,featureType=numerical,featureName=aol
+featureIndex=1680,featureType=numerical,featureName=danish
+featureIndex=1681,featureType=numerical,featureName=klee
+featureIndex=1682,featureType=numerical,featureName=xalloccolor
+featureIndex=1683,featureType=numerical,featureName=sampler
+featureIndex=1684,featureType=numerical,featureName=crx
+featureIndex=1685,featureType=numerical,featureName=acura
+featureIndex=1686,featureType=numerical,featureName=gsxr1100
+featureIndex=1687,featureType=numerical,featureName=vizquel
+featureIndex=1688,featureType=numerical,featureName=boucher
+featureIndex=1689,featureType=numerical,featureName=hatr
+featureIndex=1690,featureType=numerical,featureName=legislatur
+featureIndex=1691,featureType=numerical,featureName=sovereignti
+featureIndex=1692,featureType=numerical,featureName=ticket
+featureIndex=1693,featureType=numerical,featureName=sail
+featureIndex=1694,featureType=numerical,featureName=nasa goddard
+featureIndex=1695,featureType=numerical,featureName=world
+featureIndex=1696,featureType=numerical,featureName=jcopelan
+featureIndex=1697,featureType=numerical,featureName=brat
+featureIndex=1698,featureType=numerical,featureName=quicken
+featureIndex=1699,featureType=numerical,featureName=q6
+featureIndex=1700,featureType=numerical,featureName=monning
+featureIndex=1701,featureType=numerical,featureName=hail
+featureIndex=1702,featureType=numerical,featureName=gland
+featureIndex=1703,featureType=numerical,featureName=fever
+featureIndex=1704,featureType=numerical,featureName=vida
+featureIndex=1705,featureType=numerical,featureName=without have
+featureIndex=1706,featureType=numerical,featureName=sledd
+featureIndex=1707,featureType=numerical,featureName=august
+featureIndex=1708,featureType=numerical,featureName=aid
+featureIndex=1709,featureType=numerical,featureName=speach
+featureIndex=1710,featureType=numerical,featureName=now have
+featureIndex=1711,featureType=numerical,featureName=who next
+featureIndex=1712,featureType=numerical,featureName=multiplex
+featureIndex=1713,featureType=numerical,featureName=lanphier
+featureIndex=1714,featureType=numerical,featureName=dump
+featureIndex=1715,featureType=numerical,featureName=stand alon
+featureIndex=1716,featureType=numerical,featureName=erg
+featureIndex=1717,featureType=numerical,featureName=r3000
+featureIndex=1718,featureType=numerical,featureName=heydt
+featureIndex=1719,featureType=numerical,featureName=schenectadi
+featureIndex=1720,featureType=numerical,featureName=anglia
+featureIndex=1721,featureType=numerical,featureName=crispin
+featureIndex=1722,featureType=numerical,featureName=mundstock
+featureIndex=1723,featureType=numerical,featureName=distrust
+featureIndex=1724,featureType=numerical,featureName=hanson
+featureIndex=1725,featureType=numerical,featureName=bulb
+featureIndex=1726,featureType=numerical,featureName=i recal read
+featureIndex=1727,featureType=numerical,featureName=babylonian
+featureIndex=1728,featureType=numerical,featureName=sigsauer
+featureIndex=1729,featureType=numerical,featureName=unborn
+featureIndex=1730,featureType=numerical,featureName=freivald
+featureIndex=1731,featureType=numerical,featureName=ezra
+featureIndex=1732,featureType=numerical,featureName=humankind
+featureIndex=1733,featureType=numerical,featureName=cd300
+featureIndex=1734,featureType=numerical,featureName=corpor line
+featureIndex=1735,featureType=numerical,featureName=your name
+featureIndex=1736,featureType=numerical,featureName=commerci us
+featureIndex=1737,featureType=numerical,featureName=virtual realiti
+featureIndex=1738,featureType=numerical,featureName=robert knowl
+featureIndex=1739,featureType=numerical,featureName=85mb
+featureIndex=1740,featureType=numerical,featureName=comdex
+featureIndex=1741,featureType=numerical,featureName=walli
+featureIndex=1742,featureType=numerical,featureName=v2.12
+featureIndex=1743,featureType=numerical,featureName=synthes
+featureIndex=1744,featureType=numerical,featureName=transact
+featureIndex=1745,featureType=numerical,featureName=269
+featureIndex=1746,featureType=numerical,featureName=tcora
+featureIndex=1747,featureType=numerical,featureName=fenwai
+featureIndex=1748,featureType=numerical,featureName=surgic
+featureIndex=1749,featureType=numerical,featureName=cardena
+featureIndex=1750,featureType=numerical,featureName=bentsen
+featureIndex=1751,featureType=numerical,featureName=nam
+featureIndex=1752,featureType=numerical,featureName=tantrum
+featureIndex=1753,featureType=numerical,featureName=dialin
