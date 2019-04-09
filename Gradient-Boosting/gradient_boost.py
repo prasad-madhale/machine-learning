@@ -33,13 +33,6 @@ class RegressionTree:
 
         return dataset.iloc[:train_len], dataset.iloc[train_len:]
 
-    # @staticmethod
-    # def normalize(dataset, train_len):
-    #     cols = dataset.columns[:-1]
-    #     dataset[cols] = dataset[cols].apply(lambda x: (x - x.min()) / (x.max() - x.min()))
-    #
-    #     return dataset.iloc[:train_len], dataset.iloc[train_len:]
-
     @staticmethod
     def get_thresholds(dataset, feature):
         dataset.sort_values(by=[feature])
@@ -49,10 +42,6 @@ class RegressionTree:
             ts.append((dataset.iloc[entry][feature] + dataset.iloc[entry + 1][feature]) / 2)
 
         return ts
-
-    # @staticmethod
-    # def get_thresholds(dataset, feature):
-    #     return np.unique(dataset.iloc[:][feature])
 
     @staticmethod
     def get_best_split(dataset):
@@ -170,11 +159,11 @@ class RegressionTree:
         mse = pd.Series(errors).mean()
         return mse, np.array(predictions)
 
-    def update_labels(self, identifier, preds):
+    def update_labels(self, identifier, preds, learn_rate):
         if identifier == 'train':
-            self.train_data.iloc[:][self.train_data.columns[-1]] -= preds
+            self.train_data.iloc[:][self.train_data.columns[-1]] -= preds*learn_rate
         elif identifier == 'test':
-            self.test_data.iloc[:][self.test_data.columns[-1]] -= preds
+            self.test_data.iloc[:][self.test_data.columns[-1]] -= preds*learn_rate
 
 
 class Terminal:
@@ -201,7 +190,7 @@ class GradientBoosting:
         self.max_iters = iters
         self.col_names = column_names
 
-    def fit(self, max_depth):
+    def fit(self, max_depth, learning_rate=0.8):
         reg_tree = RegressionTree(self.col_names)
 
         for itr in range(self.max_iters):
@@ -215,18 +204,19 @@ class GradientBoosting:
 
             # print training mse at each iteration
             print('Training Error at {}: {}'.format(itr+1, train_error))
-            print('Testing Error at {}: {}'.format(itr+1, test_error))
 
             # update the labels using residues
             # for train
-            reg_tree.update_labels('train', train_predictions)
+            reg_tree.update_labels('train', train_predictions, learning_rate)
 
             # for test
-            reg_tree.update_labels('test', test_predictions)
+            reg_tree.update_labels('test', test_predictions, learning_rate)
+
+        print('Final Testing Error: {}'.format(test_error))
 
 
 # EXECUTION
 column_names = ['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT', 'MEDV']
 g_boost = GradientBoosting(5, column_names)
-g_boost.fit(2)
+g_boost.fit(max_depth=2, learning_rate=0.5)
 
