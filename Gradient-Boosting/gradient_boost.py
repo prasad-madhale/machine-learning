@@ -50,6 +50,10 @@ class RegressionTree:
 
         return ts
 
+    # @staticmethod
+    # def get_thresholds(dataset, feature):
+    #     return np.unique(dataset.iloc[:][feature])
+
     @staticmethod
     def get_best_split(dataset):
 
@@ -124,23 +128,6 @@ class RegressionTree:
 
         return Node(best_feature, best_threshold, left_node, right_node)
 
-    def print(self):
-        self.print_tree(self.model, '')
-
-    @staticmethod
-    def print_tree(root, spaces):
-
-        if isinstance(root, Terminal):
-            print(spaces + 'prediction: {}'.format(root.predict()))
-            return
-
-        print(spaces + 'NODE: Feature: {}, Threshold: {}'.format(root.feature, root.threshold))
-
-        print(spaces + 'Left: ')
-        RegressionTree.print_tree(root.left_node, spaces + '  ')
-        print(spaces + 'Right: ')
-        RegressionTree.print_tree(root.right_node, spaces + '  ')
-
     @staticmethod
     def regress(root, entry):
 
@@ -155,11 +142,17 @@ class RegressionTree:
         return result
 
     def test(self):
+        train_error, _ = RegressionTree.test_model(self.model, self.train_data)
         test_error, _ = RegressionTree.test_model(self.model, self.test_data)
-        return test_error
+        return train_error, test_error
 
-    def predict(self):
-        return RegressionTree.test_model(self.model, self.train_data)
+    def predict(self, identifier):
+        if identifier == 'train':
+            mse, prediction = RegressionTree.test_model(self.model, self.train_data)
+        elif identifier == 'test':
+            mse, prediction = RegressionTree.test_model(self.model, self.test_data)
+
+        return mse, prediction
 
     @staticmethod
     def test_model(model, test_data):
@@ -177,8 +170,11 @@ class RegressionTree:
         mse = pd.Series(errors).mean()
         return mse, np.array(predictions)
 
-    def update_labels(self, preds):
-        self.train_data.iloc[:][self.train_data.columns[-1]] -= preds
+    def update_labels(self, identifier, preds):
+        if identifier == 'train':
+            self.train_data.iloc[:][self.train_data.columns[-1]] -= preds
+        elif identifier == 'test':
+            self.test_data.iloc[:][self.test_data.columns[-1]] -= preds
 
 
 class Terminal:
@@ -210,23 +206,27 @@ class GradientBoosting:
 
         for itr in range(self.max_iters):
             # train a decision tree
-            reg_tree.fit(2)
+            reg_tree.fit(max_depth)
 
-            mse, preds = reg_tree.predict()
+            _, train_predictions = reg_tree.predict('train')
+            _, test_predictions = reg_tree.predict('test')
 
-            print(preds.shape)
+            train_error, test_error = reg_tree.test()
 
             # print training mse at each iteration
-            print('Training MSE at {}: {}'.format(itr, mse))
+            print('Training Error at {}: {}'.format(itr+1, train_error))
+            print('Testing Error at {}: {}'.format(itr+1, test_error))
 
             # update the labels using residues
-            reg_tree.update_labels(preds)
+            # for train
+            reg_tree.update_labels('train', train_predictions)
 
-        print(reg_tree.test())
+            # for test
+            reg_tree.update_labels('test', test_predictions)
 
 
 # EXECUTION
 column_names = ['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT', 'MEDV']
-g_boost = GradientBoosting(10, column_names)
+g_boost = GradientBoosting(5, column_names)
 g_boost.fit(2)
 
