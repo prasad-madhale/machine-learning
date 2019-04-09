@@ -93,10 +93,6 @@ class AdaBoost:
             # add to summary all the values needed for plotting
             summary[ep] = [model.error, train_error, test_error, auc_score]
 
-            # print('Round: {}  |  Feature: {}  |  Threshold: {}  |  Round_error: {}  |  Train_error: {}  |  '
-            #       'Test_error: {}  |  AUC: {}'.format(ep+1, model.feature, model.threshold, model.error, train_error,
-            #                                           test_error, auc_score))
-
         return models, summary
 
     @staticmethod
@@ -355,5 +351,5 @@ coding_matrix = np.array([[1,0,1,0,0,1,1,0,0,1,1,0,1,0,1,1,1,1,1,0],
                         [0,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1,1,0,0,1],
                         [1,0,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1,1,0,0]])
 
-ecoc = ECOC(train_data, train_label, test_data, test_label, 10, coding_matrix)
+ecoc = ECOC(train_data, train_label, test_data, test_label, 200, coding_matrix)
 ecoc.train()
