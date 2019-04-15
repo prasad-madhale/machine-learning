@@ -184,13 +184,20 @@ class Bagging:
 
         self.models = models
 
-    def test(self):
+    def test(self, option):
+
+        if option == 'train':
+            test_data = self.train_data
+        elif option == 'test':
+            test_data = self.test_data
+        else:
+            raise Exception('Provide valid input')
 
         all_preds = []
         all_accus = []
 
         for model in self.models:
-            acc, predictions = DecisionTree.test_model(model, self.test_data)
+            acc, predictions = DecisionTree.test_model(model, test_data)
 
             all_accus.append(acc)
             all_preds.append(predictions)
@@ -202,12 +209,12 @@ class Bagging:
 
         final_preds = []
 
-        for i in range(len(self.test_data)):
+        for i in range(len(test_data)):
             arr = all_preds[:, i]
             counts = np.bincount(arr)
             final_preds.append(np.argmax(counts))
 
-        acc = accuracy_score(self.test_data['spam_label'], final_preds)
+        acc = accuracy_score(test_data['spam_label'], final_preds)
         return acc, final_preds, mean_accs
 
 
@@ -243,11 +250,13 @@ test_size = int(0.20 * len(df))
 test_data = df[:test_size]
 train_data = df[test_size:]
 
-# lets use 40% data as the n for bagging
+# lets use 70% data as the n for bagging
 train_size = int(0.70 * len(train_data))
 
 boot_agr = Bagging(t=50, n=train_size, train_set=train_data, test_set=test_data, max_depth=2)
 boot_agr.fit()
-acc, preds, mean_acc = boot_agr.test()
 
-print(acc, mean_acc)
+# get testing accuracy
+test_acc, _, _ = boot_agr.test('test')
+
+print('Test Accuracy: {}'.format(test_acc))
