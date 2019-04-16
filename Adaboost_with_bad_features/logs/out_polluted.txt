@@ -1,0 +1,8 @@
+Round: 0  |  Feature: 52  |  Threshold: 0.006580043311677495  |  Round_error: 0.20463880164290887  |  Train_error: 0.20463880164290893  |   Test_error: 0.21304347826086956  |  Test Accuracy: 0.7869565217391304
+Round: 1  |  Feature: 51  |  Threshold: 0.0023554406059486423  |  Round_error: 0.24019715786257256  |  Train_error: 0.20463880164290893  |   Test_error: 0.21304347826086956  |  Test Accuracy: 0.7869565217391304
+Round: 2  |  Feature: 24  |  Threshold: 0.005760921747479598  |  Round_error: 0.7180416454656756  |  Train_error: 0.15027784489007  |   Test_error: 0.12391304347826082  |  Test Accuracy: 0.8760869565217392
+Round: 3  |  Feature: 6  |  Threshold: 0.0013755158184319122  |  Round_error: 0.2851586209989276  |  Train_error: 0.1427881130707901  |   Test_error: 0.13260869565217392  |  Test Accuracy: 0.8673913043478261
+Round: 4  |  Feature: 55  |  Threshold: 0.0008510212254705647  |  Round_error: 0.3179044223373014  |  Train_error: 0.10268180719980669  |   Test_error: 0.08043478260869563  |  Test Accuracy: 0.9195652173913044
+Round: 5  |  Feature: 15  |  Threshold: 0.00125  |  Round_error: 0.37351349391191546  |  Train_error: 0.10896351775791258  |   Test_error: 0.08260869565217388  |  Test Accuracy: 0.9173913043478261
+Round: 6  |  Feature: 36  |  Threshold: 0.009433962264150943  |  Round_error: 0.6470821954519239  |  Train_error: 0.0959168881372312  |   Test_error: 0.08260869565217388  |  Test Accuracy: 0.9173913043478261
+Round: 7  |  Feature: 4  |  Threshold: 0.08750000000000001  |  Round_error: 0.38795374404809924  |  Train_error: 0.099299347668519  |   Test_error: 0.08043478260869563  |  Test Accuracy: 0.9195652173913044
