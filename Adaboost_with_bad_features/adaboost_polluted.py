@@ -76,7 +76,7 @@ class AdaBoost:
         # get all unique thresholds in sorted order
         thresholds = WeakLearner.get_thresholds(train_data)
 
-        # # pick midpoints from the thresholds
+        # pick midpoints from the thresholds
         thresholds = WeakLearner.get_midpoints(thresholds)
 
         for ep in range(num_weak_learners):
