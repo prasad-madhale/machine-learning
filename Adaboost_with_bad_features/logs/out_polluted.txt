@@ -6,3 +6,10 @@ Round: 4  |  Feature: 55  |  Threshold: 0.0008510212254705647  |  Round_error: 0
 Round: 5  |  Feature: 15  |  Threshold: 0.00125  |  Round_error: 0.37351349391191546  |  Train_error: 0.10896351775791258  |   Test_error: 0.08260869565217388  |  Test Accuracy: 0.9173913043478261
 Round: 6  |  Feature: 36  |  Threshold: 0.009433962264150943  |  Round_error: 0.6470821954519239  |  Train_error: 0.0959168881372312  |   Test_error: 0.08260869565217388  |  Test Accuracy: 0.9173913043478261
 Round: 7  |  Feature: 4  |  Threshold: 0.08750000000000001  |  Round_error: 0.38795374404809924  |  Train_error: 0.099299347668519  |   Test_error: 0.08043478260869563  |  Test Accuracy: 0.9195652173913044
+Round: 8  |  Feature: 44  |  Threshold: 0.006302521008403361  |  Round_error: 0.6190013581022749  |  Train_error: 0.08552790529113308  |   Test_error: 0.07173913043478264  |  Test Accuracy: 0.9282608695652174
+Round: 9  |  Feature: 7  |  Threshold: 0.0013501350135013501  |  Round_error: 0.3942542374682767  |  Train_error: 0.09084319884029957  |   Test_error: 0.07826086956521738  |  Test Accuracy: 0.9217391304347826
+Round: 10  |  Feature: 26  |  Threshold: 0.00015001500150015003  |  Round_error: 0.618539788556188  |  Train_error: 0.08045421599420155  |   Test_error: 0.06956521739130439  |  Test Accuracy: 0.9304347826086956
+Round: 11  |  Feature: 54  |  Threshold: 0.0022546527462551065  |  Round_error: 0.3939066208329558  |  Train_error: 0.08431988402995894  |   Test_error: 0.07391304347826089  |  Test Accuracy: 0.9260869565217391
+Round: 12  |  Feature: 305  |  Threshold: 0.02900834738051892  |  Round_error: 0.5866489060421769  |  Train_error: 0.08117902875090599  |   Test_error: 0.08043478260869563  |  Test Accuracy: 0.9195652173913044
+Round: 13  |  Feature: 20  |  Threshold: 0.05535553555355535  |  Round_error: 0.4210738078003352  |  Train_error: 0.08359507127325438  |   Test_error: 0.07173913043478264  |  Test Accuracy: 0.9282608695652174
+Round: 14  |  Feature: 51  |  Threshold: 0.0011546277480140401  |  Round_error: 0.5916681904199674  |  Train_error: 0.08480309253442864  |   Test_error: 0.06956521739130439  |  Test Accuracy: 0.9304347826086956
