@@ -1,0 +1,2 @@
+Final Training Accuracy: 0.8006894113487715
+Final Test Accuracy: 0.7630111524163569

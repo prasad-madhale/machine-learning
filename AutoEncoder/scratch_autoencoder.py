@@ -29,8 +29,8 @@ class NN:
         
     def initialize_weights(self):
         np.random.seed(0)
-        self.w_ih = np.random.randn(self.input_shape[0], self.h_units) / np.sqrt(self.input_shape[0])
-        self.w_ho = np.random.randn(self.h_units, self.out_shape[0]) / np.sqrt(self.h_units)
+        self.w_ih = np.random.randn(self.input_shape[1], self.h_units)
+        self.w_ho = np.random.randn(self.h_units, self.out_shape[0])
 
     def initialize_bias(self):
         self.b_ih = np.zeros((1, self.h_units))

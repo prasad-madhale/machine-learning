@@ -243,7 +243,7 @@ class WeakLearner:
         increment_size = (len(test_data) * percent_to_add) // 100
 
         least_errors = []
-        # extract datapoints to be added for next iteration
+        # extract data points to be added for next iteration
         for j in range(increment_size):
             least_errors.append(heapq.heappop(heap)[1])
 
@@ -264,11 +264,11 @@ column_names = ['word_freq_make', 'word_freq_address', 'word_freq_all', 'word_fr
                 'capital_run_length_longest', 'capital_run_length_total', 'spam_label']
 
 np.random.seed(2)
-ada_boost = AdaBoost(column_names)
 
 Cs = [5, 10, 15, 20, 30, 50]
 with open('./logs/out.txt', 'w') as f:
     for c in Cs:
+        ada_boost = AdaBoost(column_names)
         print('Training Adaboost with {}% initial random data'.format(c), file=f, end='\n')
         ada_boost.fit(num_weak_learners=10, percent=c, percent_to_increment=2)
 

@@ -190,6 +190,16 @@ class WeakLearner:
         return np.array(thresholds)
 
     @staticmethod
+    def get_midpoints(data):
+        thresholds = []
+
+        for i in range(len(data)):
+            thres = data[i]
+            thresholds.append((thres[1:] + thres[:-1]) / 2)
+
+        return np.array(thresholds)
+
+    @staticmethod
     def get_tree_predictor(dataset, thresholds, labels, wts):
 
         max_diff = -float('inf')

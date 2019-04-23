@@ -49,7 +49,7 @@ class AdaBoost:
 
         error, acc = AdaBoost.get_error(models, data, labels)
 
-        print('Training Accuracy(for individual Adaboost): {}'.format(acc))
+        print('Training Accuracy(for individual Adaboost): {}'.format(acc), file=f)
 
         return models
 
@@ -123,6 +123,7 @@ class WeakLearner:
 
         for i in range(data.shape[1]):
             uniques = np.unique(data[:, i])
+            uniques = np.sort(uniques)
             thresholds.append(uniques)
 
         return np.array(thresholds)
@@ -243,12 +244,12 @@ class ECOC:
         # get train accuracy for final model
         train_acc = ECOC.get_accuracy(models, self.train_data, self.train_label, self.c_matrix)
 
-        print('Final Training Accuracy: {}'.format(train_acc))
+        print('Final Training Accuracy: {}'.format(train_acc), file=f)
 
         # get test accuracy for final model
         test_acc = ECOC.get_accuracy(models, self.test_data, self.test_label, self.c_matrix)
 
-        print('Final Test Accuracy: {}'.format(test_acc))
+        print('Final Test Accuracy: {}'.format(test_acc), file=f)
 
     @staticmethod
     def get_accuracy(models, data, labels, code_matrix):
@@ -352,4 +353,6 @@ coding_matrix = np.array([[1,0,1,0,0,1,1,0,0,1,1,0,1,0,1,1,1,1,1,0],
                         [1,0,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1,1,0,0]])
 
 ecoc = ECOC(train_data, train_label, test_data, test_label, 200, coding_matrix)
-ecoc.train()
+
+with open('./logs/out.txt', 'w') as f:
+    ecoc.train()

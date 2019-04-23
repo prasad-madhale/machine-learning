@@ -194,18 +194,15 @@ class Bagging:
             raise Exception('Provide valid input')
 
         all_preds = []
-        all_accus = []
 
         for model in self.models:
             acc, predictions = DecisionTree.test_model(model, test_data)
-
-            all_accus.append(acc)
             all_preds.append(predictions)
-
-        mean_accs = np.mean(all_accus)
 
         # convert to numpy array
         all_preds = np.array(all_preds)
+
+        print(all_preds.shape)
 
         final_preds = []
 
@@ -215,7 +212,7 @@ class Bagging:
             final_preds.append(np.argmax(counts))
 
         acc = accuracy_score(test_data['spam_label'], final_preds)
-        return acc, final_preds, mean_accs
+        return acc, final_preds
 
 
 # EXECUTION
