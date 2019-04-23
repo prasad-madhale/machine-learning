@@ -69,16 +69,25 @@ clf_rbf = svm.SVC(gamma='scale', kernel='rbf', random_state=0)
 # create SVM classifier with polynomial kernel
 clf_poly = svm.SVC(gamma='scale', kernel='poly', random_state=0)
 
-# train and test the RBF SVM
-rbf_train_acc, rbf_test_acc = train_and_test(train_data, test_data, train_label, test_label, clf_rbf)
+# create SVM classifier with linear kernel
+clf_linear = svm.SVC(gamma='scale', kernel='linear', random_state=0)
 
-print('Train Accuracy with RBF Kernel: {}'.format(rbf_train_acc))
-print('Test Accuracy with RBF Kernel: {}'.format(rbf_test_acc))
+with open('./logs/out_svm_kernels') as file_op:
+    # train and test the RBF SVM
+    rbf_train_acc, rbf_test_acc = train_and_test(train_data, test_data, train_label, test_label, clf_rbf)
 
-# train and test the Polynomial SVM
-poly_train_acc, poly_test_acc = train_and_test(train_data, test_data, train_label, test_label, clf_poly)
+    print('Train Accuracy with RBF Kernel: {}'.format(rbf_train_acc), file=file_op)
+    print('Test Accuracy with RBF Kernel: {}'.format(rbf_test_acc), file=file_op)
 
-print('Train Accuracy with Polynomial Kernel: {}'.format(poly_train_acc))
-print('Test Accuracy with Polynomial Kernel: {}'.format(poly_test_acc))
+    # train and test the Polynomial SVM
+    poly_train_acc, poly_test_acc = train_and_test(train_data, test_data, train_label, test_label, clf_poly)
 
+    print('Train Accuracy with Polynomial Kernel: {}'.format(poly_train_acc), file=file_op)
+    print('Test Accuracy with Polynomial Kernel: {}'.format(poly_test_acc), file=file_op)
+
+    # train and test the Linear SVM
+    lin_train_acc, lin_test_acc = train_and_test(train_data, test_data, train_label, test_label, clf_linear)
+
+    print('Train Accuracy with Polynomial Kernel: {}'.format(lin_train_acc), file=file_op)
+    print('Test Accuracy with Polynomial Kernel: {}'.format(lin_test_acc), file=file_op)
 
