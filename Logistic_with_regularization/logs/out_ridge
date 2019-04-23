@@ -1,0 +1,5 @@
+Logistic Regression using Gradient Descent Training Accuracy on SpamBase: 0.9311427881130708
+Logistic Regression using Gradient Descent Testing Accuracy on SpamBase: 0.9260869565217391
+Confusion Matrix:
+[[163  16]
+ [ 18 263]]

@@ -1,11 +1,7 @@
 import tensorflow as tf
 import numpy as np
 from Ecoc import ECOC
-
-mnist = tf.keras.datasets.mnist
-
-# get training and testing mnist set
-(x_train, y_train),(x_test, y_test) = mnist.load_data()
+from sklearn.preprocessing import StandardScaler
 
 
 def generate_rectangles(min_area=130, max_area=170, num_points=100):
@@ -13,8 +9,10 @@ def generate_rectangles(min_area=130, max_area=170, num_points=100):
     points = []
 
     for first in range(28):
+
+        # make half rectangles horizontally aligned
         for second_hor in range(28):
-            if len(points) >= num_points:
+            if len(points) >= (num_points // 2):
                 break
 
             lent = abs(second_hor - first)
@@ -23,6 +21,7 @@ def generate_rectangles(min_area=130, max_area=170, num_points=100):
             if min_area <= area <= max_area:
                 points.append([(first, 0), (second_hor, 27)])
 
+        # and other half vertically aligned
         for second_ver in range(28):
             if len(points) >= num_points:
                 break
@@ -184,35 +183,70 @@ def generate_code_matrix(num_features = 50):
     return np.array(coding_matrix)
 
 
-# generate 100 rectangles
-rectangles = generate_rectangles()
+def normalize(data, train_size):
+    # data = minmax_scale(data, feature_range=(0, 1))
 
-# verify areas between points
-correct = verify_rectangle(rectangles)
+    std = StandardScaler()
+    std.fit(data)
+    std.transform(data)
 
-# assert if all the generated rectangles have required areas
-assert correct, True
+    train_data = data[:train_size]
+    test_data = data[train_size:]
 
-new_train, new_labels = reduce_train(x_train, y_train)
+    return train_data, test_data
 
-# get haar features
-haar = each_item(new_train, rectangles)
 
-test_haar = each_item(x_test, rectangles)
+mnist = tf.keras.datasets.mnist
 
-# coding_matrix = generate_code_matrix()
+# get training and testing mnist set
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
 
-# generate coding matrix for ECOC procedure
-coding_matrix = np.array([[1,0,1,0,0,1,1,0,0,1,1,0,1,0,1,1,1,1,1,0],
-                        [1,0,0,0,0,1,0,1,0,0,1,1,0,0,1,1,0,1,0,1],
-                        [1,1,0,0,0,0,1,0,1,0,0,1,1,0,0,1,1,0,1,0],
-                        [1,1,1,0,0,0,0,1,0,1,0,0,1,1,0,0,1,1,0,1],
-                        [1,1,1,1,0,0,0,0,1,0,1,0,0,1,1,0,0,1,1,0],
-                        [1,1,1,1,1,0,0,0,0,1,0,1,0,0,1,1,0,0,1,1],
-                        [0,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1,1,0,0,1],
-                        [1,0,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1,1,0,0],
-                        [0,1,0,1,0,0,1,1,0,0,1,1,0,1,0,1,1,1,1,1],
-                        [0,0,1,0,1,0,0,1,1,0,0,1,1,0,1,0,1,1,1,1]])
 
-ecoc = ECOC(haar, new_labels, test_haar, y_test, 200, coding_matrix)
+# GENERATE HAAR FEATURES
+
+# # generate 100 rectangles
+# rectangles = generate_rectangles()
+#
+# # verify areas between points
+# correct = verify_rectangle(rectangles)
+#
+# # assert if all the generated rectangles have required areas
+# assert correct, True
+#
+# new_train, new_labels = reduce_train(x_train, y_train)
+#
+# # get har features
+# haar = each_item(new_train, rectangles)
+#
+# test_haar = each_item(x_test, rectangles)
+#
+# all_haar = np.concatenate([haar, test_haar])
+
+
+# LOAD HAAR FEATURES FROM NPZ FILES
+train_haar = np.load(file='./data/train_haar_features.npz')['train_haar']
+test_haar = np.load(file='./data/test_haar_features.npz')['test_haar']
+train_labels = np.load(file='./data/train_labels.npz')['train_labels']
+test_labels = y_test
+
+# full_haar = np.concatenate([train_haar, test_haar])
+#
+# # normalize haar features
+# train_haar, test_haar = normalize(full_haar, train_size=len(train_haar))
+
+coding_matrix = generate_code_matrix(num_features=30)
+
+# # generate coding matrix for ECOC procedure
+# coding_matrix = np.array([[1,0,1,0,0,1,1,0,0,1,1,0,1,0,1,1,1,1,1,0],
+#                         [1,0,0,0,0,1,0,1,0,0,1,1,0,0,1,1,0,1,0,1],
+#                         [1,1,0,0,0,0,1,0,1,0,0,1,1,0,0,1,1,0,1,0],
+#                         [1,1,1,0,0,0,0,1,0,1,0,0,1,1,0,0,1,1,0,1],
+#                         [1,1,1,1,0,0,0,0,1,0,1,0,0,1,1,0,0,1,1,0],
+#                         [1,1,1,1,1,0,0,0,0,1,0,1,0,0,1,1,0,0,1,1],
+#                         [0,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1,1,0,0,1],
+#                         [1,0,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1,1,0,0],
+#                         [0,1,0,1,0,0,1,1,0,0,1,1,0,1,0,1,1,1,1,1],
+#                         [0,0,1,0,1,0,0,1,1,0,0,1,1,0,1,0,1,1,1,1]])
+
+ecoc = ECOC(train_haar, train_labels, test_haar, test_labels, 2000, coding_matrix)
 ecoc.train()

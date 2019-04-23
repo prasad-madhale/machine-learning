@@ -204,7 +204,7 @@ def train_folds(folds):
     
     print('Error Tables')
     print('TP    FP  FN    TN')
-    print(*error_table, sep='\n')
+    print(error_table, sep='\n')
     
     plot_roc(predictions[max_idx], labels[max_idx])
     
@@ -225,22 +225,22 @@ column_names = ['word_freq_make','word_freq_address', 'word_freq_all', 'word_fre
                'char_freq_(','char_freq_[','char_freq_!','char_freq_$','char_freq_#','capital_run_length_average',
                'capital_run_length_longest','capital_run_length_total','spam_label']
 
-# get data from txt file
-train_df, train_labels, test_df, test_labels = get_data(column_names)
+with open('./logs/out.txt', 'w') as file_op:
+    # get data from txt file
+    train_df, train_labels, test_df, test_labels = get_data(column_names)
 
-train_size = len(train_df)
+    train_size = len(train_df)
 
-full_data = np.concatenate([train_df, test_df])
+    full_data = np.concatenate([train_df, test_df])
 
-train_data, test_data = normalize(full_data, train_size)
+    train_data, test_data = normalize(full_data, train_size)
 
+    # create folds of the data based on customized conditions
+    folds = split(train_data)
 
-# create folds of the data based on customized conditions
-folds = split(train_data)
+    # train naive bayes for provided folds
+    accs = train_folds(folds)
 
-# train naive bayes for provided folds
-accs = train_folds(folds)
-
-print('Accuracies for 10 Fold cross-validation')
-print(accs)
-print('Mean Accuracy: {}'.format(np.mean(accs)))
+    print('Accuracies for 10 Fold cross-validation', file=file_op)
+    print(accs, file=file_op)
+    print('Mean Accuracy: {}'.format(np.mean(accs)), file=file_op)

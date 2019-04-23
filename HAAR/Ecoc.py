@@ -36,7 +36,7 @@ def get_data(num_datapoints, num_features, path):
     return data, label
 
 
-# RANDOM-THRESHOLD ADA BOOST
+# RANDOM ADA BOOST
 class AdaBoost:
 
     @staticmethod
@@ -139,26 +139,19 @@ class WeakLearner:
 
     @staticmethod
     def get_tree_predictor(dataset, thresholds, labels, wts):
-        max_diff = -float('inf')
+        # pick random feature
+        feature = random.randint(0, dataset.shape[1]-1)
 
-        for feature in range(dataset.shape[1]):
-            for threshold in thresholds[feature]:
+        # pick random threshold
+        threshold = np.random.choice(thresholds[feature])
 
-                # build the weak learner
-                tree = Node(feature, threshold)
+        # build the weak learner
+        tree = Node(feature, threshold)
 
-                # find error for this weak learner
-                error = WeakLearner.predict(tree, dataset, labels, wts)
+        # find error for this weak learner
+        tree.error = WeakLearner.predict(tree, dataset, labels, wts)
 
-                diff = np.abs(0.5 - error)
-
-                if diff > max_diff:
-                    max_diff = diff
-                    tree.error = error
-                    tree.max_diff = max_diff
-                    best_tree = tree
-
-        return best_tree
+        return tree
 
     @staticmethod
     def predict(model, test_data, labels, wts):

@@ -156,7 +156,7 @@ def train(train_data, train_labels, reg_strength=0.1, learn_rate=0.001, max_iter
 
 
 def plot_likelihood(logs):
-    plt.figure(figsize = (15,10))
+    plt.figure(figsize=(15,10))
     plt.title('Log Likelihood')
     plt.xlabel('Iterations')
     plt.plot(logs)
@@ -202,7 +202,7 @@ def roc(test_data, test_labels, w):
     
     
 def plot_roc(fprs, tprs):
-    plt.figure(figsize = (15,10))
+    plt.figure(figsize = (15, 10))
     plt.title('ROC')
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
@@ -214,32 +214,33 @@ def plot_roc(fprs, tprs):
     
 # EXECUTION
 
-# extract data from files
-train_data, train_labels, test_data, test_labels = get_data()
+with open('./logs/out_ridge', 'w') as file_op:
+    # extract data from files
+    train_data, train_labels, test_data, test_labels = get_data()
 
-# normalize the data
-train_data, test_data = normalize(train_data, test_data)
+    # normalize the data
+    train_data, test_data = normalize(train_data, test_data)
 
-# optimize weights using Gradient Descent 
-w, loglike = train(train_data, train_labels)
+    # optimize weights using Gradient Descent
+    w, loglike = train(train_data, train_labels)
 
-# get predictions for training data
-pred_train, _, _, _, _, _ = predict(train_data, train_labels, w)
+    # get predictions for training data
+    pred_train, _, _, _, _, _ = predict(train_data, train_labels, w)
 
-# get accuracy percentage of the predictions
-train_acc = accuracy(train_data, train_labels, pred_train)
-print('Logistic Regression using Gradient Descent Training Accuracy on SpamBase: {}'.format(train_acc))
+    # get accuracy percentage of the predictions
+    train_acc = accuracy(train_data, train_labels, pred_train)
+    print('Logistic Regression using Gradient Descent Training Accuracy on SpamBase: {}'.format(train_acc), file=file_op)
 
-# get predictions for optimized weights
-preds, conf, _, _, _, _ = predict(test_data, test_labels, w)
+    # get predictions for optimized weights
+    preds, conf, _, _, _, _ = predict(test_data, test_labels, w)
 
-# get accuracy percentage of the predictions
-acc = accuracy(test_data, test_labels, preds)
-print('Logistic Regression using Gradient Descent Testing Accuracy on SpamBase: {}'.format(acc))
+    # get accuracy percentage of the predictions
+    acc = accuracy(test_data, test_labels, preds)
+    print('Logistic Regression using Gradient Descent Testing Accuracy on SpamBase: {}'.format(acc), file=file_op)
 
-print('Confusion Matrix:')
-print(conf)
+    print('Confusion Matrix:', file=file_op)
+    print(conf, file=file_op)
 
-plot_likelihood(loglike)
+    plot_likelihood(loglike)
 
-roc(test_data, test_labels, w)
+    roc(test_data, test_labels, w)

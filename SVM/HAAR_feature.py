@@ -13,7 +13,7 @@ def generate_rectangles(min_area=130, max_area=170, num_points=100):
 
     for first in range(28):
         for second_hor in range(28):
-            if len(points) >= num_points:
+            if len(points) >= (num_points // 2):
                 break
 
             lent = abs(second_hor - first)

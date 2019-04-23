@@ -174,7 +174,13 @@ def plot_roc(truth, preds):
 
 
 def normalize(data):
-    return preprocessing.minmax_scale(data, feature_range=(0, 1))
+    # return preprocessing.minmax_scale(data, feature_range=(0, 1))
+
+    std = preprocessing.StandardScaler()
+    std.fit(data)
+    std.transform(data)
+
+    return data
 
 
 def train_folds(folds):

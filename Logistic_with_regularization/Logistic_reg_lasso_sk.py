@@ -32,8 +32,11 @@ def normalize(train_data, test_data):
     data = np.concatenate([train_data, test_data])
 
     # normalize
+    # data = preprocessing.minmax_scale(data, feature_range=(0, 1))
 
-    data = preprocessing.minmax_scale(data, feature_range=(0, 1))
+    std = preprocessing.StandardScaler()
+    std.fit(data)
+    std.transform(data)
 
     train_data = data[:len(train_data)]
     test_data = data[len(train_data):]
@@ -53,7 +56,7 @@ def rounder(x, threshold):
     return 0
 
 
-def train(train_data, train_labels, alpha=0.0002):
+def train(train_data, train_labels, alpha=16):
     '''
     Args
         train_data : normalized data for training
@@ -61,7 +64,7 @@ def train(train_data, train_labels, alpha=0.0002):
         max_iter : maximum number of iterations to run GD
     '''
     model = Lasso(alpha=alpha)
-    model.fit(train_data, train_labels)
+    model = model.fit(train_data, train_labels)
 
     return model
 
@@ -82,28 +85,22 @@ def thresholds_checker(m, train_data, train_labels):
     return max(accs, key=accs.get)
 
 
-def get_accuracy(model, data, label, threshold):
-    pred = model.predict(data)
-    rounds = np.vectorize(rounder)
-
-    pred = rounds(pred, threshold)
-
-    return accuracy_score(label, pred)
+def get_accuracy(model, data, label):
+    score = 1 - model.score(data, label)
+    return score
 
 
 # EXECUTION
-# extract data from files
-train_data, train_labels, test_data, test_labels = get_data()
+with open('./logs/out_lasso', 'w') as file_op:
+    # extract data from files
+    train_data, train_labels, test_data, test_labels = get_data()
 
-# normalize the data
-train_data, test_data = normalize(train_data, test_data)
+    # normalize the data
+    # train_data, test_data = normalize(train_data, test_data)
 
-# optimize weights using Gradient Descent 
-model = train(train_data, train_labels)
+    model = train(train_data, train_labels)
 
-best_threshold = thresholds_checker(model, train_data, train_labels)
+    train_acc = get_accuracy(model, train_data, train_labels)
+    test_acc = get_accuracy(model, test_data, test_labels)
 
-train_acc = get_accuracy(model, train_data, train_labels, best_threshold)
-test_acc = get_accuracy(model, test_data, test_labels, best_threshold)
-
-print('Train acc: {}, Test acc: {}'.format(train_acc, test_acc))
+    print('Train acc: {}, Test acc: {}'.format(train_acc, test_acc), file=file_op)
