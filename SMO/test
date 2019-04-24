@@ -1,0 +1,96 @@
+import numpy as np
+import sys
+import random
+
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+from sklearn import datasets
+from numpy.random import permutation
+
+
+"""
+An implementation of the sequencial minimal optimization algorithm for support vector machines
+Essentially the algorithm just repeatedly chooses 2 alpha values and tweaks them together to 
+minimize the cost function.
+
+K is the kernel function, represented as a lambda. Default is linear. 
+
+Larger C allows for larger alpha values, which means that individual examples have more weight 
+in the decision, and that more vectors can be support vectors.
+"""
+def mySVC(X, y01, Xtest, K = lambda x,z: x.dot(z), C = 1, tol = 10**-4, max_passes = 2):
+    y = [-1 if not b else 1 for b in y01]
+    m = len(y)
+    a = np.zeros(m)
+    b = 0
+    passes = 0
+    f = lambda x : sum([a[i]*y[i]*K(X[i,:], x) for i in range(m)]) + b
+    while passes < max_passes:
+        num_changed_alphas = 0
+        for i in range(m):
+            Ei = f(X[i,:]) - y[i]
+            if (y[i]*Ei < -tol and a[i] < C) or (y[i]*Ei > tol and a[i] > 0):
+                j = np.random.choice(np.concatenate([np.arange(i), np.arange(i+1, m)]), size=1)[0]
+
+                Ej = f(X[j,:]) - y[j]
+                a_old = list(a)
+                if y[i] != y[j]:
+                    L = max(0, a[j] - a[i])
+                    H = min(C, C+a[j] - a[i])
+                else:
+                    L = max(0, a[i] + a[j] - C)
+                    H = min(C, a[i] + a[j])
+                if L == H:
+                    continue
+                eta = 2 * K(X[i, :], X[j, :]) - K(X[i, :], X[i, :]) - K(X[j, :], X[j, :])
+                if eta == 0:
+                    continue
+                a[j] = a[j] - float((y[j]*(Ei - Ej)))/eta
+                a[j] = min(max(L, a[j]), H)
+                if abs(a[j] - a_old[j]) < 10**-5:
+                    continue
+                a[i] = a[i] + y[i]*y[j]*(a_old[j] - a[j])
+                b1 = b - Ei - y[i]*(a[i] - a_old[i])*K(X[i,:], X[i,:]) \
+                    - y[j]*(a[j] - a_old[j])*K(X[i,:], X[j,:])
+                b2 = b - Ej - y[i]*(a[i] - a_old[i])*K(X[i,:], X[j,:]) \
+                    - y[j]*(a[j] - a_old[j])*K(X[j,:], X[j,:])
+                if a[i] > 0 and a[i] < C:
+                    b = b1
+                elif a[j] > 0 and a[j] < C:
+                    b = b2
+                else:
+                    b = float(b1 + b2)/2
+                num_changed_alphas = num_changed_alphas + 1
+        if num_changed_alphas == 0:
+            passes = passes + 1
+        else:
+            passes = 0
+    predictions = []
+    for i in range(Xtest.shape[0]):
+        predictions.append(f(Xtest[i,:]) > 0)
+    return predictions
+
+
+#Test
+iris = datasets.load_iris()
+indices = permutation(range(150))
+X = iris.data[indices]
+y = iris.target[indices]
+y = (y == 1)
+
+Xtrain = X[:-50]
+ytrain = y[:-50]
+Xtest = X[-50:]
+ytest = y[-50:]
+
+print(ytrain.shape)
+print(ytest.shape)
+
+clf = SVC()
+clf.fit(X,y)
+predictions = clf.predict(Xtest)
+print("sklearn: " + str(sum(ytest == predictions)))
+
+rbf = lambda x, z: np.exp(-(np.linalg.norm(x - z)**2)*.1) #The popular RBF kernel
+myPredictions = mySVC(Xtrain,ytrain,Xtest, K=rbf)
+print("Dan: " + str(sum(ytest == myPredictions)))

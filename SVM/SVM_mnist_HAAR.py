@@ -51,20 +51,10 @@ with open('./logs/out_svm_haar', 'w') as file_op:
     print('SHAPES:', file=file_op)
     print(train_haar.shape, test_haar.shape, train_labels.shape, test_labels.shape, file=file_op)
 
-    # svm for multi-class classification
-    # clf = LinearSVC(multi_class='ovr', max_iter=10000, C=0.1, tol=0.01)
-
     clf = svm.SVC(kernel='linear')
 
     # fit train data with labels
     model = clf.fit(train_haar, train_labels)
-
-    # predict for training data
-    train_predictions = model.predict(train_haar)
-
-    train_acc = accuracy_score(train_labels, train_predictions)
-
-    print('Train Accuracy: {}'.format(train_acc), file=file_op)
 
     # predict for test data
     test_predictions = model.predict(test_haar)
