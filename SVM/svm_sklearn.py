@@ -1,7 +1,7 @@
 
 import numpy as np
 import pandas as pd
-from sklearn.preprocessing import minmax_scale
+from sklearn.preprocessing import StandardScaler, minmax_scale
 from sklearn import svm
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
@@ -18,7 +18,10 @@ def get_data(column_names):
 
 
 def normalize(data):
-    return minmax_scale(data, feature_range=(0, 1))
+    std = StandardScaler()
+    std.fit(data)
+    std.transform(data)
+    return data
 
 
 def train_and_test(train_data, test_data, train_label, test_label, clf):
@@ -55,13 +58,15 @@ column_names = ['word_freq_make', 'word_freq_address', 'word_freq_all', 'word_fr
                 'capital_run_length_longest', 'capital_run_length_total', 'spam_label']
 
 # get data from txt file
-df, labels = get_data(column_names)
+data, labels = get_data(column_names)
 
 # normalize data between 0 and 1
-df = normalize(df)
+df = normalize(data)
+
+df_min_max = minmax_scale(data, feature_range=(0, 1))
 
 # split data into test and train data and labels
-train_data, test_data, train_label, test_label = train_test_split(df, labels, test_size=0.25)
+train_data, test_data, train_label, test_label = train_test_split(df_min_max, labels, test_size=0.25)
 
 # create SVM classifier with RBF kernel
 clf_rbf = svm.SVC(gamma='scale', kernel='rbf', random_state=0)
@@ -72,7 +77,7 @@ clf_poly = svm.SVC(gamma='scale', kernel='poly', random_state=0)
 # create SVM classifier with linear kernel
 clf_linear = svm.SVC(gamma='scale', kernel='linear', random_state=0)
 
-with open('./logs/out_svm_kernels') as file_op:
+with open('./logs/out_svm_kernels', 'w') as file_op:
     # train and test the RBF SVM
     rbf_train_acc, rbf_test_acc = train_and_test(train_data, test_data, train_label, test_label, clf_rbf)
 
@@ -85,9 +90,11 @@ with open('./logs/out_svm_kernels') as file_op:
     print('Train Accuracy with Polynomial Kernel: {}'.format(poly_train_acc), file=file_op)
     print('Test Accuracy with Polynomial Kernel: {}'.format(poly_test_acc), file=file_op)
 
+    train_data, test_data, train_label, test_label = train_test_split(df, labels, test_size=0.25)
+
     # train and test the Linear SVM
     lin_train_acc, lin_test_acc = train_and_test(train_data, test_data, train_label, test_label, clf_linear)
 
-    print('Train Accuracy with Polynomial Kernel: {}'.format(lin_train_acc), file=file_op)
-    print('Test Accuracy with Polynomial Kernel: {}'.format(lin_test_acc), file=file_op)
+    print('Train Accuracy with Linear Kernel: {}'.format(lin_train_acc), file=file_op)
+    print('Test Accuracy with Linear Kernel: {}'.format(lin_test_acc), file=file_op)
 

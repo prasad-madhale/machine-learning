@@ -6,9 +6,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 
-def get_data(column_names):
+def get_data(names):
     data_frame = pd.read_csv('./data/spambase.txt', header=None, sep=',', dtype=np.float)
-    data_frame.columns = column_names
+    data_frame.columns = names
 
     label = data_frame['spam_label'].values
     data = data_frame.drop(labels=['spam_label'], axis=1)
@@ -17,129 +17,174 @@ def get_data(column_names):
 
 
 def normalize(data):
-    return preprocessing.minmax_scale(data, feature_range=(0, 1))
+    std = preprocessing.StandardScaler()
+    std.fit(data)
+    std.transform(data)
+
+    return data.values
 
 
-def smo(train_data, train_labels, C, tol, max_iter, epsilon=0.001):
+class SVM:
 
-    train_size = train_data.shape[0]
+    def __init__(self, c=0.01, tol=0.01, max_pass=5, epsilon=0.001, max_iter=125):
+        self.c = c
+        self.tolerance = tol
+        self.max_passes = max_pass
+        self.eps = epsilon
+        self.max_iterations = max_iter
+        self.x = None
+        self.y = None
+        self.alphas = None
+        self.bias = 0
 
-    # initialize alphas to random values
-    # alphas = np.random.random((train_size,))
-    alphas = np.zeros(train_size)
+    def fit(self, data, label):
 
-    bias = 0
-    iter = 0
+        self.x = data
+        self.y = label
 
-    func = lambda x: sum([alphas[i] * train_labels[i] * train_data[i, :].dot(x) for i in range(train_size)]) + bias
+        train_size = self.x.shape[0]
 
-    # use iterations for stopping criteria
-    while iter < max_iter:
+        # initialize alphas to random values
+        # alphas = np.random.random((train_size,))
+        self.alphas = np.zeros(train_size)
 
-        print('Iteration: {}'.format(iter))
+        passes = 0
+        iteration = 0
 
-        iter += 1
+        # use iterations for stopping criteria
+        while passes < self.max_passes and iteration < self.max_iterations:
 
-        # count of updated alphas
-        num_changed_alphas = 0
+            print('Pass: {}'.format(passes))
+            print('Iteration: {}'.format(iteration))
 
-        for i in range(train_size):
-            ei = func(train_data[i, :]) - train_labels[i]
+            iteration += 1
 
-            if ((train_labels[i] * ei) < -tol and alphas[i] < C) or ((train_labels[i] * ei) > tol and alphas[i] > 0):
+            # count of updated alphas
+            num_changed_alphas = 0
 
-                # choose j such that j is not equal to i
-                j = np.random.choice(np.concatenate([np.arange(i), np.arange(i+1, train_size)]), size=1)[0]
+            for i in range(train_size):
+                ei = self.func(self.x[i]) - self.y[i]
 
-                ej = func(train_data[i, :]) - train_labels[j]
+                num = (self.y[i] * ei)
 
-                # save old alphas by making a copy of them
-                alpha_old = alphas.copy()
+                if (num < -self.tolerance and self.alphas[i] < self.c) or (num > self.tolerance and self.alphas[i] > 0):
 
-                # compute lower and upper bounds
-                L, H = compute_bounds(train_labels, i, j, alphas, C)
+                    # choose j such that j is not equal to i
+                    j = np.random.choice(np.concatenate([np.arange(i), np.arange(i+1, train_size)]), size=1)[0]
 
-                if L == H:
-                    continue
+                    ej = self.func(self.x[j]) - self.y[j]
 
-                # compute eta
-                eta = 2 * train_data[i].dot(train_data[j]) - train_data[i].dot(train_data[i]) - train_data[j].dot(train_data[j])
+                    # save old alphas by making a copy of them
+                    alpha_old = self.alphas.copy()
 
-                if eta == 0:
-                    continue
+                    # compute lower and upper bounds
+                    low, high = self.compute_bounds(i, j)
 
-                # update alphas
-                alphas = alphas - ((train_labels[j] * (ei - ej)) / eta)
+                    if low == high:
+                        continue
 
-                # clip alphas between the bounds
-                alphas[j] = bound_alpha(alphas[j], L, H)
+                    # compute eta
+                    eta = 2 * SVM.lin_kernel(self.x[i], self.x[j]) - SVM.lin_kernel(self.x[i], self.x[i]) - \
+                          SVM.lin_kernel(self.x[j], self.x[j])
 
-                if np.abs(alphas[j] - alpha_old[j]) < epsilon:
-                    continue
+                    if eta == 0:
+                        continue
 
-                alphas[i] = alphas[i] + train_labels[i] * train_labels[j] * (alpha_old[j] - alphas[j])
+                    # update alphas
+                    self.alphas[j] = self.alphas[j] - ((self.y[j] * (ei - ej)) / eta)
 
-                b1 = (bias - ei - (train_labels[i] * (alphas[i] - alpha_old[i]) * (train_data[i].dot(train_data[i])))) - \
-                     (train_labels[j] * (alphas[j] - alpha_old[j]) * (train_data[i].dot(train_data[j])))
+                    # clip alphas between the bounds
+                    self.alphas[j] = SVM.bound_alpha(self.alphas[j], low, high)
 
-                b2 = (bias - ej - (train_labels[i] * (alphas[i] - alpha_old[i]) * (train_data[i].dot(train_data[j])))) - \
-                     (train_labels[j] * (alphas[j] - alpha_old[j]) * (train_data[j].dot(train_data[j])))
+                    if np.abs(self.alphas[j] - alpha_old[j]) < self.eps:
+                        continue
 
-                # update bias using b1 and b2
-                bias = select_bias(b1, b2, alphas, i, j, C)
+                    self.alphas[i] = self.alphas[i] + self.y[i] * self.y[j] * (alpha_old[j] - self.alphas[j])
 
-                # increment count of changed alphas
-                num_changed_alphas += 1
+                    b1 = self.bias - ei - (self.y[i] * (self.alphas[i] - alpha_old[i]) *
+                                           SVM.lin_kernel(self.x[i], self.x[i])) - \
+                         (self.y[j] * (self.alphas[j] - alpha_old[j]) * SVM.lin_kernel(self.x[i], self.x[j]))
 
-    return alphas, bias
+                    b2 = self.bias - ej - (self.y[i] * (self.alphas[i] - alpha_old[i]) * SVM.lin_kernel(self.x[i],
+                                                                                                         self.x[j])) - \
+                         (self.y[j] * (self.alphas[j] - alpha_old[j]) * SVM.lin_kernel(self.x[j], self.x[j]))
 
+                    # update bias using b1 and b2
+                    self.bias = self.select_bias(b1, b2, i, j)
 
-def select_bias(b1, b2, alphas, i, j, C):
+                    # increment count of changed alphas
+                    num_changed_alphas += 1
 
-    if 0 < alphas[i] < C:
-        bias = b1
-    elif 0 < alphas[j] < C:
-        bias = b2
-    else:
-        bias = (b1 + b2) / 2
+            if num_changed_alphas == 0:
+                passes += 1
+            else:
+                passes = 0
 
-    return bias
+            # # get accuracy on train data every 10 steps
+            # # if iteration % 5 == 0:
+            # preds = svm.predict(self.x)
+            # t_acc = accuracy_score(self.y, preds)
+            # print('Iteration: {} | Train Acc: {}'.format(iteration, t_acc))
 
+    def select_bias(self, b1, b2, i, j):
 
-def bound_alpha(alphaJ, L, H):
-    if alphaJ > H:
-        alphaJ = min(H, alphaJ)
-    elif alphaJ < L:
-        alphaJ = max(L, alphaJ)
+        if 0 < self.alphas[i] < self.c:
+            bias = b1
+        elif 0 < self.alphas[j] < self.c:
+            bias = b2
+        else:
+            bias = (b1 + b2) / 2
 
-    return alphaJ
+        return bias
 
+    @staticmethod
+    def bound_alpha(alpha_j, lower, higher):
+        if alpha_j > higher:
+            alpha_j = higher
+        elif alpha_j < lower:
+            alpha_j = lower
 
-def compute_bounds(train_labels, i, j, alphas, C):
-    if train_labels[i] != train_labels[j]:
-        lower = max(0, alphas[j] - alphas[i])
-        higher = min(C, C + alphas[j] - alphas[i])
-    else:
-        lower = max(0, alphas[i] + alphas[j] - C)
-        higher = min(C, alphas[i] + alphas[j])
+        return alpha_j
 
-    return lower, higher
+    def func(self, xi):
+        return (self.alphas * self.y * SVM.lin_kernel(xi, self.x)).sum() + self.bias
 
+    @staticmethod
+    def lin_kernel(xi, x):
+        return np.dot(x, xi)
 
-def predict(data, labels, alphas, bias):
-    func = lambda x: sum([alphas[i] * labels[i] * data[i, :].dot(x) for i in range(len(labels))]) + bias
+    def compute_bounds(self, i, j):
+        if self.y[i] != self.y[j]:
+            lower = max(0, self.alphas[j] - self.alphas[i])
+            higher = min(self.c, self.c + self.alphas[j] - self.alphas[i])
+        else:
+            lower = max(0, self.alphas[i] + self.alphas[j] - self.c)
+            higher = min(self.c, self.alphas[i] + self.alphas[j])
 
-    predictions = []
+        return lower, higher
 
-    for entry in range(data.shape[0]):
-        predictions.append((func(data[entry, :]) > 0))
+    def predict(self, x_test):
+        predictions = []
 
-    return np.array(predictions)
+        for entry in range(x_test.shape[0]):
+            val = self.func(x_test[entry])
+
+            if val < 0:
+                predictions.append(-1)
+            else:
+                predictions.append(1)
+
+        return np.array(predictions)
+
+    def __str__(self):
+        return 'SVM with SMO: Max_iterations: {} | Max_passes: {} | C : {} | Tolerance: {} | Epsilon: {}'\
+            .format(self.max_iterations, self.max_passes, self.c, self.tolerance, self.eps)
 
 
 # EXECUTION
-
 with open('./logs/smo_spambase', 'w') as file_op:
+    np.random.seed(2)
+
     # names for the features
     column_names = ['word_freq_make', 'word_freq_address', 'word_freq_all', 'word_freq_3d', 'word_freq_our',
                     'word_freq_over', 'word_freq_remove', 'word_freq_internet', 'word_freq_order', 'word_freq_mail',
@@ -161,23 +206,28 @@ with open('./logs/smo_spambase', 'w') as file_op:
     df = normalize(df)
 
     # split data into test and train data and labels
-    train_data, test_data, train_label, test_label = train_test_split(df, labels, test_size=0.20, random_state=0)
+    train_data, test_data, train_label, test_label = train_test_split(df, labels, test_size=0.20, random_state=2)
 
     # modify labels
     train_label = np.where(train_label == 0, -1, train_label)
+    test_label = np.where(test_label == 0, -1, test_label)
 
-    alphas, bias = smo(train_data=train_data, train_labels=train_label, C=1, tol=0.01, max_iter=1000)
+    # create SMO object
+    svm = SVM()
+
+    # train the smo on train data and labels
+    svm.fit(train_data, train_label)
+
+    # get train predictions
+    train_predictions = svm.predict(train_data)
+    train_acc = accuracy_score(train_label, train_predictions)
 
     # get predictions
-    test_preds = predict(test_data, test_label, alphas, bias)
+    test_predictions = svm.predict(test_data)
+    test_acc = accuracy_score(test_label, test_predictions)
 
-    print(test_preds)
+    print('Trained SVM using SMO with train-test split (30%)', file=file_op)
+    print(svm, file=file_op)
 
-    # modify back labels
-    train_label = np.where(train_label < 0, 0, train_label)
-
-    test_acc = accuracy_score(test_label, test_preds)
-
-    print('Trained SVM using SMO with train-test split (20%)', file=file_op)
-    print('Iterations: {} | C: {} | Tolerance: {} | Epsilon: {}'.format(1000, 1, 0.01, 0.001), file=file_op)
+    print('Train Accuracy: {}'.format(train_acc), file=file_op)
     print('Test Accuracy: {}'.format(test_acc), file=file_op)

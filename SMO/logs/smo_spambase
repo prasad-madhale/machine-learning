@@ -1,0 +1,4 @@
+Trained SVM using SMO with train-test split (30%)
+SVM with SMO: Max_iterations: 125 | Max_passes: 5 | C : 0.01 | Tolerance: 0.01 | Epsilon: 0.001
+Train Accuracy: 0.9
+Test Accuracy: 0.8946796959826275
