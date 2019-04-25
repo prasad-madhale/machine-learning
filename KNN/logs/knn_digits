@@ -1,0 +1,30 @@
+For kernel = gaussian
+For k = 1
+Train accuracy: 1.0
+Test accuracy: 0.9435741239141215
+For k = 3
+Train accuracy: 0.9740416964214083
+Test accuracy: 0.9436623235819284
+For k = 7
+Train accuracy: 0.9575999222834966
+Test accuracy: 0.943989545823731
+For kernel = cosine
+For k = 1
+Train accuracy: 1.0
+Test accuracy: 0.9435741239141215
+For k = 3
+Train accuracy: 0.9740416964214083
+Test accuracy: 0.9436623235819284
+For k = 7
+Train accuracy: 0.9575999222834966
+Test accuracy: 0.943989545823731
+For kernel = polynomial
+For k = 1
+Train accuracy: 0.7546141252252526
+Test accuracy: 0.6219062131721416
+For k = 3
+Train accuracy: 0.7245347034374909
+Test accuracy: 0.6308915110420511
+For k = 7
+Train accuracy: 0.772272030572294
+Test accuracy: 0.7151751614358404

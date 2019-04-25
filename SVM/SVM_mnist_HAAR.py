@@ -11,8 +11,8 @@ mnist = tf.keras.datasets.mnist
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
 
-# GENERATE AND STORE HAAR FEATURES
-
+# # GENERATE AND STORE HAAR FEATURES
+#
 # # generate 100 rectangles
 # rectangles = generate_rectangles()
 #
@@ -23,7 +23,7 @@ mnist = tf.keras.datasets.mnist
 # assert correct, True
 #
 # # only pick 20% of each class data points from training set
-# new_train, new_labels = reduce_train(x_train, y_train, data_percent=0.25)
+# new_train, new_labels = reduce_train(x_train, y_train, data_percent=0.30)
 #
 # # save HAAR features to files
 # np.savez('./data/train_labels', train_labels=new_labels)
@@ -51,7 +51,7 @@ with open('./logs/out_svm_haar', 'w') as file_op:
     print('SHAPES:', file=file_op)
     print(train_haar.shape, test_haar.shape, train_labels.shape, test_labels.shape, file=file_op)
 
-    clf = svm.SVC(kernel='linear')
+    clf = svm.LinearSVC(dual=False)
 
     # fit train data with labels
     model = clf.fit(train_haar, train_labels)

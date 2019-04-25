@@ -1,0 +1,4 @@
+For kernel = cosine
+For radius = 0.31
+Train accuracy: 0.9227066014245144
+Test accuracy: 0.916936742352253

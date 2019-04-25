@@ -1,0 +1,4 @@
+For kernel = euclidean
+For radius = 4.408163265306122
+Train Accuracy: 0.9287029530673174
+Test Accuracy: 0.7616826078469647

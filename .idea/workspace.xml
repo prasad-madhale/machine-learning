@@ -2,13 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d65bc11-0e4d-4c0d-bfb1-fa6691a3c843" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/KNN/.idea/KNN.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KNN/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KNN/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KNN/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KNN/knn_digits.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KNN/knn_probs_digits.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KNN/knn_probs_spambase.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KNN/knn_radius_digits.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KNN/knn_radius_spambase.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KNN/knn_spambase.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SMO/Ecoc.py" beforeDir="false" afterPath="$PROJECT_DIR$/SMO/Ecoc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SMO/logs/smo_spambase" beforeDir="false" afterPath="$PROJECT_DIR$/SMO/logs/smo_spambase" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SMO/smo_mnist.py" beforeDir="false" afterPath="$PROJECT_DIR$/SMO/smo_mnist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SMO/svm_smo.py" beforeDir="false" afterPath="$PROJECT_DIR$/SMO/svm_smo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SVM/logs/out_svm_kernels" beforeDir="false" afterPath="$PROJECT_DIR$/SVM/logs/out_svm_kernels" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SVM/svm_sklearn.py" beforeDir="false" afterPath="$PROJECT_DIR$/SVM/svm_sklearn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SMO/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SVM/SVM_mnist_HAAR.py" beforeDir="false" afterPath="$PROJECT_DIR$/SVM/SVM_mnist_HAAR.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SVM/data/train_haar_features.npz" beforeDir="false" afterPath="$PROJECT_DIR$/SVM/data/train_haar_features.npz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SVM/data/train_labels.npz" beforeDir="false" afterPath="$PROJECT_DIR$/SVM/data/train_labels.npz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SVM/logs/out_svm_haar" beforeDir="false" afterPath="$PROJECT_DIR$/SVM/logs/out_svm_haar" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +26,27 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/KNN/knn_spambase.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="626">
+              <caret line="112" column="32" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -39,14 +68,19 @@
         <option value="$PROJECT_DIR$/SMO/svm_smo.py" />
         <option value="$PROJECT_DIR$/SMO/smo_mnist.py" />
         <option value="$PROJECT_DIR$/SMO/Ecoc.py" />
+        <option value="$PROJECT_DIR$/KNN/knn_radius_digits.py" />
+        <option value="$PROJECT_DIR$/KNN/knn_radius_spambase.py" />
+        <option value="$PROJECT_DIR$/KNN/knn_probs_spambase.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="21" />
-    <option name="width" value="979" />
-    <option name="height" value="824" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="2880" />
+    <option name="width" value="950" />
+    <option name="height" value="1080" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -64,17 +98,12 @@
             <path>
               <item name="machine-learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="machine-learning" type="462c0819:PsiDirectoryNode" />
-              <item name="HAAR" type="462c0819:PsiDirectoryNode" />
+              <item name="KNN" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="machine-learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="machine-learning" type="462c0819:PsiDirectoryNode" />
-              <item name="SMO" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="machine-learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="machine-learning" type="462c0819:PsiDirectoryNode" />
-              <item name="SMO" type="462c0819:PsiDirectoryNode" />
+              <item name="KNN" type="462c0819:PsiDirectoryNode" />
               <item name="logs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -86,7 +115,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/SVM" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -101,7 +130,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.smo_mnist">
+  <component name="RunManager" selected="Python.knn_probs_spambase">
     <configuration name="HAAR_feature" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="machine-learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -123,7 +152,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Logistic_reg_Spambase_Polluted" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="knn_probs_spambase" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="machine-learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -131,11 +160,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Logistic_Reg_Polluted" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/KNN" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Logistic_Reg_Polluted/Logistic_reg_Spambase_Polluted.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/KNN/knn_probs_spambase.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="knn_radius_spambase" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="machine-learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/KNN" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/KNN/knn_radius_spambase.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -188,10 +238,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.knn_probs_spambase" />
+        <item itemvalue="Python.knn_radius_spambase" />
         <item itemvalue="Python.smo_mnist" />
         <item itemvalue="Python.svm_smo" />
         <item itemvalue="Python.HAAR_feature" />
-        <item itemvalue="Python.Logistic_reg_Spambase_Polluted" />
       </list>
     </recent_temporary>
   </component>
@@ -209,22 +260,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="21" width="1853" height="1058" extended-state="6" />
+    <frame x="2880" y="0" width="950" height="1080" extended-state="4" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16666667" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.31391585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.360262" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32969433" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19809322" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993644" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32944915" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -353,18 +405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SVM/HAAR_feature.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SVM/svm_sklearn.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/SVM/SVM_mnist_HAAR.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
@@ -372,29 +412,6 @@
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SMO/logs/out_smo_digits">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HAAR/Ecoc.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HAAR/HAAR_feature.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1056">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SMO/logs/smo_spambase">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -408,22 +425,140 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HAAR/HAAR_feature.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3690">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HAAR/Ecoc.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMO/logs/out_smo_digits">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMO/test" />
+    <entry file="file://$PROJECT_DIR$/SVM/logs/out_svm_haar">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/SMO/smo_mnist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="50" column="71" selection-start-line="50" selection-start-column="71" selection-end-line="50" selection-end-column="71" />
+        <state relative-caret-position="540">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
           <folding>
             <element signature="e#1#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SVM/logs/out_svm_kernels">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SVM/HAAR_feature.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SVM/svm_sklearn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="73" column="29" lean-forward="true" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMO/logs/smo_spambase">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SMO/svm_smo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="101" column="22" selection-start-line="101" selection-start-column="22" selection-end-line="101" selection-end-column="22" />
+        <state relative-caret-position="258">
+          <caret line="105" column="53" selection-start-line="105" selection-start-column="53" selection-end-line="105" selection-end-column="53" />
           <folding>
             <element signature="e#1#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN/knn_digits.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1473">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN/knn_radius_digits.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1451">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN/logs/out_knn_spambase">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN/knn_radius_spambase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="98" column="7" selection-start-line="98" selection-start-column="7" selection-end-line="98" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN/logs/out_prob_spambase">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN/knn_probs_spambase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="140" column="52" selection-start-line="140" selection-start-column="52" selection-end-line="140" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN/knn_spambase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="112" column="32" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
