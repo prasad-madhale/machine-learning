@@ -1,0 +1,8 @@
+Original Data shapes:
+x-train: (3680, 57) x-test: (921, 57) y-train: (3680,), y-test: (921,)
+Top 5 features: ['word_freq_table' 'char_freq_[' 'char_freq_;' 'word_freq_receive'
+ 'char_freq_$']
+New Data shapes:
+x-train: (3680, 5) x-test: (921, 5) y-train: (3680,), y-test: (921,)
+Train Accuracy: 0.842391304347826
+Test Accuracy: 0.8078175895765473

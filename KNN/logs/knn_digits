@@ -8,6 +8,7 @@ Test accuracy: 0.9436623235819284
 For k = 7
 Train accuracy: 0.9575999222834966
 Test accuracy: 0.943989545823731
+
 For kernel = cosine
 For k = 1
 Train accuracy: 1.0
@@ -18,6 +19,7 @@ Test accuracy: 0.9436623235819284
 For k = 7
 Train accuracy: 0.9575999222834966
 Test accuracy: 0.943989545823731
+
 For kernel = polynomial
 For k = 1
 Train accuracy: 0.7546141252252526
