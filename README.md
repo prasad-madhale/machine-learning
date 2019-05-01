@@ -17,6 +17,16 @@ Common Machine Learning algorithms implemented from Scratch
 13. [Naive Bayesian Classifier](#naive_bayes)
 14. [Expectation Maximization](#exp_max)
 15. [AdaBoost](#ada_boost)
+16. [AdaBoost with Active Learning](#active_learn)
+17. [AdaBoost with missing data (on UCI datasets)](#adaboost_uci)
+18. [Error Correcting Output Codes](#ecoc)
+19. [Gradient Boosted Trees](#gd_trees)
+20. [Feature Selection](#feature-select)
+21. [PCA for Feature Reduction](#pca)
+22. [Logistic Regression with regularization](#ridge_lasso)
+23. [HAAR Image feature extraction](#haar)
+24. [Support Vector Machine](#svm)
+25. [Dual Perceptron](#dual_percp)
 
 ## <a id="linear_reg_eqn"></a>Linear Regression (Normal Equation)
 Linear Regression with Mean Squared Error cost function. The weight training is done with Normal Equation (closed-form solution).
@@ -167,6 +177,12 @@ Implemented a Naive Bayesian Classifier which uses Baye's rule to learn a gaussi
 
 [Naive Bayes Classifier for broken down into 4 bins](https://github.com/prasad-madhale/machine-learning/blob/master/Naive%20Bayesian/4bin_naive_bayes.py)
 
+[Naive Bayes Classifier on Polluted Dataset](https://github.com/prasad-madhale/machine-learning/blob/master/Naive_Polluted/gaussian_naive_bayes.py)
+
+[Naive Bayes on missing data](https://github.com/prasad-madhale/machine-learning/blob/master/Naive_Bayes_missing_data/missing_bernoulli_naive_bayes.py)
+
+We implement Naive Bayes on missing data by ignoring it in Bernoulli distribution probability calculations.
+
 ## <a id="exp_max"></a>Expectation Maximization
 
 Given data which is a mixture of Gaussian. EM algorithm accurately predicts to which Gaussian the data point belongs
@@ -223,4 +239,75 @@ that gives maximum improvement in predictions*
 *ROC curve*
 
 <img src="https://github.com/prasad-madhale/machine-learning/blob/master/AdaBoost/plots/random_roc.png" width="600">
+
+[AdaBoost on Polluted Data](https://github.com/prasad-madhale/machine-learning/blob/master/Adaboost_with_bad_features/adaboost_polluted.py)
+
+Implemented AdaBoost with Optimal decision stump on polluted dataset. Output stored in ./logs/out_polluted.txt 
+
+## <a id="active_learn"></a> [AdaBoost with Active Learning](https://github.com/prasad-madhale/machine-learning/blob/master/Active-Learning/adaboost_active_learning.py)
+
+Active learning is a technique in which we start with some percent of random data in the training set and then keep adding data points with least error to the training set. I have used Adaboost with Optimal Decision stumps to implement the Active Learning starting with 5, 10, 15, 20, 30, 50 percent of random data. 
+
+## <a id="adaboost_uci"></a> [AdaBoost with missing data on UCI datasets](https://github.com/prasad-madhale/machine-learning/tree/master/AdaBoost_UCI)
+
+Implemented Adaboost on popular UCI datasets. Also, handled missing data in both datasets. Tested the performance by using some fixed percent of data selected at random. 
+
+## <a id="ecoc"></a> [Error Correcting Output Codes](https://github.com/prasad-madhale/machine-learning/blob/master/ECOC/Ecoc.py)
+
+Error Correcting Output Codes uses a coding matrix to use provide a way to use a binary classifier on a multi-label dataset. ECOC uses this coding matrix such that each column in the matrix represents a subset of labels and each of these has it's own model (for our case we use Adaboost as the individual learner).
+
+## <a id="gd_trees"></a>[Gradient Boosted Trees](https://github.com/prasad-madhale/machine-learning/blob/master/Gradient-Boosting/gradient_boost.py)
+
+## <a id="bagging"></a>[Bagging](https://github.com/prasad-madhale/machine-learning/blob/master/Bagging/bootstrap_aggr.py)
+
+Bagging involves creating small bags of x% data picked randomly with replacement. A model is trained on each bag and predictions are made based on either the average/mode of predictions over all models depending on the type of labels.
+
+## <a id="feature-select"></a>[Feature Selection using Margin analysis](https://github.com/prasad-madhale/machine-learning/blob/master/Adaboost_with_bad_features/adaboost_bad_features.py)
+
+Select top important features based on margins analysis. [margins](http://www.ccs.neu.edu/home/vip/teach/MLcourse/5_features_dimensions/lecture_notes/boosting_margin_jay/jay_margin_feature.pdf)
+
+## <a id="pca"></a>[PCA for feature reduction](https://github.com/prasad-madhale/machine-learning/blob/master/Naive_bayes_PCA/gaussian_naive_bayes_PCA.py)
+
+PCA allows us to reduce the number of features in the dataset by creating features which are a linear combination of each other. We used sklearn's PCA implementation to reduce the number of features in our dataset to 100 and then ran Naive Bayes on these features to obtain good results.
+
+## <a id="ridge_lasso"></a>Logistic Regression with regularization
+
+[Logistic Regression with Ridge regularization](https://github.com/prasad-madhale/machine-learning/blob/master/Logistic_with_regularization/Logistic_reg_Ridge_reg.py)
+
+[Logistic Regression with LASSO regularization](https://github.com/prasad-madhale/machine-learning/blob/master/Logistic_with_regularization/Logistic_reg_lasso_sk.py)
+
+## <a id="haar"></a>[HAAR Image feature extraction](https://github.com/prasad-madhale/machine-learning/blob/master/HAAR/HAAR_feature.py)
+
+We extracted features from MNIST dataset using HAAR methodology. 
+1. Create 100 rectangles randomly distributed inside image pixel sizes.
+2. Extract 2 features each by imposing these 100 rectangles on each image.
+3. We get 200 features per image.
+4. Feed these features and labels into a multi-class classifier to obtain predictions(in our case we use AdaBoost with ECOC)
+
+## <a id="svm"></a>Support Vector Machine
+
+[SVM using sklearn](https://github.com/prasad-madhale/machine-learning/blob/master/SVM/svm_sklearn.py)
+[SVM with HAAR features](https://github.com/prasad-madhale/machine-learning/blob/master/SVM/SVM_mnist_HAAR.py)
+Use the extracted HAAR features from MNIST dataset in SVM
+[SVM with SMO from scratch](https://github.com/prasad-madhale/machine-learning/blob/master/SMO/svm_smo.py)
+[SVM on MNIST with HAAR features](https://github.com/prasad-madhale/machine-learning/blob/master/SMO/smo_mnist.py)
+
+## <a id="knn"></a>K-Nearest Neighbors
+
+#### 1. [KNN with Fixed neighbors](https://github.com/prasad-madhale/machine-learning/blob/master/KNN/knn_radius_digits.py)
+Implemented KNN with different number of nearest neighbors. Also, used different kernels like Gaussian, Cosine and Polynomial.
+
+#### 2. [KNN with probabilities](https://github.com/prasad-madhale/machine-learning/blob/master/KNN/knn_probs_digits.py)
+Implemented KNN with probability density estimator
+
+#### 3. [KNN with a fixed range of radius](https://github.com/prasad-madhale/machine-learning/blob/master/KNN/knn_radius_digits.py)
+Implemented KNN with fixed range of radius measured with Euclidean distance
+
+#### 4. [KNN with Relief algorithm](https://github.com/prasad-madhale/machine-learning/blob/master/KNN/knn_with_relief.py)
+Implemented KNN with feature selection by independently assessing the quality Weights of each feature by adjusting the weights with each instance
+
+## <a id="dual_percp"></a>[Dual Perceptron](https://github.com/prasad-madhale/machine-learning/blob/master/Dual-Perceptron/dual_perceptron.py)
+
+Implemented Dual Perceptron with linear and gaussian kernel. 
+
 
