@@ -67,7 +67,7 @@ class DualPerceptron:
 
 
 # EXECUTION
-dp = DualPerceptron(kernel='gaussian', path='./data/perceptronData.txt')
+# dp = DualPerceptron(kernel='gaussian', path='./data/perceptronData.txt')
 # dp = DualPerceptron(kernel='linear', path='./data/twoSpirals.txt')
 # dp = DualPerceptron(kernel='gaussian', path='./data/twoSpirals.txt')
 

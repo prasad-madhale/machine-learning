@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d65bc11-0e4d-4c0d-bfb1-fa6691a3c843" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/KNN/.idea/KNN.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KNN/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KNN/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KNN/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KNN/knn_digits.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KNN/knn_probs_digits.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KNN/knn_probs_spambase.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KNN/knn_radius_digits.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KNN/knn_radius_spambase.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KNN/knn_spambase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SMO/test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SVM/SVM_mnist_HAAR.py" beforeDir="false" afterPath="$PROJECT_DIR$/SVM/SVM_mnist_HAAR.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SVM/data/train_haar_features.npz" beforeDir="false" afterPath="$PROJECT_DIR$/SVM/data/train_haar_features.npz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SVM/data/train_labels.npz" beforeDir="false" afterPath="$PROJECT_DIR$/SVM/data/train_labels.npz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SVM/logs/out_svm_haar" beforeDir="false" afterPath="$PROJECT_DIR$/SVM/logs/out_svm_haar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dual-Perceptron/dual_perceptron.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dual-Perceptron/dual_perceptron.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KNN/logs/knn_euclidean" beforeDir="false" afterPath="$PROJECT_DIR$/KNN/logs/knn_euclidean" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,14 +13,86 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/KNN/knn_spambase.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KNN/logs/out_knn_spambase">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="112" column="32" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="40" />
+            <state relative-caret-position="54">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KNN/logs/knn_euclidean">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KNN/logs/out_knn_radius_spambase">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KNN/logs/out_knn_radius_digits">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KNN/logs/out_prob_spambase">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KNN/logs/out_prob_digits(poly)">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KNN/logs/out_prob_digits">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dual-Perceptron/dual_perceptron.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KNN/knn_with_relief.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1242">
+              <caret line="20" column="34" lean-forward="true" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/KNN/logs/knn_relief">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -71,13 +129,15 @@
         <option value="$PROJECT_DIR$/KNN/knn_radius_digits.py" />
         <option value="$PROJECT_DIR$/KNN/knn_radius_spambase.py" />
         <option value="$PROJECT_DIR$/KNN/knn_probs_spambase.py" />
+        <option value="$PROJECT_DIR$/Dual-Perceptron/dual_perceptron.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="2880" />
-    <option name="width" value="950" />
-    <option name="height" value="1080" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="298" />
+    <option name="y" value="21" />
+    <option name="width" value="1391" />
+    <option name="height" value="1058" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -87,13 +147,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="machine-learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="machine-learning" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="machine-learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="machine-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="Dual-Perceptron" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="machine-learning" type="b2602c69:ProjectViewProjectNode" />
@@ -110,6 +174,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -130,8 +195,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.knn_probs_spambase">
-    <configuration name="HAAR_feature" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.dual_perceptron">
+    <configuration name="dual_perceptron" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="machine-learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -139,11 +204,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HAAR" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Dual-Perceptron" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HAAR/HAAR_feature.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Dual-Perceptron/dual_perceptron.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -238,11 +303,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.dual_perceptron" />
         <item itemvalue="Python.knn_probs_spambase" />
         <item itemvalue="Python.knn_radius_spambase" />
         <item itemvalue="Python.smo_mnist" />
         <item itemvalue="Python.svm_smo" />
-        <item itemvalue="Python.HAAR_feature" />
       </list>
     </recent_temporary>
   </component>
@@ -260,15 +325,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2880" y="0" width="950" height="1080" extended-state="4" />
+    <frame x="67" y="21" width="1853" height="1058" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.31391585" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26010928" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969433" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.19809322" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26200873" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993644" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -438,13 +503,7 @@
     <entry file="file://$PROJECT_DIR$/HAAR/Ecoc.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/SMO/logs/out_smo_digits">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SMO/logs/out_smo_digits" />
     <entry file="file://$PROJECT_DIR$/SMO/test" />
     <entry file="file://$PROJECT_DIR$/SVM/logs/out_svm_haar">
       <provider selected="true" editor-type-id="text-editor" />
@@ -501,8 +560,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/KNN/knn_digits.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1473">
+        <state relative-caret-position="18">
           <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN/knn_probs_spambase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="140" column="52" selection-start-line="140" selection-start-column="52" selection-end-line="140" selection-end-column="52" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -511,18 +580,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/KNN/knn_radius_digits.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1451">
+        <state relative-caret-position="18">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KNN/logs/out_knn_spambase">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -536,6 +598,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/KNN/knn_spambase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="102" column="24" lean-forward="true" selection-start-line="102" selection-start-column="24" selection-end-line="102" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN/logs/out_knn_spambase">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN/knn_probs_digits.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN/logs/knn_digits">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN/logs/knn_euclidean">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN/logs/out_knn_radius_spambase">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN/logs/out_knn_radius_digits">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/KNN/logs/out_prob_spambase">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -543,23 +651,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KNN/knn_probs_spambase.py">
+    <entry file="file://$PROJECT_DIR$/KNN/logs/out_prob_digits(poly)">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN/logs/out_prob_digits">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dual-Perceptron/dual_perceptron.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="140" column="52" selection-start-line="140" selection-start-column="52" selection-end-line="140" selection-end-column="52" />
+        <state relative-caret-position="480">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KNN/knn_spambase.py">
+    <entry file="file://$PROJECT_DIR$/KNN/knn_with_relief.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="112" column="32" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="40" />
+        <state relative-caret-position="-1242">
+          <caret line="20" column="34" lean-forward="true" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN/logs/knn_relief">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
